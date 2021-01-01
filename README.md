@@ -1,3 +1,5 @@
 [![Actions Status](https://github.com/maguroplusia/Library/workflows/verify/badge.svg)](https://github.com/maguroplusia/Library/actions)
 
-# Library
+# Library for Competitive Programming
+
+競技プログラミング用のライブラリです。
