@@ -6,8 +6,6 @@
 
 競技プログラミング用のライブラリです。gitの練習も兼ねて更新していきます。
 
-Twitter:[@maguro3260](https://twitter.com/maguro3260)
-
-AtCoder:[AItale](https://atcoder.jp/users/AItale)
-
+Twitter:[@maguro3260](https://twitter.com/maguro3260)  
+AtCoder:[AItale](https://atcoder.jp/users/AItale)  
 Scrapbox:[maguro's diary](https://scrapbox.io/magurosdiary/)（競技プログラミングの解法を不定期で載せています）
