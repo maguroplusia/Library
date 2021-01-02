@@ -2,4 +2,4 @@
 
 # Library for Competitive Programming
 
-競技プログラミング用のライブラリです。
+競技プログラミング用のライブラリです。gitの練習がてら更新していきたいと思います。
