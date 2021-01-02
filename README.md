@@ -4,7 +4,7 @@
 
 # Library for Competitive Programming
 
-競技プログラミング用のライブラリです。gitの練習がてら更新していきたいと思います。
+競技プログラミング用のライブラリです。gitの練習も兼ねて更新していきます。
 
 Twitter:[@maguro3260](https://twitter.com/maguro3260)
 
