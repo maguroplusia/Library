@@ -1,10 +1,12 @@
-struct SCC {
+class SCC {
     int N;
     vector<int> graph[200010];
     vector<int> rgraph[200010];//辺を逆にはったグラフ
     vector<int> vs; //帰りがけ順の並び
     bool used[200010]; //既に頂点に訪れたか
     int cmp[200010]; //属する強連結成分のトポロジカル順序
+
+public:
 
     SCC(int n) {
         N = n;
