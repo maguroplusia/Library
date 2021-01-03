@@ -1,6 +1,11 @@
 ---
 data:
-  libraryCategories: []
+  libraryCategories:
+  - name: DataStructure
+    pages:
+    - icon: ':warning:'
+      path: DataStructure/SegmentTree.cpp
+      title: DataStructure/SegmentTree.cpp
   verificationCategories:
   - name: .
     pages:
