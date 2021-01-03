@@ -7,6 +7,9 @@ data:
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':warning:'
+      path: DataStructure/SparseTable.cpp
+      title: DataStructure/SparseTable.cpp
+    - icon: ':warning:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
   - name: Graph
@@ -35,11 +38,17 @@ data:
     - icon: ':warning:'
       path: Graph/WarshallFloyd.cpp
       title: Graph/WarshallFloyd.cpp
-  verificationCategories:
-  - name: .
+  - name: Mathmatics
     pages:
-    - icon: ':heavy_check_mark:'
-      path: example.test.cpp
-      title: example.test.cpp
+    - icon: ':warning:'
+      path: Mathmatics/MatrixPower.cpp
+      title: Mathmatics/MatrixPower.cpp
+    - icon: ':warning:'
+      path: Mathmatics/nCr.cpp
+      title: Mathmatics/nCr.cpp
+    - icon: ':warning:'
+      path: Mathmatics/nCr2.cpp
+      title: Mathmatics/nCr2.cpp
+  verificationCategories: []
 layout: toppage
 ---

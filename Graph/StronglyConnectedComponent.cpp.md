@@ -7,14 +7,14 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Graph/StronglyConnectedComponent.cpp\"\nstruct SCC {\n \
-    \   int N;\n    vector<int> graph[200010];\n    vector<int> rgraph[200010];//\u8FBA\
+  bundledCode: "#line 1 \"Graph/StronglyConnectedComponent.cpp\"\nclass SCC {\n  \
+    \  int N;\n    vector<int> graph[200010];\n    vector<int> rgraph[200010];//\u8FBA\
     \u3092\u9006\u306B\u306F\u3063\u305F\u30B0\u30E9\u30D5\n    vector<int> vs; //\u5E30\
     \u308A\u304C\u3051\u9806\u306E\u4E26\u3073\n    bool used[200010]; //\u65E2\u306B\
     \u9802\u70B9\u306B\u8A2A\u308C\u305F\u304B\n    int cmp[200010]; //\u5C5E\u3059\
     \u308B\u5F37\u9023\u7D50\u6210\u5206\u306E\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\
-    \u9806\u5E8F\n\n    SCC(int n) {\n        N = n;\n    }\n\n    void add_edge(int\
-    \ from,int to) {\n        graph[from].push_back(to);\n        rgraph[to].push_back(from);\n\
+    \u9806\u5E8F\n\npublic:\n\n    SCC(int n) {\n        N = n;\n    }\n\n    void\
+    \ add_edge(int from,int to) {\n        graph[from].push_back(to);\n        rgraph[to].push_back(from);\n\
     \    }\n\n    void dfs(int v) {\n        used[v] = true;\n        for(auto x:graph[v])\
     \ {\n            if(!used[x]) dfs(x);\n        }\n        vs.push_back(v);\n \
     \   }\n\n    void rdfs(int v,int k) {\n        used[v] = true;\n        cmp[v]\
@@ -25,13 +25,13 @@ data:
     \ dfs(v);\n        }\n        memset(used,0,sizeof(used));\n        int k = 0;\n\
     \        for(int i = vs.size() - 1;i >= 0;i--) {\n            if(!used[vs[i]])\
     \ rdfs(vs[i],k++);\n        }\n        return k;\n    }\n}\n"
-  code: "struct SCC {\n    int N;\n    vector<int> graph[200010];\n    vector<int>\
+  code: "class SCC {\n    int N;\n    vector<int> graph[200010];\n    vector<int>\
     \ rgraph[200010];//\u8FBA\u3092\u9006\u306B\u306F\u3063\u305F\u30B0\u30E9\u30D5\
     \n    vector<int> vs; //\u5E30\u308A\u304C\u3051\u9806\u306E\u4E26\u3073\n   \
     \ bool used[200010]; //\u65E2\u306B\u9802\u70B9\u306B\u8A2A\u308C\u305F\u304B\n\
     \    int cmp[200010]; //\u5C5E\u3059\u308B\u5F37\u9023\u7D50\u6210\u5206\u306E\
-    \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u9806\u5E8F\n\n    SCC(int n) {\n       \
-    \ N = n;\n    }\n\n    void add_edge(int from,int to) {\n        graph[from].push_back(to);\n\
+    \u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u9806\u5E8F\n\npublic:\n\n    SCC(int n)\
+    \ {\n        N = n;\n    }\n\n    void add_edge(int from,int to) {\n        graph[from].push_back(to);\n\
     \        rgraph[to].push_back(from);\n    }\n\n    void dfs(int v) {\n       \
     \ used[v] = true;\n        for(auto x:graph[v]) {\n            if(!used[x]) dfs(x);\n\
     \        }\n        vs.push_back(v);\n    }\n\n    void rdfs(int v,int k) {\n\
@@ -47,7 +47,7 @@ data:
   isVerificationFile: false
   path: Graph/StronglyConnectedComponent.cpp
   requiredBy: []
-  timestamp: '2021-01-03 18:28:38+09:00'
+  timestamp: '2021-01-03 18:40:50+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Graph/StronglyConnectedComponent.cpp
