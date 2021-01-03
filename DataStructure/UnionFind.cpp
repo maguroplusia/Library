@@ -1,7 +1,8 @@
-struct Union_find {
+class Union_find {
 	vector<int> par; //親
 	vector<int> siz; //根ノードiの木に含まれる要素数。iが根ノード出ない場合無意味な値となる。
 
+public:
 	//n要素で初期化
 	Union_find(int n) {
 		par.resize(n);
