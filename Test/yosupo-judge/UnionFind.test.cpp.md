@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/UnionFind.cpp
     title: DataStructure/UnionFind.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/unionfind
@@ -15,7 +15,7 @@ data:
     - https://judge.yosupo.jp/problem/unionfind
   bundledCode: "#line 1 \"Test/yosupo-judge/UnionFind.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include<bits/stdc++.h>\nusing\
-    \ namesapce std;\n\n#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n\
+    \ namespace std;\n\n#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n\
     \tvector<int> par; //\u89AA\n\tvector<int> siz; //\u6839\u30CE\u30FC\u30C9i\u306E\
     \u6728\u306B\u542B\u307E\u308C\u308B\u8981\u7D20\u6570\u3002i\u304C\u6839\u30CE\
     \u30FC\u30C9\u51FA\u306A\u3044\u5834\u5408\u7121\u610F\u5473\u306A\u5024\u3068\
@@ -36,7 +36,7 @@ data:
     \           uf.unite(a,b);\n        }\n        else {\n            cout << uf.same(a,b)\
     \ << endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include<bits/stdc++.h>\n\
-    using namesapce std;\n\n#include\"../../DataStructure/UnionFind.cpp\"\n\nint main()\
+    using namespace std;\n\n#include\"../../DataStructure/UnionFind.cpp\"\n\nint main()\
     \ {\n    int N,Q;\n    cin >> N >> Q;\n    UnionFind uf(N);\n    for(int i = 0;i\
     \ < Q;i++) {\n        int t,a,b;\n        cin >> t >> a >> b;\n        if(t ==\
     \ 0) {\n            uf.unite(a,b);\n        }\n        else {\n            cout\
@@ -46,8 +46,8 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/UnionFind.test.cpp
   requiredBy: []
-  timestamp: '2021-01-04 18:34:35+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-04 18:46:57+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/UnionFind.test.cpp
 layout: document

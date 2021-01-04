@@ -1,13 +1,13 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
@@ -15,7 +15,7 @@ data:
     - https://judge.yosupo.jp/problem/point_add_range_sum
   bundledCode: "#line 1 \"Test/yosupo-judge/SegmentTree.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#include<bits/stdc++.h>\n\
-    using namesapce std;\ntypedef long long ll;\n\n#line 1 \"DataStructure/SegmentTree.cpp\"\
+    using namespace std;\ntypedef long long ll;\n\n#line 1 \"DataStructure/SegmentTree.cpp\"\
     \ntemplate<typename T>\nclass SegmentTree {\n    int N; //\u8449\u306E\u6570\n\
     \    T def; //\u5358\u4F4D\u5143\n    vector<T> dat; //\u30C7\u30FC\u30BF\n  \
     \  function<T(T,T)> operation_; //\u533A\u9593\u30AF\u30A8\u30EA\u3067\u4F7F\u3046\
@@ -47,7 +47,7 @@ data:
     \ {\n            int l,r;\n            cin >> l >> r;\n            cout << seg.query(l,r)\
     \ << endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    \n#include<bits/stdc++.h>\nusing namesapce std;\ntypedef long long ll;\n\n#include\"\
+    \n#include<bits/stdc++.h>\nusing namespace std;\ntypedef long long ll;\n\n#include\"\
     ../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n    cin >>\
     \ N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n    [](ll a,ll b){return a + b;},\n\
     \    [](ll a,ll b){return a + b;});\n    for(int i = 0;i < N;i++) {\n        ll\
@@ -62,8 +62,8 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/SegmentTree.test.cpp
   requiredBy: []
-  timestamp: '2021-01-04 17:56:14+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-04 18:46:51+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/SegmentTree.test.cpp
 layout: document

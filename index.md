@@ -6,13 +6,13 @@ data:
     - icon: ':warning:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':x:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
   - name: Graph
@@ -63,13 +63,13 @@ data:
   verificationCategories:
   - name: Test/yosupo-judge
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SegmentTree.test.cpp
       title: Test/yosupo-judge/SegmentTree.test.cpp
     - icon: ':x:'
       path: Test/yosupo-judge/SparseTable.test.cpp
       title: Test/yosupo-judge/SparseTable.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/UnionFind.test.cpp
       title: Test/yosupo-judge/UnionFind.test.cpp
 layout: toppage

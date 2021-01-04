@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SegmentTree.test.cpp
     title: Test/yosupo-judge/SegmentTree.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SegmentTree.cpp\"\ntemplate<typename T>\n\
@@ -59,7 +59,7 @@ data:
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
   timestamp: '2021-01-04 17:29:17+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/SegmentTree.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp

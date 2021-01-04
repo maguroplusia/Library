@@ -15,7 +15,7 @@ data:
     - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"Test/yosupo-judge/SparseTable.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include<bits/stdc++.h>\nusing\
-    \ namesapce std;\n\n#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate <typename\
+    \ namespace std;\n\n#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate <typename\
     \ T>\nclass SparseTable {\n    vector<vector<T>> table; //table[i][j] = j\u756A\
     \u76EE\u304B\u3089\u898B\u30662^i\u500B\u306E\u8981\u7D20\u306E\u6700\u5C0F\u5024\
     \n    vector<int> lookup;\n\npublic:\n    \n    //Sparse Table\u306E\u69CB\u7BC9\
@@ -36,7 +36,7 @@ data:
     \ < Q;i++) {\n        int l,r;\n        cin >> l >> r;\n        cout << st.query(l,r)\
     \ << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include<bits/stdc++.h>\n\
-    using namesapce std;\n\n#include\"../../DataStructure/SparseTable.cpp\"\n\nint\
+    using namespace std;\n\n#include\"../../DataStructure/SparseTable.cpp\"\n\nint\
     \ main() {\n    int N,Q;\n    cin >> N >> Q;\n    vector<int> vec(N)\n    for(int\
     \ i = 0;i < N;i++) {\n        cin >> vec.at(i);\n    }\n    SparseTable st(vec);\n\
     \    for(int i = 0;i < Q;i++) {\n        int l,r;\n        cin >> l >> r;\n  \
@@ -46,7 +46,7 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/SparseTable.test.cpp
   requiredBy: []
-  timestamp: '2021-01-04 18:02:49+09:00'
+  timestamp: '2021-01-04 18:46:53+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/yosupo-judge/SparseTable.test.cpp
