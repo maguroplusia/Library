@@ -3,7 +3,7 @@
 using namesapce std;
 
 #include"../../Other/Template.cpp"
-#include"../../Datastructure/SegmentTree.cpp"
+#include"../../DataStructure/SegmentTree.cpp"
 
 int main() {
     int N,Q;
