@@ -9,7 +9,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
     - icon: ':heavy_check_mark:'
@@ -66,7 +66,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SegmentTree.test.cpp
       title: Test/yosupo-judge/SegmentTree.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SparseTable.test.cpp
       title: Test/yosupo-judge/SparseTable.test.cpp
     - icon: ':heavy_check_mark:'
