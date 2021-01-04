@@ -4,15 +4,15 @@ class SparseTable {
     vector<int> lookup;
 
 public:
-    
+
     //Sparse Tableの構築
-    SparseTable(const vector<T> &v) {
+    SparseTable(vector<T> v) {
         //logを取る
         int b = 0;
         while((1 << b) <= v.size()) {
             b++;
         }
-        table.assign(b,vector<T>(1 << b));
+        table.resize(b,vector<T>(1 << b));
         for(int i = 0;i < v.size();i++) {
             table[0][i] = v[i];
         }
