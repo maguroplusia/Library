@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':x:'
-    path: Test/yosupo-judge/SegmentTree.test.cpp
-    title: Test/yosupo-judge/SegmentTree.test.cpp
+    path: Test/yosupo-judge/UnionFind.test.cpp
+    title: Test/yosupo-judge/UnionFind.test.cpp
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
   attributes:
@@ -42,7 +42,7 @@ data:
   timestamp: '2021-01-04 15:16:03+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
-  - Test/yosupo-judge/SegmentTree.test.cpp
+  - Test/yosupo-judge/UnionFind.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

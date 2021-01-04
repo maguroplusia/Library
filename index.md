@@ -3,13 +3,16 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
+    - icon: ':warning:'
+      path: DataStructure/LazySegmentTree.cpp
+      title: DataStructure/LazySegmentTree.cpp
     - icon: ':x:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':warning:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
   - name: Graph
@@ -63,5 +66,8 @@ data:
     - icon: ':x:'
       path: Test/yosupo-judge/SegmentTree.test.cpp
       title: Test/yosupo-judge/SegmentTree.test.cpp
+    - icon: ':x:'
+      path: Test/yosupo-judge/UnionFind.test.cpp
+      title: Test/yosupo-judge/UnionFind.test.cpp
 layout: toppage
 ---

@@ -4,9 +4,6 @@ data:
   - icon: ':x:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
-  - icon: ':x:'
-    path: Other/Template.cpp
-    title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
@@ -17,20 +14,8 @@ data:
     links:
     - https://judge.yosupo.jp/problem/point_add_range_sum
   bundledCode: "#line 1 \"Test/yosupo-judge/SegmentTree.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n#include<bits/stdc++.h>\n\
-    using namesapce std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\
-    constexpr int Inf = 1000000030;\nconstexpr ll INF= 2000000000000000000;\nconstexpr\
-    \ ll MOD = 1000000007;\nconst double PI = 3.1415926535897;\ntypedef pair<ll,ll>\
-    \ P;\ntypedef pair<ll,P> PP;\n\ntemplate<class T> inline bool chmax(T &a, T b)\
-    \ {\n    if (a < b) {\n        a = b;\n        return 1;\n    }\n    return 0;\n\
-    }\n\ntemplate<class T> inline bool chmin(T &a, T b) {\n    if (a > b) {\n    \
-    \    a = b;\n        return 1;\n    }\n    return 0;\n}\n\n\nll mod(ll val, ll\
-    \ M) {\n    val = val % M;\n    if(val < 0) {\n        val += M;\n    }\n    return\
-    \ val;\n}\n\ntemplate<typename T>\nT RS(T N, T P, T M){\n    if(P == 0) {\n  \
-    \      return 1;\n    }\n    if(P < 0) {\n        return 0;\n    }\n    if(P %\
-    \ 2 == 0){\n        ll t = RS(N, P/2, M);\n        if(M == -1) return t * t;\n\
-    \        return t * t % M;\n    }\n    if(M == -1) {\n        return N * RS(N,P\
-    \ - 1,M);\n    }\n    return N * RS(N, P-1, M) % M;\n}\n#line 1 \"DataStructure/SegmentTree.cpp\"\
+    \ \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#include<bits/stdc++.h>\n\
+    using namesapce std;\ntypedef long long ll;\n\n#line 1 \"DataStructure/SegmentTree.cpp\"\
     \ntemplate<typename T>\nclass SegmentTree {\n    int N; //\u8449\u306E\u6570\n\
     \    T def; //\u5358\u4F4D\u5143\n    vector<T> dat; //\u30C7\u30FC\u30BF\n  \
     \  function<T(T,T)> operation_; //\u533A\u9593\u30AF\u30A8\u30EA\u3067\u4F7F\u3046\
@@ -52,7 +37,7 @@ data:
     \ + 2]);\n        }\n    }\n\n    //[a,b)\u5168\u3066\u3067operator\u3092\u4F5C\
     \u7528\u3055\u305B\u305F\u5024\u3092\u6C42\u3081\u308B\n    T query(int a,int\
     \ b) {return query_sub(a,b,0,N,0);}\n\n    T operator[](int i) {return dat[i +\
-    \ N - 1];}\n};\n#line 7 \"Test/yosupo-judge/SegmentTree.test.cpp\"\n\nint main()\
+    \ N - 1];}\n};\n#line 8 \"Test/yosupo-judge/SegmentTree.test.cpp\"\n\nint main()\
     \ {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n    [](ll\
     \ a,ll b){return a + b;},\n    [](ll a,ll b){return a + b;});\n    for(int i =\
     \ 0;i < N;i++) {\n        ll A;\n        cin >> A;\n        seg.set(i,A);\n  \
@@ -62,23 +47,22 @@ data:
     \ {\n            int l,r;\n            cin >> l >> r;\n            cout << seg.query(l,r)\
     \ << endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    #include<bits/stdc++.h>\nusing namesapce std;\n\n#include\"../../Other/Template.cpp\"\
-    \n#include\"../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n\
-    \    cin >> N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n    [](ll a,ll b){return\
-    \ a + b;},\n    [](ll a,ll b){return a + b;});\n    for(int i = 0;i < N;i++) {\n\
-    \        ll A;\n        cin >> A;\n        seg.set(i,A);\n    }\n    seg.build();\n\
-    \    for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
-    \ == 0) {\n            int p;\n            ll x;\n            cin >> p >> x;\n\
-    \            seg.update(p,x);\n        }\n        else {\n            int l,r;\n\
-    \            cin >> l >> r;\n            cout << seg.query(l,r) << endl;\n   \
-    \     }\n    }\n}\n"
+    \n#include<bits/stdc++.h>\nusing namesapce std;\ntypedef long long ll;\n\n#include\"\
+    ../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n    cin >>\
+    \ N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n    [](ll a,ll b){return a + b;},\n\
+    \    [](ll a,ll b){return a + b;});\n    for(int i = 0;i < N;i++) {\n        ll\
+    \ A;\n        cin >> A;\n        seg.set(i,A);\n    }\n    seg.build();\n    for(int\
+    \ i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t == 0) {\n\
+    \            int p;\n            ll x;\n            cin >> p >> x;\n         \
+    \   seg.update(p,x);\n        }\n        else {\n            int l,r;\n      \
+    \      cin >> l >> r;\n            cout << seg.query(l,r) << endl;\n        }\n\
+    \    }\n}\n"
   dependsOn:
-  - Other/Template.cpp
   - DataStructure/SegmentTree.cpp
   isVerificationFile: true
   path: Test/yosupo-judge/SegmentTree.test.cpp
   requiredBy: []
-  timestamp: '2021-01-04 17:29:20+09:00'
+  timestamp: '2021-01-04 17:56:14+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/yosupo-judge/SegmentTree.test.cpp
