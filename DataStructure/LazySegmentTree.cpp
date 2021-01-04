@@ -80,4 +80,4 @@ public:
     void update(int a,int b,M m) {update_sub(a,b,0,N,m);}
 
     void query(int a,int b) {return query_sub(a,b,0,N,0);}
-}
+};
