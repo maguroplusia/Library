@@ -49,6 +49,19 @@ data:
     - icon: ':warning:'
       path: Mathmatics/nCr2.cpp
       title: Mathmatics/nCr2.cpp
-  verificationCategories: []
+    - icon: ':warning:'
+      path: Mathmatics/nCr3.cpp
+      title: Mathmatics/nCr3.cpp
+  - name: Other
+    pages:
+    - icon: ':warning:'
+      path: Other/Template.cpp
+      title: Other/Template.cpp
+  verificationCategories:
+  - name: Test/yosupo-judge
+    pages:
+    - icon: ':x:'
+      path: Test/yosupo-judge/SegmentTree.test.cpp
+      title: Test/yosupo-judge/SegmentTree.test.cpp
 layout: toppage
 ---
