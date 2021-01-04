@@ -3,6 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+#include"../../Other/Template.cpp"
 #include"../../DataStructure/UnionFind.cpp"
 
 int main() {
