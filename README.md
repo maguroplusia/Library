@@ -4,7 +4,7 @@
 
 # Library for Competitive Programming
 
-maguroの競技プログラミング用のライブラリです。
+競技プログラミング用のライブラリです。
 
 Twitter:[@maguro3260](https://twitter.com/maguro3260)  
 AtCoder:[AItale](https://atcoder.jp/users/AItale)  
