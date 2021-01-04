@@ -57,7 +57,7 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:

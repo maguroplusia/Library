@@ -2,9 +2,18 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Test/yosupo-judge/SegmentTree.test.cpp
+    title: Test/yosupo-judge/SegmentTree.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Test/yosupo-judge/SparseTable.test.cpp
+    title: Test/yosupo-judge/SparseTable.test.cpp
+  - icon: ':heavy_check_mark:'
+    path: Test/yosupo-judge/UnionFind.test.cpp
+    title: Test/yosupo-judge/UnionFind.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\nconstexpr int\
@@ -37,8 +46,11 @@ data:
   path: Other/Template.cpp
   requiredBy: []
   timestamp: '2021-01-04 15:16:03+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Test/yosupo-judge/UnionFind.test.cpp
+  - Test/yosupo-judge/SegmentTree.test.cpp
+  - Test/yosupo-judge/SparseTable.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:
