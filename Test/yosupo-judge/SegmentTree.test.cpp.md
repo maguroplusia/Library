@@ -20,7 +20,7 @@ data:
     \n#include\"../../Datastructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n\
     \    cin >> N >> Q;\n    SegmentTree<ll> seg(N,0,\n    [](ll a,ll b){return a\
     \ + b;},\n    [](ll a,ll b){return a + b;});\n    for(int i = 0;i < N;i++) {\n\
-    \        ll A;\n        cin >> A;\n        seg.set(A);\n    }\n    seg.build();\n\
+    \        ll A;\n        cin >> A;\n        seg.set(i,A);\n    }\n    seg.build();\n\
     \    for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
     \ == 0) {\n            int p;\n            ll x;\n            seg.update(p,x);\n\
     \        }\n        else {\n            int l,r;\n            cin >> l >> r;\n\
