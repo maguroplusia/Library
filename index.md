@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':warning:'
@@ -54,7 +54,7 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:

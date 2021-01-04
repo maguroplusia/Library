@@ -2,9 +2,12 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: Test/yosupo-judge/SegmentTree.test.cpp
+    title: Test/yosupo-judge/SegmentTree.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\nconstexpr int\
@@ -37,8 +40,9 @@ data:
   path: Other/Template.cpp
   requiredBy: []
   timestamp: '2021-01-04 15:16:03+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - Test/yosupo-judge/SegmentTree.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

@@ -2,9 +2,12 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: Test/yosupo-judge/SegmentTree.test.cpp
+    title: Test/yosupo-judge/SegmentTree.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SegmentTree.cpp\"\ntemplate<typename T>\n\
@@ -25,9 +28,10 @@ data:
     \ 2]);\n        }\n    }\n\n    //i\u756A\u76EE\u306E\u5024\u3092\u66F4\u65B0\u3059\
     \u308B\n    void update(int i,T x) {\n        i += N - 1;\n        dat[i] = update_(dat[i],x);\n\
     \        while(i > 0) {\n            i = (i - 1) / 2;\n            dat[i] = operation_(dat[i\
-    \ * 2 + 1],dat[i * 2 + 2]);\n        }\n    }\n\n    //operator(a,a + 1,\u2026\
-    ,b - 1)\u3092\u6C42\u3081\u308B\n    T query(int a,int b) {return query_sub(a,b,0,N,0);}\n\
-    \n    T operator[](int i) {return dat[i + N - 1];}\n};\n"
+    \ * 2 + 1],dat[i * 2 + 2]);\n        }\n    }\n\n    //[a,b)\u5168\u3066\u3067\
+    operator\u3092\u4F5C\u7528\u3055\u305B\u305F\u5024\u3092\u6C42\u3081\u308B\n \
+    \   T query(int a,int b) {return query_sub(a,b,0,N,0);}\n\n    T operator[](int\
+    \ i) {return dat[i + N - 1];}\n};\n"
   code: "template<typename T>\nclass SegmentTree {\n    int N; //\u8449\u306E\u6570\
     \n    T def; //\u5358\u4F4D\u5143\n    vector<T> dat; //\u30C7\u30FC\u30BF\n \
     \   function<T(T,T)> operation_; //\u533A\u9593\u30AF\u30A8\u30EA\u3067\u4F7F\u3046\
@@ -46,16 +50,18 @@ data:
     \u3092\u66F4\u65B0\u3059\u308B\n    void update(int i,T x) {\n        i += N -\
     \ 1;\n        dat[i] = update_(dat[i],x);\n        while(i > 0) {\n          \
     \  i = (i - 1) / 2;\n            dat[i] = operation_(dat[i * 2 + 1],dat[i * 2\
-    \ + 2]);\n        }\n    }\n\n    //operator(a,a + 1,\u2026,b - 1)\u3092\u6C42\
-    \u3081\u308B\n    T query(int a,int b) {return query_sub(a,b,0,N,0);}\n\n    T\
-    \ operator[](int i) {return dat[i + N - 1];}\n};\n"
+    \ + 2]);\n        }\n    }\n\n    //[a,b)\u5168\u3066\u3067operator\u3092\u4F5C\
+    \u7528\u3055\u305B\u305F\u5024\u3092\u6C42\u3081\u308B\n    T query(int a,int\
+    \ b) {return query_sub(a,b,0,N,0);}\n\n    T operator[](int i) {return dat[i +\
+    \ N - 1];}\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
-  timestamp: '2021-01-04 17:10:12+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  timestamp: '2021-01-04 17:29:17+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - Test/yosupo-judge/SegmentTree.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:
