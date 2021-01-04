@@ -2,8 +2,8 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 
+#include"../../Other/Template.cpp"
 #include"../../DataStructure/SegmentTree.cpp"
 
 int main() {
