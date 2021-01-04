@@ -47,7 +47,7 @@ data:
     \n    void set(int i,X x) {dat[i + N - 1] = x;}\n    void build() {\n        for(int\
     \ i = N - 2;i >= 0;i--) {\n            dat[i] = fx(dat[i * 2 + 1],dat[i * 2 +\
     \ 2]);\n        }\n    }\n\n    void update(int a,int b,M m) {update_sub(a,b,0,N,m);}\n\
-    \n    void query(int a,int b) {return query_sub(a,b,0,N,0);}\n}\n"
+    \n    void query(int a,int b) {return query_sub(a,b,0,N,0);}\n};\n"
   code: "/*\n    X:\u5024\u914D\u5217\u306E\u578B\n    M:\u9045\u5EF6\u914D\u5217\u306E\
     \u578B\n*/\ntemplate<typename X,typename M>\nclass LazySegmentTree {\n    using\
     \ FX = function<X(X,X)>;\n    using FA = function<X(X,M,int,int)>;\n    using\
@@ -88,12 +88,12 @@ data:
     \ set(int i,X x) {dat[i + N - 1] = x;}\n    void build() {\n        for(int i\
     \ = N - 2;i >= 0;i--) {\n            dat[i] = fx(dat[i * 2 + 1],dat[i * 2 + 2]);\n\
     \        }\n    }\n\n    void update(int a,int b,M m) {update_sub(a,b,0,N,m);}\n\
-    \n    void query(int a,int b) {return query_sub(a,b,0,N,0);}\n}\n"
+    \n    void query(int a,int b) {return query_sub(a,b,0,N,0);}\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/LazySegmentTree.cpp
   requiredBy: []
-  timestamp: '2021-01-04 17:33:50+09:00'
+  timestamp: '2021-01-04 18:25:37+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: DataStructure/LazySegmentTree.cpp

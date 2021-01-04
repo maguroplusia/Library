@@ -10,11 +10,11 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\nclass Union_find {\n\tvector<int>\
+  bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n\tvector<int>\
     \ par; //\u89AA\n\tvector<int> siz; //\u6839\u30CE\u30FC\u30C9i\u306E\u6728\u306B\
     \u542B\u307E\u308C\u308B\u8981\u7D20\u6570\u3002i\u304C\u6839\u30CE\u30FC\u30C9\
     \u51FA\u306A\u3044\u5834\u5408\u7121\u610F\u5473\u306A\u5024\u3068\u306A\u308B\
-    \u3002\n\npublic:\n\t//n\u8981\u7D20\u3067\u521D\u671F\u5316\n\tUnion_find(int\
+    \u3002\n\npublic:\n\t//n\u8981\u7D20\u3067\u521D\u671F\u5316\n\tUnionFind(int\
     \ n) {\n\t\tpar.resize(n);\n\t\tsiz.resize(n);\n\t\tfor(int i = 0;i < n;i++) {\n\
     \t\t\tpar[i] = i;\n\t\t\tsiz[i] = 1;\n\t\t}\n\t}\n\n\t//\u6728\u306E\u6839\u3092\
     \u6C42\u3081\u308B\n\tint find(int x) {\n\t\tif(par[x] == x) {\n\t\t\treturn x;\n\
@@ -26,11 +26,11 @@ data:
     \u306B\u5C5E\u3059\u308B\u304B\u5426\u304B\n\tbool same(int x,int y) {\n\t\treturn\
     \ find(x) == find(y);\n\t}\n\n\tint size(int x) {\n\t\treturn siz[find(x)];\n\t\
     }\n};\n"
-  code: "class Union_find {\n\tvector<int> par; //\u89AA\n\tvector<int> siz; //\u6839\
+  code: "class UnionFind {\n\tvector<int> par; //\u89AA\n\tvector<int> siz; //\u6839\
     \u30CE\u30FC\u30C9i\u306E\u6728\u306B\u542B\u307E\u308C\u308B\u8981\u7D20\u6570\
     \u3002i\u304C\u6839\u30CE\u30FC\u30C9\u51FA\u306A\u3044\u5834\u5408\u7121\u610F\
     \u5473\u306A\u5024\u3068\u306A\u308B\u3002\n\npublic:\n\t//n\u8981\u7D20\u3067\
-    \u521D\u671F\u5316\n\tUnion_find(int n) {\n\t\tpar.resize(n);\n\t\tsiz.resize(n);\n\
+    \u521D\u671F\u5316\n\tUnionFind(int n) {\n\t\tpar.resize(n);\n\t\tsiz.resize(n);\n\
     \t\tfor(int i = 0;i < n;i++) {\n\t\t\tpar[i] = i;\n\t\t\tsiz[i] = 1;\n\t\t}\n\t\
     }\n\n\t//\u6728\u306E\u6839\u3092\u6C42\u3081\u308B\n\tint find(int x) {\n\t\t\
     if(par[x] == x) {\n\t\t\treturn x;\n\t\t}\n\t\telse {\n\t\t\treturn par[x] = find(par[x]);\n\
@@ -45,7 +45,7 @@ data:
   isVerificationFile: false
   path: DataStructure/UnionFind.cpp
   requiredBy: []
-  timestamp: '2021-01-03 18:40:36+09:00'
+  timestamp: '2021-01-04 18:34:35+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/yosupo-judge/UnionFind.test.cpp
