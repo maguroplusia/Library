@@ -8,7 +8,7 @@ using namesapce std;
 int main() {
     int N,Q;
     cin >> N >> Q;
-    SegmentTree<ll> seg(N,0,
+    SegmentTree<ll> seg(N,(ll)0,
     [](ll a,ll b){return a + b;},
     [](ll a,ll b){return a + b;});
     for(int i = 0;i < N;i++) {
@@ -23,6 +23,7 @@ int main() {
         if(t == 0) {
             int p;
             ll x;
+            cin >> p >> x;
             seg.update(p,x);
         }
         else {
