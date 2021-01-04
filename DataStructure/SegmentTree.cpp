@@ -15,10 +15,10 @@ class SegmentTree {
     }
 
 public:
-    SegmentTree(int n,T e,function<T(T,T)> op,function<T(T,T)> up): def(e),dat(n * 4,e),operation(op),update_(up) {
+    SegmentTree(int n,T e,function<T(T,T)> op,function<T(T,T)> up): def(e), dat(n * 4,e),operation(op),update_(up) {
         int n_ = 1;
-        while(n_ >= n) {
-            n *= 2;
+        while(n > n_) {
+            n_ *= 2;
         }
         N = n_;
     }
@@ -31,6 +31,7 @@ public:
         }
     }
 
+    //i番目の値を更新する
     void update(int i,T x) {
         i += N - 1;
         dat[i] = update_(dat[i],x);
@@ -40,6 +41,7 @@ public:
         }
     }
 
+    //operator(l,l + 1,…,r - 1)を求める
     T query(int a,int b) return query_sub(a,b,0,N,0);
 
     T operator[](int i) return dat[i + N - 1];
