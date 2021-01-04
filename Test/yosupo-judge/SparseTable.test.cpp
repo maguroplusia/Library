@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/staticrmq"
 
 #include<bits/stdc++.h>
-using namesapce std;
+using namespace std;
 
 #include"../../DataStructure/SparseTable.cpp"
 
