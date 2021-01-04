@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     int N,Q;
     cin >> N >> Q;
-    vector<int> vec(N)
+    vector<int> vec(N);
     for(int i = 0;i < N;i++) {
         cin >> vec.at(i);
     }
