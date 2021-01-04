@@ -1,8 +1,9 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
+
 #include<bits/stdc++.h>
 using namesapce std;
+typedef long long ll;
 
-#include"../../Other/Template.cpp"
 #include"../../DataStructure/SegmentTree.cpp"
 
 int main() {
