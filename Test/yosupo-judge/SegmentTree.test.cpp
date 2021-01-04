@@ -14,7 +14,7 @@ int main() {
     for(int i = 0;i < N;i++) {
         ll A;
         cin >> A;
-        seg.set(A);
+        seg.set(i,A);
     }
     seg.build();
     for(int i = 0;i < Q;i++) {
