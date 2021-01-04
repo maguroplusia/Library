@@ -15,7 +15,7 @@ class SegmentTree {
     }
 
 public:
-    SegmentTree(int n,T e,function<T(T,T)> op,function<T(T,T)> up): def(e), dat(n * 4,e),operation(op),update_(up) {
+    SegmentTree(int n,T e,function<T(T,T)> op,function<T(T,T)> up): def(e),dat(n * 4,e),operation(op),update_(up) {
         int n_ = 1;
         while(n_ >= n) {
             n *= 2;
@@ -42,5 +42,5 @@ public:
 
     T query(int a,int b) return query_sub(a,b,0,N,0);
 
-    T operator[](int i) return dat[i + n - 1];
+    T operator[](int i) return dat[i + N - 1];
 };
