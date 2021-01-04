@@ -42,7 +42,7 @@ public:
         }
     }
 
-    //operator(a,a + 1,…,b - 1)を求める
+    //[a,b)全てでoperatorを作用させた値を求める
     T query(int a,int b) {return query_sub(a,b,0,N,0);}
 
     T operator[](int i) {return dat[i + N - 1];}
