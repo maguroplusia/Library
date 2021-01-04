@@ -4,6 +4,9 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
+    path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
+    title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SegmentTree.test.cpp
     title: Test/yosupo-judge/SegmentTree.test.cpp
   - icon: ':heavy_check_mark:'
@@ -49,6 +52,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/UnionFind.test.cpp
+  - Test/yosupo-judge/BinaryIndexedTree.test.cpp
   - Test/yosupo-judge/SegmentTree.test.cpp
   - Test/yosupo-judge/SparseTable.test.cpp
 documentation_of: Other/Template.cpp

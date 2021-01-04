@@ -3,6 +3,9 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
+    - icon: ':heavy_check_mark:'
+      path: DataStructure/BinaryIndexedTree.cpp
+      title: DataStructure/BinaryIndexedTree.cpp
     - icon: ':warning:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
@@ -63,6 +66,9 @@ data:
   verificationCategories:
   - name: Test/yosupo-judge
     pages:
+    - icon: ':heavy_check_mark:'
+      path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
+      title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SegmentTree.test.cpp
       title: Test/yosupo-judge/SegmentTree.test.cpp
