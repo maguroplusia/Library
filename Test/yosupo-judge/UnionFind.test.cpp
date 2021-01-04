@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/unionfind"
+
 #include<bits/stdc++.h>
 using namesapce std;
 
-#include"../../Other/Template.cpp"
 #include"../../DataStructure/UnionFind.cpp"
 
 int main() {
