@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/point_add_range_sum"
 
 #include<bits/stdc++.h>
-using namesapce std;
+using namespace std;
 typedef long long ll;
 
 #include"../../DataStructure/SegmentTree.cpp"
