@@ -2,9 +2,12 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: Test/yosupo-judge/SparseTable.test.cpp
+    title: Test/yosupo-judge/SparseTable.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SparseTable.cpp\"\ntemplate <typename T>\n\
@@ -42,8 +45,9 @@ data:
   path: DataStructure/SparseTable.cpp
   requiredBy: []
   timestamp: '2021-01-03 18:40:19+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - Test/yosupo-judge/SparseTable.test.cpp
 documentation_of: DataStructure/SparseTable.cpp
 layout: document
 redirect_from:

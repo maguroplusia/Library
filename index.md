@@ -9,7 +9,7 @@ data:
     - icon: ':x:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
     - icon: ':x:'
@@ -57,7 +57,7 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:
@@ -66,6 +66,9 @@ data:
     - icon: ':x:'
       path: Test/yosupo-judge/SegmentTree.test.cpp
       title: Test/yosupo-judge/SegmentTree.test.cpp
+    - icon: ':x:'
+      path: Test/yosupo-judge/SparseTable.test.cpp
+      title: Test/yosupo-judge/SparseTable.test.cpp
     - icon: ':x:'
       path: Test/yosupo-judge/UnionFind.test.cpp
       title: Test/yosupo-judge/UnionFind.test.cpp
