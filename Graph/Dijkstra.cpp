@@ -5,28 +5,28 @@ struct edge{
 
 int N; //頂点数
 vector<edge> graph[200010];
-ll d[200010]; //頂点sからの最短距離
+ll dist[200010]; //頂点sからの最短距離
 int pre[200010];
 
 void Dijkstra(int s) {
 	//greater<P>を指定することでfirstが小さい順に取り出せる
 	priority_queue<P,vector<P>,greater<P>> que;
-	fill(d,d + N,INF);
+	fill(dist,dist + N,INF);
 	fill(pre,pre + N,-1);
-	d[s] = 0;
+	dist[s] = 0;
 	que.push(P(0,s));
 
 	while(!que.empty()) {
 		P p = que.top();
 		que.pop();
 		int v = p.second;
-		if(d[v] < p.first) {
+		if(dist[v] < p.first) {
 			continue;
 		}
         for(auto x:graph[v]) {
-            if(chmin(d[x.to],d[v] + x.cost)) {
+            if(chmin(dist[x.to],dist[v] + x.cost)) {
                 pre[x.to] = v;
-                que.push(P(d[x.to],x.to));
+                que.push(P(dist[x.to],x.to));
             }
         }
 	}
