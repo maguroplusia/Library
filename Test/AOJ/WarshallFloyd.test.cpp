@@ -15,12 +15,12 @@ int main() {
         int s,t;
         ll d;
         cin >> s >> t >> d;
-        d[s][t] = d;
+        dist[s][t] = d;
     }
     WarshallFloyd();
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
-        if(d[i][i] < 0) isnegative = true;
+        if(dist[i][i] < 0) isnegative = true;
     }
     if(isnegative) {
         cout << "NEGATIVE CYCLE" << endl;
@@ -28,8 +28,8 @@ int main() {
     }
     for(int i = 0;i < N;i++) {
         for(int j = 0;j < N;j++) {
-            if(d[i][j] == INF) cout << "INF" << " ";
-            else cout << d[i][j] << " ";
+            if(dist[i][j] == INF) cout << "INF" << " ";
+            else cout << dist[i][j] << " ";
         }
         cout << endl;
     }
