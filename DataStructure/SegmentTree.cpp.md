@@ -6,14 +6,14 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
     title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SegmentTree.cpp\"\ntemplate<typename T>\n\
@@ -65,7 +65,7 @@ data:
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
   timestamp: '2021-01-04 17:29:17+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp

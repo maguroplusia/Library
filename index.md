@@ -9,7 +9,7 @@ data:
     - icon: ':warning:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -41,7 +41,7 @@ data:
     - icon: ':warning:'
       path: Graph/TopologicalSort.cpp
       title: Graph/TopologicalSort.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Graph/WarshallFloyd.cpp
       title: Graph/WarshallFloyd.cpp
   - name: Mathmatics
@@ -75,9 +75,12 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+    - icon: ':x:'
+      path: Test/AOJ/WarshallFloyd.test.cpp
+      title: Test/AOJ/WarshallFloyd.test.cpp
   - name: Test/yosupo-judge
     pages:
     - icon: ':heavy_check_mark:'

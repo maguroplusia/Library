@@ -48,7 +48,7 @@ data:
     \t\t\t\tif(i == N - 1) return true;\n\t\t\t}\n\t\t}\n\t}\n\treturn false;\n}\n\
     #line 8 \"Test/AOJ/BellmanFord.test.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
     \    int r;\n    cin >> r;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
-    \        ll d;\n        cin >> s >> t >> d;\n        es.push_back(edge{s,t,d});\n\
+    \        ll d;\n        cin >> s >> t >> d;\n        es[i] = (edge{s,t,d});\n\
     \    }\n    Bellmanford(r);\n    bool isnegative = false;\n    for(int i = 0;i\
     \ < N;i++) {\n        if(d[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
     \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
@@ -58,7 +58,7 @@ data:
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
     \    int r;\n    cin >> r;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
-    \        ll d;\n        cin >> s >> t >> d;\n        es.push_back(edge{s,t,d});\n\
+    \        ll d;\n        cin >> s >> t >> d;\n        es[i] = (edge{s,t,d});\n\
     \    }\n    Bellmanford(r);\n    bool isnegative = false;\n    for(int i = 0;i\
     \ < N;i++) {\n        if(d[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
     \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
@@ -70,7 +70,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 13:39:30+09:00'
+  timestamp: '2021-01-05 14:00:54+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp

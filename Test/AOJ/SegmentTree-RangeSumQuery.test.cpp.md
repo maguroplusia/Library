@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
   - icon: ':question:'
@@ -10,7 +10,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
@@ -56,26 +56,28 @@ data:
     \ main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n\
     \    [](int a,int b){return a + b;},\n    [](int a,int b){return a + b;});\n \
     \   for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
-    \ == 0) {\n            int p,x;\n            cin >> p >> x;\n            seg.update(p,x);\n\
-    \        }\n        else {\n            int s,t;\n            cin >> s >> t;\n\
-    \            cout << seg.query(s,t + 1) << endl;\n        }\n    }\n}\n"
+    \ == 0) {\n            int p,x;\n            cin >> p >> x;\n            p--;\n\
+    \            seg.update(p,x);\n        }\n        else {\n            int s,t;\n\
+    \            cin >> s >> t;\n            s--;\n            t--;\n            cout\
+    \ << seg.query(s,t + 1) << endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n\
     \    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n    [](int a,int b){return\
     \ a + b;},\n    [](int a,int b){return a + b;});\n    for(int i = 0;i < Q;i++)\
     \ {\n        int t;\n        cin >> t;\n        if(t == 0) {\n            int\
-    \ p,x;\n            cin >> p >> x;\n            seg.update(p,x);\n        }\n\
-    \        else {\n            int s,t;\n            cin >> s >> t;\n          \
-    \  cout << seg.query(s,t + 1) << endl;\n        }\n    }\n}\n"
+    \ p,x;\n            cin >> p >> x;\n            p--;\n            seg.update(p,x);\n\
+    \        }\n        else {\n            int s,t;\n            cin >> s >> t;\n\
+    \            s--;\n            t--;\n            cout << seg.query(s,t + 1) <<\
+    \ endl;\n        }\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - DataStructure/SegmentTree.cpp
   isVerificationFile: true
   path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 13:39:32+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-05 14:00:58+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
 layout: document

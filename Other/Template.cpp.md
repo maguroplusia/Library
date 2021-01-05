@@ -12,9 +12,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - icon: ':x:'
+    path: Test/AOJ/WarshallFloyd.test.cpp
+    title: Test/AOJ/WarshallFloyd.test.cpp
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
@@ -68,6 +71,7 @@ data:
   - Test/yosupo-judge/SparseTable.test.cpp
   - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   - Test/AOJ/Dijkstra.test.cpp
+  - Test/AOJ/WarshallFloyd.test.cpp
   - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   - Test/AOJ/BellmanFord.test.cpp

@@ -2,9 +2,12 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: Test/AOJ/WarshallFloyd.test.cpp
+    title: Test/AOJ/WarshallFloyd.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/WarshallFloyd.cpp\"\nint N; //\u9802\u70B9\u6570\n\
@@ -30,8 +33,9 @@ data:
   path: Graph/WarshallFloyd.cpp
   requiredBy: []
   timestamp: '2021-01-03 18:28:38+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - Test/AOJ/WarshallFloyd.test.cpp
 documentation_of: Graph/WarshallFloyd.cpp
 layout: document
 redirect_from:
