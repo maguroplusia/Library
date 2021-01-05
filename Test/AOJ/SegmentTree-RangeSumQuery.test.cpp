@@ -11,7 +11,7 @@ int main() {
     cin >> N >> Q;
     SegmentTree<int> seg(N,0,
     [](int a,int b){return a + b;},
-    [](int a,int b){return b;});
+    [](int a,int b){return a + b;});
     for(int i = 0;i < Q;i++) {
         int t;
         cin >> t;
