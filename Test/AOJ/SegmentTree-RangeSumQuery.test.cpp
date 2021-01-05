@@ -21,9 +21,9 @@ int main() {
             seg.update(p,x);
         }
         else {
-            int l,r;
-            cin >> l >> r;
-            cout << seg.query(l,r) << endl;
+            int s,t;
+            cin >> s >> t;
+            cout << seg.query(s,t + 1) << endl;
         }
     }
 }
