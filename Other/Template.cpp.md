@@ -3,12 +3,21 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: Test/AOJ/Dijkstra.test.cpp
+    title: Test/AOJ/Dijkstra.test.cpp
+  - icon: ':x:'
+    path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+    title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+  - icon: ':x:'
+    path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+    title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   - icon: ':heavy_check_mark:'
-    path: Test/yosupo-judge/SegmentTree.test.cpp
-    title: Test/yosupo-judge/SegmentTree.test.cpp
+    path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+    title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SparseTable.test.cpp
     title: Test/yosupo-judge/SparseTable.test.cpp
@@ -16,7 +25,7 @@ data:
     path: Test/yosupo-judge/UnionFind.test.cpp
     title: Test/yosupo-judge/UnionFind.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\nconstexpr int\
@@ -49,12 +58,15 @@ data:
   path: Other/Template.cpp
   requiredBy: []
   timestamp: '2021-01-04 15:16:03+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - Test/yosupo-judge/UnionFind.test.cpp
   - Test/yosupo-judge/BinaryIndexedTree.test.cpp
-  - Test/yosupo-judge/SegmentTree.test.cpp
   - Test/yosupo-judge/SparseTable.test.cpp
+  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+  - Test/AOJ/Dijkstra.test.cpp
+  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

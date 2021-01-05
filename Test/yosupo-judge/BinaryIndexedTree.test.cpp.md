@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: DataStructure/BinaryIndexedTree.cpp
     title: DataStructure/BinaryIndexedTree.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
@@ -35,12 +35,12 @@ data:
     \ bit;\n\n    //a\u756A\u76EE\u307E\u3067\u306E\u548C\u3092\u8A08\u7B97\u3059\u308B\
     \n    T sum_sub(int a) {\n        a++;\n        T ret = 0;\n        if(a == 0)\
     \ return ret;\n        while(a > 0) {\n            ret += bit[a];\n          \
-    \  a -= a & -a;\n        }\n        return ret;\n    }\n\npublic:\n\n\tBinaryIndexedTree(int\
-    \ a): N(a) {\n\t\tbit.assign(++a,0);\n\t}\n\n    //A[a]\u306Bw\u3092\u52A0\u7B97\
-    \u3059\u308B\n    void add(int a,T w) {\n        a++;\n        if(a == 0) return;\n\
-    \        while(a < bit.size()) {\n            bit[a] += w;\n            a += a\
-    \ & -a;\n        }\n    }\n\n    T sum(int a,int b) {\n        return sum_sub(b\
-    \ - 1) - sum_sub(a - 1);\n    }\n};\n#line 8 \"Test/yosupo-judge/BinaryIndexedTree.test.cpp\"\
+    \  a -= a & -a;\n        }\n        return ret;\n    }\n\npublic:\n\n    BinaryIndexedTree(int\
+    \ a): N(a) {\n        bit.assign(++a,0);\n    }\n\n    //A[a]\u306Bw\u3092\u52A0\
+    \u7B97\u3059\u308B\n    void add(int a,T w) {\n        a++;\n        if(a == 0)\
+    \ return;\n        while(a < bit.size()) {\n            bit[a] += w;\n       \
+    \     a += a & -a;\n        }\n    }\n\n    T sum(int a,int b) {\n        return\
+    \ sum_sub(b - 1) - sum_sub(a - 1);\n    }\n};\n#line 8 \"Test/yosupo-judge/BinaryIndexedTree.test.cpp\"\
     \n\nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    vector<ll> vec(N);\n \
     \   for(int i = 0;i < N;i++) {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<ll>\
     \ bit(N);\n    for(int i = 0;i < N;i++) {\n        bit.add(i,vec.at(i));\n   \
@@ -60,7 +60,7 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   requiredBy: []
-  timestamp: '2021-01-04 20:05:30+09:00'
+  timestamp: '2021-01-05 12:08:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/BinaryIndexedTree.test.cpp

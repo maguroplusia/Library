@@ -9,7 +9,7 @@ data:
     - icon: ':warning:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: DataStructure/SegmentTree.cpp
       title: DataStructure/SegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -23,7 +23,7 @@ data:
     - icon: ':warning:'
       path: Graph/BellmanFord.cpp
       title: Graph/BellmanFord.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Graph/Dijkstra.cpp
       title: Graph/Dijkstra.cpp
     - icon: ':warning:'
@@ -60,18 +60,29 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:
+  - name: Test/AOJ
+    pages:
+    - icon: ':x:'
+      path: Test/AOJ/Dijkstra.test.cpp
+      title: Test/AOJ/Dijkstra.test.cpp
+    - icon: ':x:'
+      path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+      title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+    - icon: ':x:'
+      path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+      title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - name: Test/yosupo-judge
     pages:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
       title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     - icon: ':heavy_check_mark:'
-      path: Test/yosupo-judge/SegmentTree.test.cpp
-      title: Test/yosupo-judge/SegmentTree.test.cpp
+      path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+      title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SparseTable.test.cpp
       title: Test/yosupo-judge/SparseTable.test.cpp

@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: DataStructure/SegmentTree.cpp
     title: DataStructure/SegmentTree.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/point_add_range_sum
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
     links:
-    - https://judge.yosupo.jp/problem/point_add_range_sum
-  bundledCode: "#line 1 \"Test/yosupo-judge/SegmentTree.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\n#include<bits/stdc++.h>\n\
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
+  bundledCode: "#line 1 \"Test/AOJ/SegmentTree-RangeSumQuery.test.cpp\"\n#define PROBLEM\
+    \ \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\n\n#include<bits/stdc++.h>\n\
     using namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\
     constexpr int Inf = 1000000030;\nconstexpr ll INF= 2000000000000000000;\nconstexpr\
     \ ll MOD = 1000000007;\nconst double PI = 3.1415926535897;\ntypedef pair<ll,ll>\
@@ -52,39 +52,35 @@ data:
     \ + 2]);\n        }\n    }\n\n    //[a,b)\u5168\u3066\u3067operator\u3092\u4F5C\
     \u7528\u3055\u305B\u305F\u5024\u3092\u6C42\u3081\u308B\n    T query(int a,int\
     \ b) {return query_sub(a,b,0,N,0);}\n\n    T operator[](int i) {return dat[i +\
-    \ N - 1];}\n};\n#line 8 \"Test/yosupo-judge/SegmentTree.test.cpp\"\n\nint main()\
-    \ {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n    [](ll\
-    \ a,ll b){return a + b;},\n    [](ll a,ll b){return a + b;});\n    for(int i =\
-    \ 0;i < N;i++) {\n        ll A;\n        cin >> A;\n        seg.set(i,A);\n  \
-    \  }\n    seg.build();\n    for(int i = 0;i < Q;i++) {\n        int t;\n     \
-    \   cin >> t;\n        if(t == 0) {\n            int p;\n            ll x;\n \
-    \           cin >> p >> x;\n            seg.update(p,x);\n        }\n        else\
-    \ {\n            int l,r;\n            cin >> l >> r;\n            cout << seg.query(l,r)\
-    \ << endl;\n        }\n    }\n}\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
-    \n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
+    \ N - 1];}\n};\n#line 8 \"Test/AOJ/SegmentTree-RangeSumQuery.test.cpp\"\n\nint\
+    \ main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n\
+    \    [](int a,int b){return a + b;},\n    [](int a,int b){return b;});\n    for(int\
+    \ i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t == 0) {\n\
+    \            int p,x;\n            cin >> p >> x;\n            seg.update(p,x);\n\
+    \        }\n        else {\n            int l,r;\n            cin >> l >> r;\n\
+    \            cout << seg.query(l,r) << endl;\n        }\n    }\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\
+    \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n\
-    \    cin >> N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n    [](ll a,ll b){return\
-    \ a + b;},\n    [](ll a,ll b){return a + b;});\n    for(int i = 0;i < N;i++) {\n\
-    \        ll A;\n        cin >> A;\n        seg.set(i,A);\n    }\n    seg.build();\n\
-    \    for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
-    \ == 0) {\n            int p;\n            ll x;\n            cin >> p >> x;\n\
-    \            seg.update(p,x);\n        }\n        else {\n            int l,r;\n\
-    \            cin >> l >> r;\n            cout << seg.query(l,r) << endl;\n   \
-    \     }\n    }\n}\n"
+    \    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n    [](int a,int b){return\
+    \ a + b;},\n    [](int a,int b){return b;});\n    for(int i = 0;i < Q;i++) {\n\
+    \        int t;\n        cin >> t;\n        if(t == 0) {\n            int p,x;\n\
+    \            cin >> p >> x;\n            seg.update(p,x);\n        }\n       \
+    \ else {\n            int l,r;\n            cin >> l >> r;\n            cout <<\
+    \ seg.query(l,r) << endl;\n        }\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - DataStructure/SegmentTree.cpp
   isVerificationFile: true
-  path: Test/yosupo-judge/SegmentTree.test.cpp
+  path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   requiredBy: []
-  timestamp: '2021-01-04 19:32:30+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-01-05 12:22:45+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: Test/yosupo-judge/SegmentTree.test.cpp
+documentation_of: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
 layout: document
 redirect_from:
-- /verify/Test/yosupo-judge/SegmentTree.test.cpp
-- /verify/Test/yosupo-judge/SegmentTree.test.cpp.html
-title: Test/yosupo-judge/SegmentTree.test.cpp
+- /verify/Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+- /verify/Test/AOJ/SegmentTree-RangeSumQuery.test.cpp.html
+title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
 ---
