@@ -7,14 +7,14 @@ using namespace std;
 #include"../../Graph/BellmanFord.cpp"
 
 int main() {
-    cin >> N;
-    int E,r;
-    cin >> E >> r;
-    for(int i = 0;i < E;i++) {
+    cin >> N >> M;
+    int r;
+    cin >> r;
+    for(int i = 0;i < M;i++) {
         int s,t;
         ll d;
         cin >> s >> t >> d;
-        graph[s].push_back(edge{t,d});
+        es.push_back(edge{s,t,d});
     }
     Bellmanford(r);
     bool isnegative = false;
