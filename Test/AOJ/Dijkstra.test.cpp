@@ -18,7 +18,7 @@ int main() {
     }
     Dijkstra(r);
     for(int i = 0;i < N;i++) {
-        if(d[i] == INF) cout << "INF" << endl;
-        else cout << d[i] << endl;
+        if(dist[i] == INF) cout << "INF" << endl;
+        else cout << dist[i] << endl;
     }
 }
