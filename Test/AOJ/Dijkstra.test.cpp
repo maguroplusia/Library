@@ -8,9 +8,9 @@ using namespace std;
 
 int main() {
     cin >> N;
-    int E,r;
-    cin >> E >> r;
-    for(int i = 0;i < E;i++) {
+    int M,r;
+    cin >> M >> r;
+    for(int i = 0;i < M;i++) {
         int s,t;
         ll d;
         cin >> s >> t >> d;
