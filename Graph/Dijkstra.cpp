@@ -11,7 +11,7 @@ int pre[200010];
 void Dijkstra(int s) {
 	//greater<P>を指定することでfirstが小さい順に取り出せる
 	priority_queue<P,vector<P>,greater<P>> que;
-	fill(d,d + N,Inf);
+	fill(d,d + N,INF);
 	fill(pre,pre + N,-1);
 	d[s] = 0;
 	que.push(P(0,s));
