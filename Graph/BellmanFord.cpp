@@ -15,7 +15,7 @@ void BellmanFord(int s) {
 	}
 	dist[s] = 0;
 	for(int i = 0;i < N * 2;i++) {
-		for(auto x:es) {
+		for(auto e:es) {
 			if(dist[e.from] < INF && dist[e.from] + e.cost < dist[e.to])  {
 				if(i >= N - 1) {
 					dist[e.to] = -INF;
@@ -30,7 +30,7 @@ void BellmanFord(int s) {
 
 //trueなら負の閉路が存在する
 bool find_negative_roop() {
-	memset(d,0,sizeof(d));
+	memset(dist,0,sizeof(dist));
 	for(int i = 0;i < N;i++) {
 		for(int j = 0;j < M;j++) {
 			edge e = es[j];
