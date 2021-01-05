@@ -18,11 +18,14 @@ int main() {
         if(t == 0) {
             int p,x;
             cin >> p >> x;
+            p--;
             seg.update(p,x);
         }
         else {
             int s,t;
             cin >> s >> t;
+            s--;
+            t--;
             cout << seg.query(s,t + 1) << endl;
         }
     }
