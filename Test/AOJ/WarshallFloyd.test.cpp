@@ -8,10 +8,10 @@ using namespace std;
 
 int main() {
     cin >> N;
-    int E;
-    cin >> E;
+    int M;
+    cin >> M;
     init();
-    for(int i = 0;i < E;i++) {
+    for(int i = 0;i < M;i++) {
         int s,t;
         ll d;
         cin >> s >> t >> d;
@@ -28,8 +28,9 @@ int main() {
     }
     for(int i = 0;i < N;i++) {
         for(int j = 0;j < N;j++) {
-            if(dist[i][j] == INF) cout << "INF" << " ";
-            else cout << dist[i][j] << " ";
+            if(dist[i][j] == INF) cout << "INF";
+            else cout << dist[i][j];
+            if(j != N - 1) cout << " ";
         }
         cout << endl;
     }
