@@ -20,7 +20,7 @@ data:
       title: DataStructure/UnionFind.cpp
   - name: Graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/BellmanFord.cpp
       title: Graph/BellmanFord.cpp
     - icon: ':heavy_check_mark:'
@@ -41,7 +41,7 @@ data:
     - icon: ':warning:'
       path: Graph/TopologicalSort.cpp
       title: Graph/TopologicalSort.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/WarshallFloyd.cpp
       title: Graph/WarshallFloyd.cpp
   - name: Mathmatics
@@ -60,13 +60,13 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:
   - name: Test/AOJ
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/BellmanFord.test.cpp
       title: Test/AOJ/BellmanFord.test.cpp
     - icon: ':heavy_check_mark:'
@@ -78,7 +78,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/WarshallFloyd.test.cpp
       title: Test/AOJ/WarshallFloyd.test.cpp
   - name: Test/yosupo-judge
