@@ -17,9 +17,9 @@ class BinaryIndexedTree {
 
 public:
 
-	BinaryIndexedTree(int a): N(a) {
-		bit.assign(++a,0);
-	}
+    BinaryIndexedTree(int a): N(a) {
+        bit.assign(++a,0);
+    }
 
     //A[a]にwを加算する
     void add(int a,T w) {
