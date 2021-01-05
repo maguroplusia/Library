@@ -4,9 +4,12 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':x:'
+    path: Test/AOJ/BellmanFord.test.cpp
+    title: Test/AOJ/BellmanFord.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/Dijkstra.test.cpp
     title: Test/AOJ/Dijkstra.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   - icon: ':x:'
@@ -67,6 +70,7 @@ data:
   - Test/AOJ/Dijkstra.test.cpp
   - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+  - Test/AOJ/BellmanFord.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

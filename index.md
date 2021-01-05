@@ -20,10 +20,10 @@ data:
       title: DataStructure/UnionFind.cpp
   - name: Graph
     pages:
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Graph/BellmanFord.cpp
       title: Graph/BellmanFord.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/Dijkstra.cpp
       title: Graph/Dijkstra.cpp
     - icon: ':warning:'
@@ -67,9 +67,12 @@ data:
   - name: Test/AOJ
     pages:
     - icon: ':x:'
+      path: Test/AOJ/BellmanFord.test.cpp
+      title: Test/AOJ/BellmanFord.test.cpp
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/Dijkstra.test.cpp
       title: Test/AOJ/Dijkstra.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
     - icon: ':x:'

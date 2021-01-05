@@ -10,7 +10,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
@@ -57,8 +57,8 @@ data:
     \    [](int a,int b){return min(a,b);},\n    [](int a,int b){return b;});\n  \
     \  for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
     \ == 0) {\n            int p,x;\n            cin >> p >> x;\n            seg.update(p,x);\n\
-    \        }\n        else {\n            int l,r;\n            cin >> l >> r;\n\
-    \            cout << seg.query(l,r) << endl;\n        }\n    }\n}\n"
+    \        }\n        else {\n            int s,t;\n            cin >> s >> t;\n\
+    \            cout << seg.query(s,t + 1) << endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n\
@@ -66,16 +66,16 @@ data:
     \    [](int a,int b){return min(a,b);},\n    [](int a,int b){return b;});\n  \
     \  for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
     \ == 0) {\n            int p,x;\n            cin >> p >> x;\n            seg.update(p,x);\n\
-    \        }\n        else {\n            int l,r;\n            cin >> l >> r;\n\
-    \            cout << seg.query(l,r) << endl;\n        }\n    }\n}\n"
+    \        }\n        else {\n            int s,t;\n            cin >> s >> t;\n\
+    \            cout << seg.query(s,t + 1) << endl;\n        }\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - DataStructure/SegmentTree.cpp
   isVerificationFile: true
   path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 12:22:43+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-05 13:22:47+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
 layout: document

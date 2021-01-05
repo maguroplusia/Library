@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Dijkstra.cpp
     title: Graph/Dijkstra.cpp
   - icon: ':question:'
@@ -10,7 +10,7 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
@@ -45,25 +45,24 @@ data:
     reverse(path.begin(),path.end());\n\treturn path;\n}\n#line 8 \"Test/AOJ/Dijkstra.test.cpp\"\
     \n\nint main() {\n    cin >> N;\n    int E,r;\n    cin >> E >> r;\n    for(int\
     \ i = 0;i < E;i++) {\n        int s,t;\n        ll d;\n        cin >> s >> t >>\
-    \ d;\n        graph[s].push_back(edge{t,d});\n        graph[t].push_back(edge{s,d});\n\
-    \    }\n    Dijkstra(r);\n    for(int i = 0;i < N;i++) {\n        if(d[i] == INF)\
-    \ cout << \"INF\" << endl;\n        else cout << d[i] << endl;\n    }\n}\n"
+    \ d;\n        graph[s].push_back(edge{t,d});\n    }\n    Dijkstra(r);\n    for(int\
+    \ i = 0;i < N;i++) {\n        if(d[i] == INF) cout << \"INF\" << endl;\n     \
+    \   else cout << d[i] << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/Dijkstra.cpp\"\n\nint main() {\n    cin >> N;\n    int\
     \ E,r;\n    cin >> E >> r;\n    for(int i = 0;i < E;i++) {\n        int s,t;\n\
     \        ll d;\n        cin >> s >> t >> d;\n        graph[s].push_back(edge{t,d});\n\
-    \        graph[t].push_back(edge{s,d});\n    }\n    Dijkstra(r);\n    for(int\
-    \ i = 0;i < N;i++) {\n        if(d[i] == INF) cout << \"INF\" << endl;\n     \
-    \   else cout << d[i] << endl;\n    }\n}\n"
+    \    }\n    Dijkstra(r);\n    for(int i = 0;i < N;i++) {\n        if(d[i] == INF)\
+    \ cout << \"INF\" << endl;\n        else cout << d[i] << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - Graph/Dijkstra.cpp
   isVerificationFile: true
   path: Test/AOJ/Dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 12:22:55+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-05 13:22:49+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Dijkstra.test.cpp
 layout: document
