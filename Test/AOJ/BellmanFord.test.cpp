@@ -19,14 +19,14 @@ int main() {
     Bellmanford(r);
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
-        if(d[i] == -INF) isnegative = true;
+        if(dist[i] == -INF) isnegative = true;
     }
     if(isnegative) {
         cout << "NEGATIVE CYCLE" << endl;
         return 0;
     }
     for(int i = 0;i < N;i++) {
-        if(d[i] == INF) cout << "INF" << endl;
+        if(dist[i] == INF) cout << "INF" << endl;
         else cout << d[i] << endl;
     }
 }
