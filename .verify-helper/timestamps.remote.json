@@ -1,6 +1,7 @@
 {
-"Test/AOJ/Dijkstra.test.cpp": "2021-01-05 13:22:49 +0900",
+"Test/AOJ/Dijkstra.test.cpp": "2021-01-05 14:00:56 +0900",
 "Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp": "2021-01-05 13:22:47 +0900",
+"Test/AOJ/SegmentTree-RangeSumQuery.test.cpp": "2021-01-05 14:00:58 +0900",
 "Test/yosupo-judge/BinaryIndexedTree.test.cpp": "2021-01-05 12:08:29 +0900",
 "Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp": "2021-01-05 12:22:50 +0900",
 "Test/yosupo-judge/SparseTable.test.cpp": "2021-01-04 19:32:32 +0900",
