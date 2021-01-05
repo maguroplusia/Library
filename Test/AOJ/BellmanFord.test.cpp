@@ -16,7 +16,7 @@ int main() {
         cin >> s >> t >> d;
         es[i] = (edge{s,t,d});
     }
-    Bellmanford(r);
+    BellmanFord(r);
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
         if(dist[i] == -INF) isnegative = true;
@@ -27,6 +27,6 @@ int main() {
     }
     for(int i = 0;i < N;i++) {
         if(dist[i] == INF) cout << "INF" << endl;
-        else cout << d[i] << endl;
+        else cout << dist[i] << endl;
     }
 }
