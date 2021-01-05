@@ -4,12 +4,12 @@ struct edge{
     ll cost;
 };
 
-edge es[200010]; //辺
-ll d[200010]; //最短距離
+edge es[2010]; //辺
+ll d[2010]; //最短距離
 int N,M; //頂点数、辺数
 
-//s番目の頂点から各頂点への最短距離を求める（ただし始点から終点までの間に負閉路がある場合はfalseを返す）
-bool BellmanFord(int s,int g) {
+//s番目の頂点から各頂点への最短距離を求める（ただしs番目の頂点から負閉路を辿って行ける場合は-INF）
+void BellmanFord(int s) {
 	for(int i = 0;i < N;i++) {
 		d[i] = INF;
 	}
@@ -17,10 +17,7 @@ bool BellmanFord(int s,int g) {
 	for(int i = 0;i < N * 2;i++) {
 		for(auto x:es) {
 			if(d[e.from] < INF && d[e.from] + e.cost < d[e.to])  {
-				if(i >= N - 1 && e.to == g) {
-					return false;
-				}
-				else if(i >= N - 1) {
+				if(i >= N - 1) {
 					d[e.to] = -INF;
 				}
 				else {
@@ -29,7 +26,6 @@ bool BellmanFord(int s,int g) {
 			}
 		}
 	}
-	return d[g];
 }
 
 //trueなら負の閉路が存在する
