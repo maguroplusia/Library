@@ -12,7 +12,7 @@ data:
     links: []
   bundledCode: "#line 1 \"Graph/BellmanFord.cpp\"\n//\u9802\u70B9from\u304B\u3089\u9802\
     \u70B9to\u3078\u306E\u30B3\u30B9\u30C8cost\u306E\u8FBA\nstruct edge{\n\tint from,to;\n\
-    \    ll cost;\n};\n\nedge es[2010]; //\u8FBA\nll d[2010]; //\u6700\u77ED\u8DDD\
+    \    ll cost;\n};\n\nedge es[3010]; //\u8FBA\nll d[3010]; //\u6700\u77ED\u8DDD\
     \u96E2\nint N,M; //\u9802\u70B9\u6570\u3001\u8FBA\u6570\n\n//s\u756A\u76EE\u306E\
     \u9802\u70B9\u304B\u3089\u5404\u9802\u70B9\u3078\u306E\u6700\u77ED\u8DDD\u96E2\
     \u3092\u6C42\u3081\u308B\uFF08\u305F\u3060\u3057s\u756A\u76EE\u306E\u9802\u70B9\
@@ -28,8 +28,8 @@ data:
     \ d[e.from] + e.cost) {\n\t\t\t\td[e.to] = d[e.from] + e.cost;\n\t\t\t\tif(i ==\
     \ N - 1) return true;\n\t\t\t}\n\t\t}\n\t}\n\treturn false;\n}\n"
   code: "//\u9802\u70B9from\u304B\u3089\u9802\u70B9to\u3078\u306E\u30B3\u30B9\u30C8\
-    cost\u306E\u8FBA\nstruct edge{\n\tint from,to;\n    ll cost;\n};\n\nedge es[2010];\
-    \ //\u8FBA\nll d[2010]; //\u6700\u77ED\u8DDD\u96E2\nint N,M; //\u9802\u70B9\u6570\
+    cost\u306E\u8FBA\nstruct edge{\n\tint from,to;\n    ll cost;\n};\n\nedge es[3010];\
+    \ //\u8FBA\nll d[3010]; //\u6700\u77ED\u8DDD\u96E2\nint N,M; //\u9802\u70B9\u6570\
     \u3001\u8FBA\u6570\n\n//s\u756A\u76EE\u306E\u9802\u70B9\u304B\u3089\u5404\u9802\
     \u70B9\u3078\u306E\u6700\u77ED\u8DDD\u96E2\u3092\u6C42\u3081\u308B\uFF08\u305F\
     \u3060\u3057s\u756A\u76EE\u306E\u9802\u70B9\u304B\u3089\u8CA0\u9589\u8DEF\u3092\
@@ -47,7 +47,7 @@ data:
   isVerificationFile: false
   path: Graph/BellmanFord.cpp
   requiredBy: []
-  timestamp: '2021-01-05 13:22:56+09:00'
+  timestamp: '2021-01-05 13:39:27+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/AOJ/BellmanFord.test.cpp

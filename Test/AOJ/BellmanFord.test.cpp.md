@@ -31,8 +31,8 @@ data:
     \        return t * t % M;\n    }\n    if(M == -1) {\n        return N * RS(N,P\
     \ - 1,M);\n    }\n    return N * RS(N, P-1, M) % M;\n}\n#line 1 \"Graph/BellmanFord.cpp\"\
     \n//\u9802\u70B9from\u304B\u3089\u9802\u70B9to\u3078\u306E\u30B3\u30B9\u30C8cost\u306E\
-    \u8FBA\nstruct edge{\n\tint from,to;\n    ll cost;\n};\n\nedge es[2010]; //\u8FBA\
-    \nll d[2010]; //\u6700\u77ED\u8DDD\u96E2\nint N,M; //\u9802\u70B9\u6570\u3001\u8FBA\
+    \u8FBA\nstruct edge{\n\tint from,to;\n    ll cost;\n};\n\nedge es[3010]; //\u8FBA\
+    \nll d[3010]; //\u6700\u77ED\u8DDD\u96E2\nint N,M; //\u9802\u70B9\u6570\u3001\u8FBA\
     \u6570\n\n//s\u756A\u76EE\u306E\u9802\u70B9\u304B\u3089\u5404\u9802\u70B9\u3078\
     \u306E\u6700\u77ED\u8DDD\u96E2\u3092\u6C42\u3081\u308B\uFF08\u305F\u3060\u3057\
     s\u756A\u76EE\u306E\u9802\u70B9\u304B\u3089\u8CA0\u9589\u8DEF\u3092\u8FBF\u3063\
@@ -46,9 +46,9 @@ data:
     for(int i = 0;i < N;i++) {\n\t\tfor(int j = 0;j < M;j++) {\n\t\t\tedge e = es[j];\n\
     \t\t\tif(d[e.to] > d[e.from] + e.cost) {\n\t\t\t\td[e.to] = d[e.from] + e.cost;\n\
     \t\t\t\tif(i == N - 1) return true;\n\t\t\t}\n\t\t}\n\t}\n\treturn false;\n}\n\
-    #line 8 \"Test/AOJ/BellmanFord.test.cpp\"\n\nint main() {\n    cin >> N;\n   \
-    \ int E,r;\n    cin >> E >> r;\n    for(int i = 0;i < E;i++) {\n        int s,t;\n\
-    \        ll d;\n        cin >> s >> t >> d;\n        graph[s].push_back(edge{t,d});\n\
+    #line 8 \"Test/AOJ/BellmanFord.test.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
+    \    int r;\n    cin >> r;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
+    \        ll d;\n        cin >> s >> t >> d;\n        es.push_back(edge{s,t,d});\n\
     \    }\n    Bellmanford(r);\n    bool isnegative = false;\n    for(int i = 0;i\
     \ < N;i++) {\n        if(d[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
     \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
@@ -56,9 +56,9 @@ data:
     \        else cout << d[i] << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
-    \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    cin >> N;\n   \
-    \ int E,r;\n    cin >> E >> r;\n    for(int i = 0;i < E;i++) {\n        int s,t;\n\
-    \        ll d;\n        cin >> s >> t >> d;\n        graph[s].push_back(edge{t,d});\n\
+    \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
+    \    int r;\n    cin >> r;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
+    \        ll d;\n        cin >> s >> t >> d;\n        es.push_back(edge{s,t,d});\n\
     \    }\n    Bellmanford(r);\n    bool isnegative = false;\n    for(int i = 0;i\
     \ < N;i++) {\n        if(d[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
     \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
@@ -70,7 +70,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 13:22:56+09:00'
+  timestamp: '2021-01-05 13:39:30+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp
