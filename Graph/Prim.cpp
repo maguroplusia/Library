@@ -1,6 +1,6 @@
-ll cost[20010][20010]; // cost[u][v]は辺e=(u,v)のコスト
-ll mincost[20010]; // 集合Xからのへ辺の最小コスト
-bool used[20010]; //すでに頂点iがXに含まれているか
+ll cost[2010][2010]; // cost[u][v]は辺e=(u,v)のコスト
+ll mincost[2010]; // 集合Xからのへ辺の最小コスト
+bool used[2010]; //すでに頂点iがXに含まれているか
 int N,M; //頂点の個数、辺の本数
 
 ll prim() {
@@ -23,7 +23,7 @@ ll prim() {
         }
         used[v] = true; //頂点vをXに追加
         res += mincost[v];
-        for(int u = 0;u < V;u++) {
+        for(int u = 0;u < N;u++) {
             chmin(mincost[u],mincost[v]);
         }
     }
