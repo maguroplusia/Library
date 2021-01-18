@@ -1,4 +1,4 @@
-#define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/2/GRL_2_A"
+#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A&lang=jp"
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -7,15 +7,12 @@ using namespace std;
 #include"../../Graph/Prim.cpp"
 
 int main() {
-    cin >> N >> M;
-    for(int i = 0;i < M;i++) {
-        int s,t;
-        ll w;
-        cin >> s >> t >> w;
-        s--;
-        t--;
-        cost[s][t] = w;
-        cost[t][s] = w;
+    cin >> N;
+    for(int i = 0;i < N;i++) {
+        for(int j = 0;j < N;j++) {
+            cin >> cost[i][j];
+            if(cost[i][j] == -1) cost[i][j] = INF;
+        }
     }
     cout << prim() << endl;
 }
