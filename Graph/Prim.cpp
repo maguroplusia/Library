@@ -1,7 +1,7 @@
 ll cost[20010][20010]; // cost[u][v]は辺e=(u,v)のコスト
 ll mincost[20010]; // 集合Xからのへ辺の最小コスト
 bool used[20010]; //すでに頂点iがXに含まれているか
-int N; //頂点の個数
+int N,M; //頂点の個数、辺の本数
 
 ll prim() {
     for(int i = 0;i < N;i++) {
