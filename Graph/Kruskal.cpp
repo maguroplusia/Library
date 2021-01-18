@@ -8,7 +8,7 @@ bool comp(const edge &e1,const edge &e2) {
     return e1.cost < e2.cost;
 }
 
-int N,M;
+int N,M; //頂点の本数、点の個数
 edge graph[200010];
 
 ll Kruskal() {
