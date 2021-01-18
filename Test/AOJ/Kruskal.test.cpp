@@ -5,7 +5,7 @@ using namespace std;
 
 #include"../../Other/Template.cpp"
 #include"../../DataStructure/UnionFind.cpp"
-#include"../../Graph/Prim.cpp"
+#include"../../Graph/Kruskal.cpp"
 
 int main() {
     cin >> N >> M;
