@@ -52,4 +52,4 @@ public:
     bool same(int a,int b) {
         return cmp[a] == cmp[b];
     }
-}
+};
