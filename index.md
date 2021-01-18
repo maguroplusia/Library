@@ -32,7 +32,7 @@ data:
     - icon: ':warning:'
       path: Graph/LowestCommonAncestor.cpp
       title: Graph/LowestCommonAncestor.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Graph/Prim.cpp
       title: Graph/Prim.cpp
     - icon: ':warning:'
@@ -60,7 +60,7 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:
@@ -72,6 +72,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Dijkstra.test.cpp
       title: Test/AOJ/Dijkstra.test.cpp
+    - icon: ':x:'
+      path: Test/AOJ/Prim.test.cpp
+      title: Test/AOJ/Prim.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
