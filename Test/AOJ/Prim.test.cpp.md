@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Prim.cpp
     title: Graph/Prim.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A&lang=jp
@@ -41,9 +41,9 @@ data:
     \u3089\u306E\u8FBA\u306E\u30B3\u30B9\u30C8\u304C\u6700\u5C0F\u306B\u306A\u308B\
     \u9802\u70B9\u3092\u63A2\u3059\n        for(int u = 0;u < N;u++) {\n         \
     \   if(!used[u] && (v == -1 || mincost[u] < mincost[v])) {\n                v\
-    \ = u;\n            }\n        }\n        if(v == -1) {\n            break;\n\
-    \        }\n        used[v] = true; //\u9802\u70B9v\u3092X\u306B\u8FFD\u52A0\n\
-    \        res += mincost[v];\n        for(int u = 0;u < N;u++) {\n            chmin(mincost[u],mincost[v]);\n\
+    \ = u;\n            }\n        }\n        if(v == -1) break;\n        used[v]\
+    \ = true; //\u9802\u70B9v\u3092X\u306B\u8FFD\u52A0\n        res += mincost[v];\n\
+    \        for(int u = 0;u < N;u++) {\n            chmin(mincost[u],cost[v][u]);\n\
     \        }\n    }\n    return res;\n}\n#line 8 \"Test/AOJ/Prim.test.cpp\"\n\n\
     int main() {\n    cin >> N;\n    for(int i = 0;i < N;i++) {\n        for(int j\
     \ = 0;j < N;j++) {\n            cin >> cost[i][j];\n            if(cost[i][j]\
@@ -60,8 +60,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/Prim.test.cpp
   requiredBy: []
-  timestamp: '2021-01-18 18:42:56+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-18 18:59:39+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Prim.test.cpp
 layout: document

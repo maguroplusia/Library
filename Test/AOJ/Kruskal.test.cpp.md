@@ -1,19 +1,19 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/UnionFind.cpp
     title: DataStructure/UnionFind.cpp
-  - icon: ':x:'
-    path: Graph/Prim.cpp
-    title: Graph/Prim.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
+    path: Graph/Kruskal.cpp
+    title: Graph/Kruskal.cpp
+  - icon: ':heavy_check_mark:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/2/GRL_2_A
@@ -47,40 +47,33 @@ data:
     \t\t}\n\t\tpar[y] = x;\n\t\tsiz[x] += siz[y];\n\t}\n\n\t//\uFF58\u3068\uFF59\u304C\
     \u540C\u3058\u96C6\u5408\u306B\u5C5E\u3059\u308B\u304B\u5426\u304B\n\tbool same(int\
     \ x,int y) {\n\t\treturn find(x) == find(y);\n\t}\n\n\tint size(int x) {\n\t\t\
-    return siz[find(x)];\n\t}\n};\n#line 1 \"Graph/Prim.cpp\"\nll cost[2010][2010];\
-    \ // cost[u][v]\u306F\u8FBAe=(u,v)\u306E\u30B3\u30B9\u30C8\nll mincost[2010];\
-    \ // \u96C6\u5408X\u304B\u3089\u306E\u3078\u8FBA\u306E\u6700\u5C0F\u30B3\u30B9\
-    \u30C8\nbool used[2010]; //\u3059\u3067\u306B\u9802\u70B9i\u304CX\u306B\u542B\u307E\
-    \u308C\u3066\u3044\u308B\u304B\nint N,M; //\u9802\u70B9\u306E\u500B\u6570\u3001\
-    \u8FBA\u306E\u672C\u6570\n\nll prim() {\n    for(int i = 0;i < N;i++) {\n    \
-    \    mincost[i] = INF;\n        used[i] = false;\n    }\n    mincost[0] = 0;\n\
-    \    ll res = 0;\n    while(true) {\n        int v = -1;\n        //X\u306B\u5C5E\
-    \u3055\u306A\u3044\u9802\u70B9\u306E\u3046\u3061X\u304B\u3089\u306E\u8FBA\u306E\
-    \u30B3\u30B9\u30C8\u304C\u6700\u5C0F\u306B\u306A\u308B\u9802\u70B9\u3092\u63A2\
-    \u3059\n        for(int u = 0;u < N;u++) {\n            if(!used[u] && (v == -1\
-    \ || mincost[u] < mincost[v])) {\n                v = u;\n            }\n    \
-    \    }\n        if(v == -1) {\n            break;\n        }\n        used[v]\
-    \ = true; //\u9802\u70B9v\u3092X\u306B\u8FFD\u52A0\n        res += mincost[v];\n\
-    \        for(int u = 0;u < N;u++) {\n            chmin(mincost[u],mincost[v]);\n\
-    \        }\n    }\n    return res;\n}\n#line 9 \"Test/AOJ/Kruskal.test.cpp\"\n\
-    \nint main() {\n    cin >> N >> M;\n    for(int i = 0;i < M;i++) {\n        int\
-    \ s,t;\n        ll w;\n        cin >> s >> t >> w;\n        graph[i] = edge{s,t,w};\n\
-    \    }\n    cout << Kruskal() << endl;\n}\n"
+    return siz[find(x)];\n\t}\n};\n#line 1 \"Graph/Kruskal.cpp\"\n//UnionFind\u30E9\
+    \u30A4\u30D6\u30E9\u30EA\u3092\u547C\u3073\u51FA\u3059\u3053\u3068\nstruct edge\
+    \ {\n    int u,v;\n    ll cost;\n};\n\nbool comp(const edge &e1,const edge &e2)\
+    \ {\n    return e1.cost < e2.cost;\n}\n\nint N,M; //\u9802\u70B9\u306E\u672C\u6570\
+    \u3001\u70B9\u306E\u500B\u6570\nedge graph[200010];\n\nll Kruskal() {\n    sort(graph,graph\
+    \ + M,comp);\n    UnionFind uf(N);\n    ll ret = 0;\n    for(int i = 0;i < M;i++)\
+    \ {\n        edge e = graph[i];\n        if(!uf.same(e.u,e.v)) {\n           \
+    \ uf.unite(e.u,e.v);\n            ret += e.cost;\n        }\n    }\n    return\
+    \ ret;\n}\n#line 9 \"Test/AOJ/Kruskal.test.cpp\"\n\nint main() {\n    cin >> N\
+    \ >> M;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n        ll w;\n   \
+    \     cin >> s >> t >> w;\n        graph[i] = edge{s,t,w};\n    }\n    cout <<\
+    \ Kruskal() << endl;\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/2/GRL_2_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
-    \n#include\"../../DataStructure/UnionFind.cpp\"\n#include\"../../Graph/Prim.cpp\"\
+    \n#include\"../../DataStructure/UnionFind.cpp\"\n#include\"../../Graph/Kruskal.cpp\"\
     \n\nint main() {\n    cin >> N >> M;\n    for(int i = 0;i < M;i++) {\n       \
     \ int s,t;\n        ll w;\n        cin >> s >> t >> w;\n        graph[i] = edge{s,t,w};\n\
     \    }\n    cout << Kruskal() << endl;\n}\n"
   dependsOn:
   - Other/Template.cpp
   - DataStructure/UnionFind.cpp
-  - Graph/Prim.cpp
+  - Graph/Kruskal.cpp
   isVerificationFile: true
   path: Test/AOJ/Kruskal.test.cpp
   requiredBy: []
-  timestamp: '2021-01-18 18:42:54+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-18 18:59:41+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Kruskal.test.cpp
 layout: document

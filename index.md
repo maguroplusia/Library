@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
   - name: Graph
@@ -26,13 +26,13 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Dijkstra.cpp
       title: Graph/Dijkstra.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Graph/Kruskal.cpp
       title: Graph/Kruskal.cpp
     - icon: ':warning:'
       path: Graph/LowestCommonAncestor.cpp
       title: Graph/LowestCommonAncestor.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/Prim.cpp
       title: Graph/Prim.cpp
     - icon: ':warning:'
@@ -60,7 +60,7 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:
@@ -72,10 +72,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Dijkstra.test.cpp
       title: Test/AOJ/Dijkstra.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/Kruskal.test.cpp
       title: Test/AOJ/Kruskal.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/Prim.test.cpp
       title: Test/AOJ/Prim.test.cpp
     - icon: ':heavy_check_mark:'

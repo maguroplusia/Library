@@ -1,10 +1,10 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/UnionFind.cpp
     title: DataStructure/UnionFind.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []

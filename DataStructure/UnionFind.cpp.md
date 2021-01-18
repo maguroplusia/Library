@@ -3,14 +3,14 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/Kruskal.test.cpp
     title: Test/AOJ/Kruskal.test.cpp
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/UnionFind.test.cpp
     title: Test/yosupo-judge/UnionFind.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n\tvector<int>\
@@ -49,7 +49,7 @@ data:
   path: DataStructure/UnionFind.cpp
   requiredBy: []
   timestamp: '2021-01-04 18:34:35+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/UnionFind.test.cpp
   - Test/AOJ/Kruskal.test.cpp
