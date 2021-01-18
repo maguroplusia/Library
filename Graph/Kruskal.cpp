@@ -13,7 +13,7 @@ edge graph[200010];
 
 ll Kruskal() {
     sort(graph,graph + M,comp);
-    Union_find uf(N);
+    UnionFind uf(N);
     ll ret = 0;
     for(int i = 0;i < M;i++) {
         edge e = graph[i];
