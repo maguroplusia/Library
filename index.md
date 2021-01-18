@@ -35,7 +35,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Prim.cpp
       title: Graph/Prim.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Graph/StronglyConnectedComponent.cpp
       title: Graph/StronglyConnectedComponent.cpp
     - icon: ':warning:'
@@ -60,7 +60,7 @@ data:
       title: Mathmatics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   verificationCategories:
@@ -84,6 +84,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+    - icon: ':x:'
+      path: Test/AOJ/StronglyConnectedComponent.test.cpp
+      title: Test/AOJ/StronglyConnectedComponent.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/WarshallFloyd.test.cpp
       title: Test/AOJ/WarshallFloyd.test.cpp

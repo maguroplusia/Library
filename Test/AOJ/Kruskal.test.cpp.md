@@ -7,7 +7,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Graph/Kruskal.cpp
     title: Graph/Kruskal.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
