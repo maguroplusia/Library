@@ -7,9 +7,7 @@ using namespace std;
 #include"../../Graph/Prim.cpp"
 
 int main() {
-    cin >> N;
-    int M;
-    cin >> M;
+    cin >> N >> M;
     for(int i = 0;i < M;i++) {
         int s,t;
         ll w;
