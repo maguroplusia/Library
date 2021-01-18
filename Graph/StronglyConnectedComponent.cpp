@@ -6,16 +6,6 @@ class SCC {
     bool used[200010]; //既に頂点に訪れたか
     int cmp[200010]; //属する強連結成分のトポロジカル順序
 
-public:
-
-    SCC(int n) {
-        N = n;
-    }
-
-    void add_edge(int from,int to) {
-        graph[from].push_back(to);
-        rgraph[to].push_back(from);
-    }
 
     void dfs(int v) {
         used[v] = true;
@@ -33,6 +23,17 @@ public:
         }
     }
 
+public:
+
+    SCC(int n) {
+        N = n;
+    }
+
+    void add_edge(int from,int to) {
+        graph[from].push_back(to);
+        rgraph[to].push_back(from);
+    }
+
     //返り値は分解した後の頂点の数
     int scc() {
         memset(used,0,sizeof(used));
@@ -46,5 +47,9 @@ public:
             if(!used[vs[i]]) rdfs(vs[i],k++);
         }
         return k;
+    }
+
+    bool same(int a,int b) {
+        return cmp[a] == cmp[b];
     }
 }
