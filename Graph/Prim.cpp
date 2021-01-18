@@ -18,13 +18,11 @@ ll prim() {
                 v = u;
             }
         }
-        if(v == -1) {
-            break;
-        }
+        if(v == -1) break;
         used[v] = true; //頂点vをXに追加
         res += mincost[v];
         for(int u = 0;u < N;u++) {
-            chmin(mincost[u],mincost[v]);
+            chmin(mincost[u],cost[v][u]);
         }
     }
     return res;
