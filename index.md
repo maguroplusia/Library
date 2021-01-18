@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: DataStructure/UnionFind.cpp
       title: DataStructure/UnionFind.cpp
   - name: Graph
@@ -72,6 +72,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Dijkstra.test.cpp
       title: Test/AOJ/Dijkstra.test.cpp
+    - icon: ':x:'
+      path: Test/AOJ/Kruskal.test.cpp
+      title: Test/AOJ/Kruskal.test.cpp
     - icon: ':x:'
       path: Test/AOJ/Prim.test.cpp
       title: Test/AOJ/Prim.test.cpp

@@ -10,6 +10,9 @@ data:
     path: Test/AOJ/Dijkstra.test.cpp
     title: Test/AOJ/Dijkstra.test.cpp
   - icon: ':x:'
+    path: Test/AOJ/Kruskal.test.cpp
+    title: Test/AOJ/Kruskal.test.cpp
+  - icon: ':x:'
     path: Test/AOJ/Prim.test.cpp
     title: Test/AOJ/Prim.test.cpp
   - icon: ':heavy_check_mark:'
@@ -77,6 +80,7 @@ data:
   - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/Dijkstra.test.cpp
   - Test/AOJ/WarshallFloyd.test.cpp
+  - Test/AOJ/Kruskal.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   - Test/AOJ/BellmanFord.test.cpp
 documentation_of: Other/Template.cpp
