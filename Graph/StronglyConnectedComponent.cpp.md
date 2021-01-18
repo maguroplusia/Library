@@ -3,11 +3,11 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/StronglyConnectedComponent.test.cpp
     title: Test/AOJ/StronglyConnectedComponent.test.cpp
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/StronglyConnectedComponent.cpp\"\nclass SCC {\n  \
@@ -28,7 +28,7 @@ data:
     \ < N;v++) {\n            if(!used[v]) dfs(v);\n        }\n        memset(used,0,sizeof(used));\n\
     \        int k = 0;\n        for(int i = vs.size() - 1;i >= 0;i--) {\n       \
     \     if(!used[vs[i]]) rdfs(vs[i],k++);\n        }\n        return k;\n    }\n\
-    \n    bool same(int a,int b) {\n        return cmp[a] == cmp[b];\n    }\n}\n"
+    \n    bool same(int a,int b) {\n        return cmp[a] == cmp[b];\n    }\n};\n"
   code: "class SCC {\n    int N;\n    vector<int> graph[200010];\n    vector<int>\
     \ rgraph[200010];//\u8FBA\u3092\u9006\u306B\u306F\u3063\u305F\u30B0\u30E9\u30D5\
     \n    vector<int> vs; //\u5E30\u308A\u304C\u3051\u9806\u306E\u4E26\u3073\n   \
@@ -47,13 +47,13 @@ data:
     \  }\n        memset(used,0,sizeof(used));\n        int k = 0;\n        for(int\
     \ i = vs.size() - 1;i >= 0;i--) {\n            if(!used[vs[i]]) rdfs(vs[i],k++);\n\
     \        }\n        return k;\n    }\n\n    bool same(int a,int b) {\n       \
-    \ return cmp[a] == cmp[b];\n    }\n}\n"
+    \ return cmp[a] == cmp[b];\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/StronglyConnectedComponent.cpp
   requiredBy: []
-  timestamp: '2021-01-18 19:29:14+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-01-18 19:46:59+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/AOJ/StronglyConnectedComponent.test.cpp
 documentation_of: Graph/StronglyConnectedComponent.cpp

@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/StronglyConnectedComponent.cpp
     title: Graph/StronglyConnectedComponent.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/3/GRL_3_C
@@ -48,13 +48,13 @@ data:
     \ < N;v++) {\n            if(!used[v]) dfs(v);\n        }\n        memset(used,0,sizeof(used));\n\
     \        int k = 0;\n        for(int i = vs.size() - 1;i >= 0;i--) {\n       \
     \     if(!used[vs[i]]) rdfs(vs[i],k++);\n        }\n        return k;\n    }\n\
-    \n    bool same(int a,int b) {\n        return cmp[a] == cmp[b];\n    }\n}\n#line\
-    \ 8 \"Test/AOJ/StronglyConnectedComponent.test.cpp\"\n\nint main() {\n    int\
-    \ N,M;\n    cin >> N >> M;\n    SCC scc(N);\n    for(int i = 0;i < M;i++) {\n\
-    \        int s,t;\n        cin >> s >> t;\n        scc.add_edge(s,t);\n    }\n\
-    \    scc.scc();\n    int Q;\n    cin >> Q;\n    for(int i = 0;i < Q;i++) {\n \
-    \       int u,v;\n        cin >> u >> v;\n        cout << scc.same(u,v) << endl;\n\
-    \    }\n}\n"
+    \n    bool same(int a,int b) {\n        return cmp[a] == cmp[b];\n    }\n};\n\
+    #line 8 \"Test/AOJ/StronglyConnectedComponent.test.cpp\"\n\nint main() {\n   \
+    \ int N,M;\n    cin >> N >> M;\n    SCC scc(N);\n    for(int i = 0;i < M;i++)\
+    \ {\n        int s,t;\n        cin >> s >> t;\n        scc.add_edge(s,t);\n  \
+    \  }\n    scc.scc();\n    int Q;\n    cin >> Q;\n    for(int i = 0;i < Q;i++)\
+    \ {\n        int u,v;\n        cin >> u >> v;\n        cout << scc.same(u,v) <<\
+    \ endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/3/GRL_3_C\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/StronglyConnectedComponent.cpp\"\n\nint main() {\n   \
@@ -69,8 +69,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/StronglyConnectedComponent.test.cpp
   requiredBy: []
-  timestamp: '2021-01-18 19:29:16+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-01-18 19:46:59+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/StronglyConnectedComponent.test.cpp
 layout: document
