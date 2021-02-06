@@ -9,6 +9,7 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -36,19 +37,20 @@ data:
     \ i = 0;i < 500;i++) {\n        for(int j = 0;j < 500;j++) {\n            if(i\
     \ == j) {\n                dist[i][j] = 0;\n            }\n            else {\n\
     \                dist[i][j] = INF;\n            }\n        }\n    }\n}\n\nvoid\
-    \ WarshallFloyd() {\n\tfor(int k = 0;k < N;k++) {\n\t\tfor(int i = 0;i < N;i++)\
-    \ {\n\t\t\tfor(int j = 0;j < N;j++) {\n                if(dist[i][k] != INF &&\
-    \ dist[k][j] != INF) {\n                    chmin(dist[i][j],dist[i][k] + dist[k][j]);\n\
-    \                }\n\t\t\t}\n\t\t}\n\t}\n}\n#line 8 \"Test/AOJ/WarshallFloyd.test.cpp\"\
-    \n\nint main() {\n    cin >> N;\n    int M;\n    cin >> M;\n    init();\n    for(int\
-    \ i = 0;i < M;i++) {\n        int s,t;\n        ll d;\n        cin >> s >> t >>\
-    \ d;\n        dist[s][t] = d;\n    }\n    WarshallFloyd();\n    bool isnegative\
-    \ = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i][i] < 0) isnegative\
-    \ = true;\n    }\n    if(isnegative) {\n        cout << \"NEGATIVE CYCLE\" <<\
-    \ endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++) {\n        for(int\
-    \ j = 0;j < N;j++) {\n            if(dist[i][j] == INF) cout << \"INF\";\n   \
-    \         else cout << dist[i][j];\n            if(j != N - 1) cout << \" \";\n\
-    \        }\n        cout << endl;\n    }\n}\n"
+    \ WarshallFloyd() {\n    for(int k = 0;k < N;k++) {\n        for(int i = 0;i <\
+    \ N;i++) {\n            for(int j = 0;j < N;j++) {\n                if(dist[i][k]\
+    \ != INF && dist[k][j] != INF) {\n                    chmin(dist[i][j],dist[i][k]\
+    \ + dist[k][j]);\n                }\n            }\n        }\n    }\n}\n#line\
+    \ 8 \"Test/AOJ/WarshallFloyd.test.cpp\"\n\nint main() {\n    cin >> N;\n    int\
+    \ M;\n    cin >> M;\n    init();\n    for(int i = 0;i < M;i++) {\n        int\
+    \ s,t;\n        ll d;\n        cin >> s >> t >> d;\n        dist[s][t] = d;\n\
+    \    }\n    WarshallFloyd();\n    bool isnegative = false;\n    for(int i = 0;i\
+    \ < N;i++) {\n        if(dist[i][i] < 0) isnegative = true;\n    }\n    if(isnegative)\
+    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
+    \   for(int i = 0;i < N;i++) {\n        for(int j = 0;j < N;j++) {\n         \
+    \   if(dist[i][j] == INF) cout << \"INF\";\n            else cout << dist[i][j];\n\
+    \            if(j != N - 1) cout << \" \";\n        }\n        cout << endl;\n\
+    \    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/WarshallFloyd.cpp\"\n\nint main() {\n    cin >> N;\n \
@@ -67,7 +69,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/WarshallFloyd.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 15:09:58+09:00'
+  timestamp: '2021-02-06 17:01:43+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/WarshallFloyd.test.cpp

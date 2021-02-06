@@ -12,6 +12,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
     title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -68,8 +69,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 redirect_from:

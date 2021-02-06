@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SparseTable.test.cpp
     title: Test/yosupo-judge/SparseTable.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

@@ -16,6 +16,9 @@ data:
     path: Test/AOJ/Prim.test.cpp
     title: Test/AOJ/Prim.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Test/AOJ/RollingHash.test.cpp
+    title: Test/AOJ/RollingHash.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   - icon: ':heavy_check_mark:'
@@ -39,6 +42,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/UnionFind.test.cpp
     title: Test/yosupo-judge/UnionFind.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
@@ -75,18 +79,19 @@ data:
   timestamp: '2021-01-04 15:16:03+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-  - Test/yosupo-judge/SparseTable.test.cpp
   - Test/yosupo-judge/UnionFind.test.cpp
   - Test/yosupo-judge/BinaryIndexedTree.test.cpp
-  - Test/AOJ/Prim.test.cpp
-  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - Test/yosupo-judge/SparseTable.test.cpp
+  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   - Test/AOJ/Dijkstra.test.cpp
+  - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+  - Test/AOJ/BellmanFord.test.cpp
+  - Test/AOJ/Prim.test.cpp
+  - Test/AOJ/StronglyConnectedComponent.test.cpp
   - Test/AOJ/WarshallFloyd.test.cpp
   - Test/AOJ/Kruskal.test.cpp
-  - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-  - Test/AOJ/StronglyConnectedComponent.test.cpp
-  - Test/AOJ/BellmanFord.test.cpp
+  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - Test/AOJ/RollingHash.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

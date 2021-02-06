@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/AOJ/Prim.test.cpp
     title: Test/AOJ/Prim.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

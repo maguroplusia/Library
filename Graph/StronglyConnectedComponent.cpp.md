@@ -6,6 +6,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/AOJ/StronglyConnectedComponent.test.cpp
     title: Test/AOJ/StronglyConnectedComponent.test.cpp
+  _isVerificationFailed: false
   _pathExtension: cpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:

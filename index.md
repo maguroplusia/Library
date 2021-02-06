@@ -63,6 +63,11 @@ data:
     - icon: ':heavy_check_mark:'
       path: Other/Template.cpp
       title: Other/Template.cpp
+  - name: String
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: String/RollingHash.cpp
+      title: String/RollingHash.cpp
   verificationCategories:
   - name: Test/AOJ
     pages:
@@ -78,6 +83,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Prim.test.cpp
       title: Test/AOJ/Prim.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Test/AOJ/RollingHash.test.cpp
+      title: Test/AOJ/RollingHash.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
