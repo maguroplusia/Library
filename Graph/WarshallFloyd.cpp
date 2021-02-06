@@ -15,13 +15,13 @@ void init() {
 }
 
 void WarshallFloyd() {
-	for(int k = 0;k < N;k++) {
-		for(int i = 0;i < N;i++) {
-			for(int j = 0;j < N;j++) {
+    for(int k = 0;k < N;k++) {
+        for(int i = 0;i < N;i++) {
+            for(int j = 0;j < N;j++) {
                 if(dist[i][k] != INF && dist[k][j] != INF) {
                     chmin(dist[i][j],dist[i][k] + dist[k][j]);
                 }
-			}
-		}
-	}
+            }
+        }
+    }
 }
