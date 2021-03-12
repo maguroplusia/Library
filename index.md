@@ -47,6 +47,9 @@ data:
   - name: Mathmatics
     pages:
     - icon: ':warning:'
+      path: Mathmatics/ChineseRemainderTheorem.cpp
+      title: Mathmatics/ChineseRemainderTheorem.cpp
+    - icon: ':warning:'
       path: Mathmatics/MatrixPower.cpp
       title: Mathmatics/MatrixPower.cpp
     - icon: ':warning:'
@@ -112,5 +115,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/UnionFind.test.cpp
       title: Test/yosupo-judge/UnionFind.test.cpp
+  - name: Test/yukicoder
+    pages:
+    - icon: ':x:'
+      path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
+      title: Test/yukicoder/ChineseRemainderTheorem.test.cpp
 layout: toppage
 ---
