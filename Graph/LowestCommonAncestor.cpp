@@ -30,7 +30,7 @@ void init(int V) {
     }
 }
 
-int lca(int u,int v) {
+int LCA(int u,int v) {
     if(depth[u] > depth[v]) {
         swap(u,v);
     }
@@ -39,9 +39,7 @@ int lca(int u,int v) {
             v = parent[k][v];
         }
     }
-    if(u == v) {
-        return u;
-    }
+    if(u == v) return u;
     for(int k = 49;k >= 0;k--) {
         if(parent[k][u] != parent[k][v]) {
             u = parent[k][u];
