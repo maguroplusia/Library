@@ -4,7 +4,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Graph/BellmanFord.cpp
     title: Graph/BellmanFord.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []

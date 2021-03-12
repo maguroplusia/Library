@@ -46,7 +46,7 @@ data:
       title: Graph/WarshallFloyd.cpp
   - name: Mathematics
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Mathematics/ChineseRemainderTheorem.cpp
       title: Mathematics/ChineseRemainderTheorem.cpp
     - icon: ':warning:'
@@ -63,7 +63,7 @@ data:
       title: Mathematics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   - name: String
@@ -117,7 +117,7 @@ data:
       title: Test/yosupo-judge/UnionFind.test.cpp
   - name: Test/yukicoder
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
       title: Test/yukicoder/ChineseRemainderTheorem.test.cpp
 layout: toppage

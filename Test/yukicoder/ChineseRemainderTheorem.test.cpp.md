@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Mathematics/ChineseRemainderTheorem.cpp
     title: Mathematics/ChineseRemainderTheorem.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://yukicoder.me/problems/447
@@ -47,20 +47,22 @@ data:
     \ / d;\n    }\n    return make_pair(mod(retr,retm),retm);\n}\n#line 8 \"Test/yukicoder/ChineseRemainderTheorem.test.cpp\"\
     \n\nint main() {\n    ll X1,Y1,X2,Y2,X3,Y3;\n    cin >> X1 >> Y1 >> X2 >> Y2 >>\
     \ X3 >> Y3;\n    pair<ll,ll> ret = CRT({X1,X2,X3},{Y1,Y2,Y3});\n    if(ret.second\
-    \ == -1) cout << -1 << endl;\n    else cout << ret.first << endl;\n}\n"
+    \ == -1) cout << -1 << endl;\n    else {\n        if(ret.first == 0) cout << ret.second\
+    \ << endl;\n        else cout << ret.first << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://yukicoder.me/problems/447\"\n\n#include<bits/stdc++.h>\n\
     using namespace std;\n\n#include\"../../Other/Template.cpp\"\n#include\"../../Mathematics/ChineseRemainderTheorem.cpp\"\
     \n\nint main() {\n    ll X1,Y1,X2,Y2,X3,Y3;\n    cin >> X1 >> Y1 >> X2 >> Y2 >>\
     \ X3 >> Y3;\n    pair<ll,ll> ret = CRT({X1,X2,X3},{Y1,Y2,Y3});\n    if(ret.second\
-    \ == -1) cout << -1 << endl;\n    else cout << ret.first << endl;\n}\n"
+    \ == -1) cout << -1 << endl;\n    else {\n        if(ret.first == 0) cout << ret.second\
+    \ << endl;\n        else cout << ret.first << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - Mathematics/ChineseRemainderTheorem.cpp
   isVerificationFile: true
   path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
   requiredBy: []
-  timestamp: '2021-03-12 20:33:31+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-03-12 21:22:25+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yukicoder/ChineseRemainderTheorem.test.cpp
 layout: document

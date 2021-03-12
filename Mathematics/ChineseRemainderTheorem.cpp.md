@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
     title: Test/yukicoder/ChineseRemainderTheorem.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Mathematics/ChineseRemainderTheorem.cpp\"\n//extgcd(a,b,x,y):ax+by=gcd(a,b)\u3092\
@@ -43,7 +43,7 @@ data:
   path: Mathematics/ChineseRemainderTheorem.cpp
   requiredBy: []
   timestamp: '2021-03-12 20:33:31+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yukicoder/ChineseRemainderTheorem.test.cpp
 documentation_of: Mathematics/ChineseRemainderTheorem.cpp
