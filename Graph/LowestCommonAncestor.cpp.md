@@ -3,16 +3,16 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
     title: Test/yosupo-judge/LowestCommonAncestor.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Graph/LowestCommonAncestor.cpp\"\nint N;\nvector<int> graph[200010];\n\
-    \nint root = 0;\n\nint parent[50][200010];\nint depth[200010];\n\nvoid dfs(int\
+  bundledCode: "#line 1 \"Graph/LowestCommonAncestor.cpp\"\nint N;\nvector<int> graph[500010];\n\
+    \nint root = 0;\n\nint parent[50][500010];\nint depth[500010];\n\nvoid dfs(int\
     \ v,int p,int d) {\n    parent[0][v] = p;\n    depth[v] = d;\n    for(int i =\
     \ 0;i < graph[v].size();i++) {\n        if(graph[v][i] != p) {\n            dfs(graph[v][i],v,d\
     \ + 1);\n        }\n    }\n}\n\nvoid init(int V) {\n    dfs(root,-1,0);\n    for(int\
@@ -25,8 +25,8 @@ data:
     \   if(u == v) return u;\n    for(int k = 49;k >= 0;k--) {\n        if(parent[k][u]\
     \ != parent[k][v]) {\n            u = parent[k][u];\n            v = parent[k][v];\n\
     \        }\n    }\n    return parent[0][u];\n}\n"
-  code: "int N;\nvector<int> graph[200010];\n\nint root = 0;\n\nint parent[50][200010];\n\
-    int depth[200010];\n\nvoid dfs(int v,int p,int d) {\n    parent[0][v] = p;\n \
+  code: "int N;\nvector<int> graph[500010];\n\nint root = 0;\n\nint parent[50][500010];\n\
+    int depth[500010];\n\nvoid dfs(int v,int p,int d) {\n    parent[0][v] = p;\n \
     \   depth[v] = d;\n    for(int i = 0;i < graph[v].size();i++) {\n        if(graph[v][i]\
     \ != p) {\n            dfs(graph[v][i],v,d + 1);\n        }\n    }\n}\n\nvoid\
     \ init(int V) {\n    dfs(root,-1,0);\n    for(int k = 0;k + 1 < 50;k++) {\n  \
@@ -43,8 +43,8 @@ data:
   isVerificationFile: false
   path: Graph/LowestCommonAncestor.cpp
   requiredBy: []
-  timestamp: '2021-03-12 21:40:30+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-03-12 21:55:53+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/LowestCommonAncestor.test.cpp
 documentation_of: Graph/LowestCommonAncestor.cpp

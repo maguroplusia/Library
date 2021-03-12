@@ -33,7 +33,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
     title: Test/yosupo-judge/LowestCommonAncestor.test.cpp
   - icon: ':heavy_check_mark:'
@@ -48,9 +48,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
     title: Test/yukicoder/ChineseRemainderTheorem.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\nconstexpr int\
@@ -83,7 +83,7 @@ data:
   path: Other/Template.cpp
   requiredBy: []
   timestamp: '2021-01-04 15:16:03+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/AOJ/RollingHash.test.cpp
   - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp

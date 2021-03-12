@@ -29,7 +29,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Kruskal.cpp
       title: Graph/Kruskal.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/LowestCommonAncestor.cpp
       title: Graph/LowestCommonAncestor.cpp
     - icon: ':heavy_check_mark:'
@@ -63,7 +63,7 @@ data:
       title: Mathematics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   - name: String
@@ -106,7 +106,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
       title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
       title: Test/yosupo-judge/LowestCommonAncestor.test.cpp
     - icon: ':heavy_check_mark:'

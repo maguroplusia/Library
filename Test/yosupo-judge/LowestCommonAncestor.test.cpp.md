@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/LowestCommonAncestor.cpp
     title: Graph/LowestCommonAncestor.cpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/lca
@@ -32,8 +32,8 @@ data:
     \ 2 == 0){\n        ll t = RS(N, P/2, M);\n        if(M == -1) return t * t;\n\
     \        return t * t % M;\n    }\n    if(M == -1) {\n        return N * RS(N,P\
     \ - 1,M);\n    }\n    return N * RS(N, P-1, M) % M;\n}\n#line 1 \"Graph/LowestCommonAncestor.cpp\"\
-    \nint N;\nvector<int> graph[200010];\n\nint root = 0;\n\nint parent[50][200010];\n\
-    int depth[200010];\n\nvoid dfs(int v,int p,int d) {\n    parent[0][v] = p;\n \
+    \nint N;\nvector<int> graph[500010];\n\nint root = 0;\n\nint parent[50][500010];\n\
+    int depth[500010];\n\nvoid dfs(int v,int p,int d) {\n    parent[0][v] = p;\n \
     \   depth[v] = d;\n    for(int i = 0;i < graph[v].size();i++) {\n        if(graph[v][i]\
     \ != p) {\n            dfs(graph[v][i],v,d + 1);\n        }\n    }\n}\n\nvoid\
     \ init(int V) {\n    dfs(root,-1,0);\n    for(int k = 0;k + 1 < 50;k++) {\n  \
@@ -64,8 +64,8 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
   requiredBy: []
-  timestamp: '2021-03-12 21:40:33+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-03-12 21:55:53+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/LowestCommonAncestor.test.cpp
 layout: document
