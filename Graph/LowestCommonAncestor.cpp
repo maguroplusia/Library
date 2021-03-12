@@ -1,10 +1,10 @@
 int N;
-vector<int> graph[200010];
+vector<int> graph[500010];
 
 int root = 0;
 
-int parent[50][200010];
-int depth[200010];
+int parent[50][500010];
+int depth[500010];
 
 void dfs(int v,int p,int d) {
     parent[0][v] = p;
