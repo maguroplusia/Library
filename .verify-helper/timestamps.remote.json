@@ -11,5 +11,6 @@
 "Test/yosupo-judge/BinaryIndexedTree.test.cpp": "2021-01-05 12:08:29 +0900",
 "Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp": "2021-01-05 12:22:50 +0900",
 "Test/yosupo-judge/SparseTable.test.cpp": "2021-01-04 19:32:32 +0900",
-"Test/yosupo-judge/UnionFind.test.cpp": "2021-02-06 17:01:37 +0900"
+"Test/yosupo-judge/UnionFind.test.cpp": "2021-02-06 17:01:37 +0900",
+"Test/yukicoder/ChineseRemainderTheorem.test.cpp": "2021-03-12 21:22:25 +0900"
 }
