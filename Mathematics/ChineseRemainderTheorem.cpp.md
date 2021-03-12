@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
+    title: Test/yukicoder/ChineseRemainderTheorem.test.cpp
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Mathmatics/ChineseRemainderTheorem.cpp\"\n//extgcd(a,b,x,y):ax+by=gcd(a,b)\u3092\
+  bundledCode: "#line 1 \"Mathematics/ChineseRemainderTheorem.cpp\"\n//extgcd(a,b,x,y):ax+by=gcd(a,b)\u3092\
     \u6E80\u305F\u3059(x,y)\u304C\u683C\u7D0D\u3055\u308C\u308B\u3000\u8FD4\u308A\u5024\
     \u306Fgcd(a,b)\nll extgcd(ll a,ll b,ll &x,ll &y) {\n    if(b == 0) {\n       \
     \ x = 1;\n        y = 0;\n        return a;\n    }\n    ll d = extgcd(b,a % b,y,x);\n\
@@ -37,15 +40,16 @@ data:
     \ / d;\n    }\n    return make_pair(mod(retr,retm),retm);\n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: Mathmatics/ChineseRemainderTheorem.cpp
+  path: Mathematics/ChineseRemainderTheorem.cpp
   requiredBy: []
-  timestamp: '2021-03-12 20:19:48+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
-documentation_of: Mathmatics/ChineseRemainderTheorem.cpp
+  timestamp: '2021-03-12 20:33:31+09:00'
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - Test/yukicoder/ChineseRemainderTheorem.test.cpp
+documentation_of: Mathematics/ChineseRemainderTheorem.cpp
 layout: document
 redirect_from:
-- /library/Mathmatics/ChineseRemainderTheorem.cpp
-- /library/Mathmatics/ChineseRemainderTheorem.cpp.html
-title: Mathmatics/ChineseRemainderTheorem.cpp
+- /library/Mathematics/ChineseRemainderTheorem.cpp
+- /library/Mathematics/ChineseRemainderTheorem.cpp.html
+title: Mathematics/ChineseRemainderTheorem.cpp
 ---

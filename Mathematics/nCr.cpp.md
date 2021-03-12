@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Mathmatics/nCr.cpp\"\nll fac[1000010], finv[1000010], inv[1000010];\n\
+  bundledCode: "#line 1 \"Mathematics/nCr.cpp\"\nll fac[1000010], finv[1000010], inv[1000010];\n\
     \n// \u30C6\u30FC\u30D6\u30EB\u3092\u4F5C\u308B\u524D\u51E6\u7406\nvoid COMinit()\n\
     {\n    fac[0] = fac[1] = 1;\n    finv[0] = finv[1] = 1;\n    inv[1] = 1;\n   \
     \ for (int i = 2; i < 1000010; i++)\n    {\n        fac[i] = fac[i - 1] * i %\
@@ -27,15 +27,15 @@ data:
     \ 0;\n    return fac[n] * (finv[k] * finv[n - k] % MOD) % MOD;\n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: Mathmatics/nCr.cpp
+  path: Mathematics/nCr.cpp
   requiredBy: []
-  timestamp: '2021-01-03 18:39:56+09:00'
+  timestamp: '2021-03-12 20:33:31+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: Mathmatics/nCr.cpp
+documentation_of: Mathematics/nCr.cpp
 layout: document
 redirect_from:
-- /library/Mathmatics/nCr.cpp
-- /library/Mathmatics/nCr.cpp.html
-title: Mathmatics/nCr.cpp
+- /library/Mathematics/nCr.cpp
+- /library/Mathematics/nCr.cpp.html
+title: Mathematics/nCr.cpp
 ---

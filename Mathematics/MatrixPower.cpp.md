@@ -8,7 +8,7 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Mathmatics/MatrixPower.cpp\"\n//\u884C\u5217\u306E\u7A4D\
+  bundledCode: "#line 1 \"Mathematics/MatrixPower.cpp\"\n//\u884C\u5217\u306E\u7A4D\
     \u3092\u6C42\u3081\u308B\uFF08\u305F\u3060\u3057A\u306E\u6A2A\u306E\u8981\u7D20\
     \u6570\u3068B\u306E\u7E26\u306E\u8981\u7D20\u6570\u304C\u7570\u306A\u3063\u305F\
     \u3089RE\uFF09\nvector<vector<ll>> matpro(vector<vector<ll>> A,vector<vector<ll>>\
@@ -40,15 +40,15 @@ data:
     \ - 1,A));\n}\n"
   dependsOn: []
   isVerificationFile: false
-  path: Mathmatics/MatrixPower.cpp
+  path: Mathematics/MatrixPower.cpp
   requiredBy: []
-  timestamp: '2021-01-03 18:39:56+09:00'
+  timestamp: '2021-03-12 20:33:31+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: Mathmatics/MatrixPower.cpp
+documentation_of: Mathematics/MatrixPower.cpp
 layout: document
 redirect_from:
-- /library/Mathmatics/MatrixPower.cpp
-- /library/Mathmatics/MatrixPower.cpp.html
-title: Mathmatics/MatrixPower.cpp
+- /library/Mathematics/MatrixPower.cpp
+- /library/Mathematics/MatrixPower.cpp.html
+title: Mathematics/MatrixPower.cpp
 ---

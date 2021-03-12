@@ -44,26 +44,26 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/WarshallFloyd.cpp
       title: Graph/WarshallFloyd.cpp
-  - name: Mathmatics
+  - name: Mathematics
     pages:
+    - icon: ':x:'
+      path: Mathematics/ChineseRemainderTheorem.cpp
+      title: Mathematics/ChineseRemainderTheorem.cpp
     - icon: ':warning:'
-      path: Mathmatics/ChineseRemainderTheorem.cpp
-      title: Mathmatics/ChineseRemainderTheorem.cpp
+      path: Mathematics/MatrixPower.cpp
+      title: Mathematics/MatrixPower.cpp
     - icon: ':warning:'
-      path: Mathmatics/MatrixPower.cpp
-      title: Mathmatics/MatrixPower.cpp
+      path: Mathematics/nCr.cpp
+      title: Mathematics/nCr.cpp
     - icon: ':warning:'
-      path: Mathmatics/nCr.cpp
-      title: Mathmatics/nCr.cpp
+      path: Mathematics/nCr2.cpp
+      title: Mathematics/nCr2.cpp
     - icon: ':warning:'
-      path: Mathmatics/nCr2.cpp
-      title: Mathmatics/nCr2.cpp
-    - icon: ':warning:'
-      path: Mathmatics/nCr3.cpp
-      title: Mathmatics/nCr3.cpp
+      path: Mathematics/nCr3.cpp
+      title: Mathematics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   - name: String
