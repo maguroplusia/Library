@@ -14,11 +14,11 @@ data:
   _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_4_B
+    PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B
     links:
-    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_4_B
+    - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B
   bundledCode: "#line 1 \"Test/AOJ/TopologicalSort.test.cpp\"\n#define PROBLEM \"\
-    https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_4_B\"\n\n#include<bits/stdc++.h>\n\
+    https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B\"\n\n#include<bits/stdc++.h>\n\
     using namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\
     constexpr int Inf = 1000000030;\nconstexpr ll INF= 2000000000000000000;\nconstexpr\
     \ ll MOD = 1000000007;\nconst double PI = 3.1415926535897;\ntypedef pair<ll,ll>\
@@ -56,7 +56,7 @@ data:
     \ < M;i++) {\n        int s,t;\n        cin >> s >> t;\n        graph[s].push_back(t);\n\
     \    }\n    vector<int> ret = topological_sort();\n    for(int i = 0;i < N;i++)\
     \ {\n        cout << ret.at(i) << endl;\n    }\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/all/GRL_4_B\"\
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/4/GRL_4_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/TopologicalSort.cpp\"\n\nint main() {\n    cin >> N;\n\
     \    int M;\n    cin >> M;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
@@ -69,7 +69,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/TopologicalSort.test.cpp
   requiredBy: []
-  timestamp: '2021-03-13 16:30:06+09:00'
+  timestamp: '2021-03-13 16:53:51+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/TopologicalSort.test.cpp
