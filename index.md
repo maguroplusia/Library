@@ -38,7 +38,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/StronglyConnectedComponent.cpp
       title: Graph/StronglyConnectedComponent.cpp
-    - icon: ':warning:'
+    - icon: ':x:'
       path: Graph/TopologicalSort.cpp
       title: Graph/TopologicalSort.cpp
     - icon: ':heavy_check_mark:'
@@ -63,7 +63,7 @@ data:
       title: Mathematics/nCr3.cpp
   - name: Other
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   - name: String
@@ -98,6 +98,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/StronglyConnectedComponent.test.cpp
       title: Test/AOJ/StronglyConnectedComponent.test.cpp
+    - icon: ':x:'
+      path: Test/AOJ/TopologicalSort.test.cpp
+      title: Test/AOJ/TopologicalSort.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/WarshallFloyd.test.cpp
       title: Test/AOJ/WarshallFloyd.test.cpp
