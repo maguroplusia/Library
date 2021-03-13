@@ -1,8 +1,9 @@
 int N;
-vector<int> graph[200010];
-int indegree[200010];
-int outdegree[200010];
+vector<int> graph[500010];
+int indegree[500010];
+int outdegree[500010];
 
+//graphをトポロジカルソートする。返り値のvectorにトポロジカル順序が格納される
 vector<int> topological_sort() {
     for(int i = 0;i < N;i++) {
         indegree[i] = 0;
@@ -33,7 +34,7 @@ vector<int> topological_sort() {
     return res;
 }
 
-//トポロジカルソートする方法、ただしN<=
+//トポロジカルソートする通り数、ただしN<=20ぐらいまで
 ll counting() {
     for(int i = 0;i < N;i++) {
         outdegree[i] = 0;
@@ -52,5 +53,5 @@ ll counting() {
             }
         }
     }
-    return dp.at((1 << V) - 1);
+    return dp.at((1 << N) - 1);
 }
