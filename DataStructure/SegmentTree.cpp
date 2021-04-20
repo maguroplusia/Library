@@ -1,10 +1,10 @@
 template<typename T>
 class SegmentTree {
-    int N; //葉の数
-    T def; //単位元
-    vector<T> dat; //データ
-    function<T(T,T)> operation_; //区間クエリで使う処理
-    function<T(T,T)> update_; //更新クエリで使う処理
+    int N;
+    const T def;
+    vector<T> dat;
+    function<T(T,T)> operation_;
+    function<T(T,T)> update_;
 
     T query_sub(int a,int b,int l,int r,int k) {
         if(r <= a || b <= l) return def;
@@ -15,7 +15,7 @@ class SegmentTree {
     }
 
 public:
-    SegmentTree(int n,T e,function<T(T,T)> op,function<T(T,T)> up): def(e),operation_(op),update_(up) {
+    SegmentTree(int n,T e,function<T(T,T)> operation,function<T(T,T)> update): def(e),operation_(operation),update_(update) {
         int n_ = 1;
         while(n > n_) {
             n_ *= 2;
@@ -24,7 +24,6 @@ public:
         dat = vector<T>(2 * N - 1,def);
     }
 
-    //最初にsetする時に呼ぶ
     void set(int i,T x) { dat[i + N - 1] = x;}
     void build() {
         for (int i = N - 2; i >= 0; i--){
@@ -32,7 +31,6 @@ public:
         }
     }
 
-    //i番目の値を更新する
     void update(int i,T x) {
         i += N - 1;
         dat[i] = update_(dat[i],x);
@@ -42,7 +40,6 @@ public:
         }
     }
 
-    //[a,b)全てでoperatorを作用させた値を求める
     T query(int a,int b) {return query_sub(a,b,0,N,0);}
 
     T operator[](int i) {return dat[i + N - 1];}
