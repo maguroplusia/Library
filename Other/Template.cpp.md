@@ -36,7 +36,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/AOJ/WarshallFloyd.test.cpp
     title: Test/AOJ/WarshallFloyd.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   - icon: ':heavy_check_mark:'

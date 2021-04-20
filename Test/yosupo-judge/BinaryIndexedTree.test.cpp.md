@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/BinaryIndexedTree.cpp
     title: Binary Indexed Tree
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_sum
@@ -39,7 +39,7 @@ data:
     \  BinaryIndexedTree(int n): N(n) {\n        bit.assign(++n,0);\n    }\n\n   \
     \ void add(int i,T x) {\n        i++;\n        if(i == 0) return;\n        while(i\
     \ < bit.size()) {\n            bit[i] += x;\n            i += i & -i;\n      \
-    \  }\n    }\n\n    T sum(int a,int b) {\n        return sum_sub(b) - sum_sub(a\
+    \  }\n    }\n\n    T sum(int a,int b) {\n        return sum_sub(b - 1) - sum_sub(a\
     \ - 1);\n    }\n};\n#line 8 \"Test/yosupo-judge/BinaryIndexedTree.test.cpp\"\n\
     \nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    vector<ll> vec(N);\n   \
     \ for(int i = 0;i < N;i++) {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<ll>\
@@ -60,8 +60,8 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   requiredBy: []
-  timestamp: '2021-04-20 18:48:21+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-04-20 19:04:27+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/BinaryIndexedTree.test.cpp
 layout: document
