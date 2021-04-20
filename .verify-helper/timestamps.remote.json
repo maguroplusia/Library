@@ -9,7 +9,6 @@
 "Test/AOJ/SegmentTree-RangeSumQuery.test.cpp": "2021-01-05 14:00:58 +0900",
 "Test/AOJ/StronglyConnectedComponent.test.cpp": "2021-01-18 19:46:59 +0900",
 "Test/AOJ/WarshallFloyd.test.cpp": "2021-02-06 17:01:43 +0900",
-"Test/yosupo-judge/BinaryIndexedTree.test.cpp": "2021-01-05 12:08:29 +0900",
 "Test/yosupo-judge/LowestCommonAncestor.test.cpp": "2021-03-12 21:55:53 +0900",
 "Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp": "2021-01-05 12:22:50 +0900",
 "Test/yosupo-judge/SparseTable.test.cpp": "2021-01-04 19:32:32 +0900",
