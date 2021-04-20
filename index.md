@@ -3,9 +3,9 @@ data:
   libraryCategories:
   - name: DataStructure
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: DataStructure/BinaryIndexedTree.cpp
-      title: DataStructure/BinaryIndexedTree.cpp
+      title: Binary Indexed Tree
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
@@ -109,7 +109,7 @@ data:
       title: Test/AOJ/WarshallFloyd.test.cpp
   - name: Test/yosupo-judge
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
       title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     - icon: ':heavy_check_mark:'

@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: DataStructure/BinaryIndexedTree.cpp
-    title: DataStructure/BinaryIndexedTree.cpp
+    title: Binary Indexed Tree
   - icon: ':question:'
     path: Other/Template.cpp
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/static_range_sum
@@ -33,17 +33,16 @@ data:
     \        return t * t % M;\n    }\n    if(M == -1) {\n        return N * RS(N,P\
     \ - 1,M);\n    }\n    return N * RS(N, P-1, M) % M;\n}\n#line 1 \"DataStructure/BinaryIndexedTree.cpp\"\
     \ntemplate <typename T>\nclass BinaryIndexedTree {\n    int N;\n    vector<T>\
-    \ bit;\n\n    //a\u756A\u76EE\u307E\u3067\u306E\u548C\u3092\u8A08\u7B97\u3059\u308B\
-    \n    T sum_sub(int a) {\n        a++;\n        T ret = 0;\n        if(a == 0)\
-    \ return ret;\n        while(a > 0) {\n            ret += bit[a];\n          \
-    \  a -= a & -a;\n        }\n        return ret;\n    }\n\npublic:\n\n    BinaryIndexedTree(int\
-    \ a): N(a) {\n        bit.assign(++a,0);\n    }\n\n    //A[a]\u306Bw\u3092\u52A0\
-    \u7B97\u3059\u308B\n    void add(int a,T w) {\n        a++;\n        if(a == 0)\
-    \ return;\n        while(a < bit.size()) {\n            bit[a] += w;\n       \
-    \     a += a & -a;\n        }\n    }\n\n    T sum(int a,int b) {\n        return\
-    \ sum_sub(b - 1) - sum_sub(a - 1);\n    }\n};\n#line 8 \"Test/yosupo-judge/BinaryIndexedTree.test.cpp\"\
-    \n\nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    vector<ll> vec(N);\n \
-    \   for(int i = 0;i < N;i++) {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<ll>\
+    \ bit;\n\n    T sum_sub(int a) {\n        a++;\n        T ret = 0;\n        if(a\
+    \ == 0) return ret;\n        while(a > 0) {\n            ret += bit[a];\n    \
+    \        a -= a & -a;\n        }\n        return ret;\n    }\n\npublic:\n\n  \
+    \  BinaryIndexedTree(int n): N(n) {\n        bit.assign(++n,0);\n    }\n\n   \
+    \ void add(int i,T x) {\n        i++;\n        if(i == 0) return;\n        while(i\
+    \ < bit.size()) {\n            bit[i] += x;\n            i += i & -i;\n      \
+    \  }\n    }\n\n    T sum(int a,int b) {\n        return sum_sub(b) - sum_sub(a\
+    \ - 1);\n    }\n};\n#line 8 \"Test/yosupo-judge/BinaryIndexedTree.test.cpp\"\n\
+    \nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    vector<ll> vec(N);\n   \
+    \ for(int i = 0;i < N;i++) {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<ll>\
     \ bit(N);\n    for(int i = 0;i < N;i++) {\n        bit.add(i,vec.at(i));\n   \
     \ }\n    for(int i = 0;i < Q;i++) {\n        int l,r;\n        cin >> l >> r;\n\
     \        cout << bit.sum(l,r) << endl;\n    }\n}\n"
@@ -61,8 +60,8 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 12:08:29+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-04-20 18:48:21+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/yosupo-judge/BinaryIndexedTree.test.cpp
 layout: document
