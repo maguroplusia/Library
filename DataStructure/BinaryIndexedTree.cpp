@@ -30,6 +30,6 @@ public:
     }
 
     T sum(int a,int b) {
-        return sum_sub(b) - sum_sub(a - 1);
+        return sum_sub(b - 1) - sum_sub(a - 1);
     }
 };
