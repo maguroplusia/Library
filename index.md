@@ -40,7 +40,7 @@ data:
       title: Graph/StronglyConnectedComponent.cpp
     - icon: ':x:'
       path: Graph/TopologicalSort.cpp
-      title: Graph/TopologicalSort.cpp
+      title: Topological Sort
     - icon: ':heavy_check_mark:'
       path: Graph/WarshallFloyd.cpp
       title: Graph/WarshallFloyd.cpp
