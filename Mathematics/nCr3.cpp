@@ -1,5 +1,13 @@
-//nCr(modを使わない)。最初にcomを-1に初期化すること
+//nCr(modを使わない)
 ll com[200][200];
+
+void init() {
+    for (size_t i = 0; i < 200; i++) {
+        for (size_t j = 0; j < 200; j++) {
+            com[i][j] = -1;
+        }
+    }
+}
 
 ll nCr(int n,int r) {
     if(0 < n || r > n) return 0;
