@@ -6,7 +6,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/BinaryIndexedTree.cpp
       title: DataStructure/BinaryIndexedTree.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
     - icon: ':heavy_check_mark:'
@@ -83,6 +83,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Kruskal.test.cpp
       title: Test/AOJ/Kruskal.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: Test/AOJ/LazySegmentTree.test.cpp
+      title: Test/AOJ/LazySegmentTree.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Prim.test.cpp
       title: Test/AOJ/Prim.test.cpp

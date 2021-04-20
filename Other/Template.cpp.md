@@ -13,6 +13,9 @@ data:
     path: Test/AOJ/Kruskal.test.cpp
     title: Test/AOJ/Kruskal.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Test/AOJ/LazySegmentTree.test.cpp
+    title: Test/AOJ/LazySegmentTree.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/Prim.test.cpp
     title: Test/AOJ/Prim.test.cpp
   - icon: ':heavy_check_mark:'
@@ -89,21 +92,22 @@ data:
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - Test/AOJ/RollingHash.test.cpp
-  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - Test/AOJ/BellmanFord.test.cpp
+  - Test/AOJ/LazySegmentTree.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-  - Test/AOJ/WarshallFloyd.test.cpp
+  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/StronglyConnectedComponent.test.cpp
+  - Test/AOJ/Prim.test.cpp
+  - Test/AOJ/WarshallFloyd.test.cpp
+  - Test/AOJ/Dijkstra.test.cpp
   - Test/AOJ/Kruskal.test.cpp
   - Test/AOJ/TopologicalSort.test.cpp
-  - Test/AOJ/BellmanFord.test.cpp
-  - Test/AOJ/Dijkstra.test.cpp
-  - Test/AOJ/Prim.test.cpp
   - Test/yukicoder/ChineseRemainderTheorem.test.cpp
-  - Test/yosupo-judge/LowestCommonAncestor.test.cpp
-  - Test/yosupo-judge/UnionFind.test.cpp
-  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-  - Test/yosupo-judge/SparseTable.test.cpp
   - Test/yosupo-judge/BinaryIndexedTree.test.cpp
+  - Test/yosupo-judge/UnionFind.test.cpp
+  - Test/yosupo-judge/SparseTable.test.cpp
+  - Test/yosupo-judge/LowestCommonAncestor.test.cpp
+  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:
