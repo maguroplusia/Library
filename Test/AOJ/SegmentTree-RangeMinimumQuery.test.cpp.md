@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
-    title: DataStructure/SegmentTree.cpp
+    title: Segment Tree
   - icon: ':question:'
     path: Other/Template.cpp
     title: Other/Template.cpp
@@ -32,29 +32,23 @@ data:
     \ 2 == 0){\n        ll t = RS(N, P/2, M);\n        if(M == -1) return t * t;\n\
     \        return t * t % M;\n    }\n    if(M == -1) {\n        return N * RS(N,P\
     \ - 1,M);\n    }\n    return N * RS(N, P-1, M) % M;\n}\n#line 1 \"DataStructure/SegmentTree.cpp\"\
-    \ntemplate<typename T>\nclass SegmentTree {\n    int N; //\u8449\u306E\u6570\n\
-    \    T def; //\u5358\u4F4D\u5143\n    vector<T> dat; //\u30C7\u30FC\u30BF\n  \
-    \  function<T(T,T)> operation_; //\u533A\u9593\u30AF\u30A8\u30EA\u3067\u4F7F\u3046\
-    \u51E6\u7406\n    function<T(T,T)> update_; //\u66F4\u65B0\u30AF\u30A8\u30EA\u3067\
-    \u4F7F\u3046\u51E6\u7406\n\n    T query_sub(int a,int b,int l,int r,int k) {\n\
-    \        if(r <= a || b <= l) return def;\n        if(a <= l && r <= b) return\
-    \ dat[k];\n        T c1 = query_sub(a,b,l,(l + r) / 2,2 * k + 1);\n        T c2\
-    \ = query_sub(a,b,(l + r) / 2,r,2 * k + 2);\n        return operation_(c1,c2);\n\
-    \    }\n\npublic:\n    SegmentTree(int n,T e,function<T(T,T)> op,function<T(T,T)>\
-    \ up): def(e),operation_(op),update_(up) {\n        int n_ = 1;\n        while(n\
-    \ > n_) {\n            n_ *= 2;\n        }\n        N = n_;\n        dat = vector<T>(2\
-    \ * N - 1,def);\n    }\n\n    //\u6700\u521D\u306Bset\u3059\u308B\u6642\u306B\u547C\
-    \u3076\n    void set(int i,T x) { dat[i + N - 1] = x;}\n    void build() {\n \
-    \       for (int i = N - 2; i >= 0; i--){\n            dat[i] = operation_(dat[i\
-    \ * 2 + 1],dat[i * 2 + 2]);\n        }\n    }\n\n    //i\u756A\u76EE\u306E\u5024\
-    \u3092\u66F4\u65B0\u3059\u308B\n    void update(int i,T x) {\n        i += N -\
-    \ 1;\n        dat[i] = update_(dat[i],x);\n        while(i > 0) {\n          \
-    \  i = (i - 1) / 2;\n            dat[i] = operation_(dat[i * 2 + 1],dat[i * 2\
-    \ + 2]);\n        }\n    }\n\n    //[a,b)\u5168\u3066\u3067operator\u3092\u4F5C\
-    \u7528\u3055\u305B\u305F\u5024\u3092\u6C42\u3081\u308B\n    T query(int a,int\
-    \ b) {return query_sub(a,b,0,N,0);}\n\n    T operator[](int i) {return dat[i +\
-    \ N - 1];}\n};\n#line 8 \"Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp\"\n\n\
-    int main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,numeric_limits<int>::max(),\n\
+    \ntemplate<typename T>\nclass SegmentTree {\n    int N;\n    const T def;\n  \
+    \  vector<T> dat;\n    function<T(T,T)> operation_;\n    function<T(T,T)> update_;\n\
+    \n    T query_sub(int a,int b,int l,int r,int k) {\n        if(r <= a || b <=\
+    \ l) return def;\n        if(a <= l && r <= b) return dat[k];\n        T c1 =\
+    \ query_sub(a,b,l,(l + r) / 2,2 * k + 1);\n        T c2 = query_sub(a,b,(l + r)\
+    \ / 2,r,2 * k + 2);\n        return operation_(c1,c2);\n    }\n\npublic:\n   \
+    \ SegmentTree(int n,T e,function<T(T,T)> operation,function<T(T,T)> update): def(e),operation_(operation),update_(update)\
+    \ {\n        int n_ = 1;\n        while(n > n_) {\n            n_ *= 2;\n    \
+    \    }\n        N = n_;\n        dat = vector<T>(2 * N - 1,def);\n    }\n\n  \
+    \  void set(int i,T x) { dat[i + N - 1] = x;}\n    void build() {\n        for\
+    \ (int i = N - 2; i >= 0; i--){\n            dat[i] = operation_(dat[i * 2 + 1],dat[i\
+    \ * 2 + 2]);\n        }\n    }\n\n    void update(int i,T x) {\n        i += N\
+    \ - 1;\n        dat[i] = update_(dat[i],x);\n        while(i > 0) {\n        \
+    \    i = (i - 1) / 2;\n            dat[i] = operation_(dat[i * 2 + 1],dat[i *\
+    \ 2 + 2]);\n        }\n    }\n\n    T query(int a,int b) {return query_sub(a,b,0,N,0);}\n\
+    \n    T operator[](int i) {return dat[i + N - 1];}\n};\n#line 8 \"Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp\"\
+    \n\nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,numeric_limits<int>::max(),\n\
     \    [](int a,int b){return min(a,b);},\n    [](int a,int b){return b;});\n  \
     \  for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
     \ == 0) {\n            int p,x;\n            cin >> p >> x;\n            seg.update(p,x);\n\
@@ -75,7 +69,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   requiredBy: []
-  timestamp: '2021-01-05 13:22:47+09:00'
+  timestamp: '2021-04-20 19:31:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp

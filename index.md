@@ -11,7 +11,7 @@ data:
       title: DataStructure/LazySegmentTree.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
-      title: DataStructure/SegmentTree.cpp
+      title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: DataStructure/SparseTable.cpp
