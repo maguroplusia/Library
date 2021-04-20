@@ -34,7 +34,7 @@ vector<int> topological_sort() {
     return res;
 }
 
-//トポロジカルソートする通り数、ただしN<=20ぐらいまで
+//トポロジカルソートする通り数、O(2^N)が間に合う程度で
 ll counting() {
     for(int i = 0;i < N;i++) {
         outdegree[i] = 0;
