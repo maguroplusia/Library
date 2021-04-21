@@ -29,7 +29,7 @@ public:
         }
     }
 
-    T sum(int a,int b) {
-        return sum_sub(b - 1) - sum_sub(a - 1);
+    T sum(int l,int r) {
+        return sum_sub(r - 1) - sum_sub(l - 1);
     }
 };
