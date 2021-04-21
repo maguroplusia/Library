@@ -19,7 +19,7 @@ data:
     \ n): N(n) {\n        bit.assign(++n,0);\n    }\n\n    void add(int i,T x) {\n\
     \        i++;\n        if(i == 0) return;\n        while(i < bit.size()) {\n \
     \           bit[i] += x;\n            i += i & -i;\n        }\n    }\n\n    T\
-    \ sum(int a,int b) {\n        return sum_sub(b - 1) - sum_sub(a - 1);\n    }\n\
+    \ sum(int l,int r) {\n        return sum_sub(r - 1) - sum_sub(l - 1);\n    }\n\
     };\n"
   code: "template <typename T>\nclass BinaryIndexedTree {\n    int N;\n    vector<T>\
     \ bit;\n\n    T sum_sub(int a) {\n        a++;\n        T ret = 0;\n        if(a\
@@ -28,13 +28,13 @@ data:
     \  BinaryIndexedTree(int n): N(n) {\n        bit.assign(++n,0);\n    }\n\n   \
     \ void add(int i,T x) {\n        i++;\n        if(i == 0) return;\n        while(i\
     \ < bit.size()) {\n            bit[i] += x;\n            i += i & -i;\n      \
-    \  }\n    }\n\n    T sum(int a,int b) {\n        return sum_sub(b - 1) - sum_sub(a\
+    \  }\n    }\n\n    T sum(int l,int r) {\n        return sum_sub(r - 1) - sum_sub(l\
     \ - 1);\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/BinaryIndexedTree.cpp
   requiredBy: []
-  timestamp: '2021-04-20 19:04:27+09:00'
+  timestamp: '2021-04-21 14:12:23+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/BinaryIndexedTree.test.cpp
@@ -47,5 +47,5 @@ title: Binary Indexed Tree
 別名 Fenwick Tree 。配列に対する1点更新クエリと区間和を求めるクエリを Segment Tree より高速に処理出来る。
 
 - `BinaryIndexedTree<T> bit(int n)` : 長さ $n$ の配列 $A_0,\ A_1,\ A_2,\ \cdots ,\ A_{n - 1}$ を構築する。計算量 $O(N)$
-- `void bit.add(int i,T x)` : $A[i]$ に $x$ を加算する。計算量 $O(\log N)$
-- `T bit.sum(int a,int b)` : $\sum_{i = a}^b A[i]$ を求める。計算量 $O(\log N)$
+- `void bit.add(int i,T x)` : `A[i] += x` を行う。計算量 $O(\log N)$
+- `T bit.sum(int l,int r)` : `A[l] + A[l + 1] + … + A[r - 1]` を求める。計算量 $O(\log N)$
