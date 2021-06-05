@@ -10,19 +10,18 @@ int pre[200010];
 
 void Dijkstra(int s) {
     //greater<P>を指定することでfirstが小さい順に取り出せる
-    priority_queue<P,vector<P>,greater<P>> que;
+    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>> que;
     fill(dist,dist + N,INF);
     fill(pre,pre + N,-1);
     dist[s] = 0;
     que.push(P(0,s));
 
     while(!que.empty()) {
-        P p = que.top();
+        auto [cost,v] = que.top();
         que.pop();
-        int v = p.second;
         if(dist[v] < p.first) continue;
         for(auto x:graph[v]) {
-            if(chmin(dist[x.to],dist[v] + x.cost)) {
+            if(chmin(dist[x.to],dist[v] + cost)) {
                 pre[x.to] = v;
                 que.push(P(dist[x.to],x.to));
             }
