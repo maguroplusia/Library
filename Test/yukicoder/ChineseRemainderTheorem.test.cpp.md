@@ -39,12 +39,13 @@ data:
     \ d;\n}\n\n//CRT(b,m):n\u6B21\u5408\u540C\u65B9\u7A0B\u5F0F\u3092\u89E3\u304F\u3002\
     \u7B54\u3048\u306F x = retr(mod retm)\u306E\u5F62\u3067\u8868\u3055\u308C\u308B\
     \uFF08\u89E3\u304C\u7121\u3044\u5834\u5408\u306F(0,-1)\u306E\u5F62\u3067\u8868\
-    \u3055\u308C\u308B\uFF09\npair<ll,ll> CRT(vector<ll> b,vector<ll> m) {\n    ll\
-    \ retr = 0;\n    ll retm = 1;\n    for(int i = 0;i < (int)b.size();i++) {\n  \
-    \      ll x,y;\n        ll d = extgcd(retm,m.at(i),x,y);\n        if((b.at(i)\
-    \ - retr) % d != 0) return make_pair(0,-1);\n        ll tmp = (b.at(i) - retr)\
-    \ / d * x % (m.at(i) / d);\n        retr += retm * tmp;\n        retm *= m.at(i)\
-    \ / d;\n    }\n    return make_pair(mod(retr,retm),retm);\n}\n#line 8 \"Test/yukicoder/ChineseRemainderTheorem.test.cpp\"\
+    \u3055\u308C\u308B\uFF09\npair<ll,ll> CRT(vector<ll> r,vector<ll> m) {\n    if(r.empty()\
+    \ || m.empty()) return make_pair(0,1);\n    ll R = r.front();\n    ll M = m.front();\n\
+    \    for(int i = 1;i < (int)r.size();i++) {\n        ll x,y;\n        ll d = extgcd(M,m.at(i),x,y);\n\
+    \        if((r.at(i) - R) % d != 0) return make_pair(0,-1);\n        ll tmp =\
+    \ (r.at(i) - R) / d % (m.at(i) / d) * x % (m.at(i) / d);\n        R += M * tmp;\n\
+    \        M *= m.at(i) / d;\n    }\n    R %= M;\n    if(R < 0) R += M;\n    return\
+    \ make_pair(R,M);\n}\n#line 8 \"Test/yukicoder/ChineseRemainderTheorem.test.cpp\"\
     \n\nint main() {\n    ll X1,Y1,X2,Y2,X3,Y3;\n    cin >> X1 >> Y1 >> X2 >> Y2 >>\
     \ X3 >> Y3;\n    pair<ll,ll> ret = CRT({X1,X2,X3},{Y1,Y2,Y3});\n    if(ret.second\
     \ == -1) cout << -1 << endl;\n    else {\n        if(ret.first == 0) cout << ret.second\
@@ -61,7 +62,7 @@ data:
   isVerificationFile: true
   path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
   requiredBy: []
-  timestamp: '2021-03-12 21:22:25+09:00'
+  timestamp: '2021-06-05 10:38:34+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yukicoder/ChineseRemainderTheorem.test.cpp
