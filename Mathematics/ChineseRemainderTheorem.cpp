@@ -11,16 +11,19 @@ ll extgcd(ll a,ll b,ll &x,ll &y) {
 }
 
 //CRT(b,m):n次合同方程式を解く。答えは x = retr(mod retm)の形で表される（解が無い場合は(0,-1)の形で表される）
-pair<ll,ll> CRT(vector<ll> b,vector<ll> m) {
-    ll retr = 0;
-    ll retm = 1;
-    for(int i = 0;i < (int)b.size();i++) {
+pair<ll,ll> CRT(vector<ll> r,vector<ll> m) {
+    if(r.empty() || m.empty()) return make_pair(0,1);
+    ll R = r.front();
+    ll M = m.front();
+    for(int i = 1;i < (int)r.size();i++) {
         ll x,y;
-        ll d = extgcd(retm,m.at(i),x,y);
-        if((b.at(i) - retr) % d != 0) return make_pair(0,-1);
-        ll tmp = (b.at(i) - retr) / d * x % (m.at(i) / d);
-        retr += retm * tmp;
-        retm *= m.at(i) / d;
+        ll d = extgcd(M,m.at(i),x,y);
+        if((r.at(i) - R) % d != 0) return make_pair(0,-1);
+        ll tmp = (r.at(i) - R) / d % (m.at(i) / d) * x % (m.at(i) / d);
+        R += M * tmp;
+        M *= m.at(i) / d;
     }
-    return make_pair(mod(retr,retm),retm);
+    R %= M;
+    if(R < 0) R += M;
+    return make_pair(R,M);
 }
