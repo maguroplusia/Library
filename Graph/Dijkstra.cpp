@@ -19,11 +19,11 @@ void Dijkstra(int s) {
     while(!que.empty()) {
         auto [cost,v] = que.top();
         que.pop();
-        if(dist[v] < p.first) continue;
-        for(auto x:graph[v]) {
-            if(chmin(dist[x.to],dist[v] + cost)) {
-                pre[x.to] = v;
-                que.push(P(dist[x.to],x.to));
+        if(dist[v] < cost) continue;
+        for(auto [d,to]:graph[v]) {
+            if(chmin(dist[to],dist[v] + d)) {
+                pre[to] = v;
+                que.push({dist[to],to});
             }
         }
     }
