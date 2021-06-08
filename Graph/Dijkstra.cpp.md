@@ -19,11 +19,11 @@ data:
     \n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>> que;\n\
     \    fill(dist,dist + N,INF);\n    fill(pre,pre + N,-1);\n    dist[s] = 0;\n \
     \   que.push(P(0,s));\n\n    while(!que.empty()) {\n        auto [cost,v] = que.top();\n\
-    \        que.pop();\n        if(dist[v] < p.first) continue;\n        for(auto\
-    \ x:graph[v]) {\n            if(chmin(dist[x.to],dist[v] + cost)) {\n        \
-    \        pre[x.to] = v;\n                que.push(P(dist[x.to],x.to));\n     \
-    \       }\n        }\n    }\n}\n\n//\u6700\u77ED\u8DEF\u3092\u53D6\u5F97\nvector<int>\
-    \ get_path(int t) {\n    vector<int> path;\n    while(t != -1) {\n        path.push_back(t);\n\
+    \        que.pop();\n        if(dist[v] < cost) continue;\n        for(auto [d,to]:graph[v])\
+    \ {\n            if(chmin(dist[to],dist[v] + d)) {\n                pre[to] =\
+    \ v;\n                que.push({dist[to],to});\n            }\n        }\n   \
+    \ }\n}\n\n//\u6700\u77ED\u8DEF\u3092\u53D6\u5F97\nvector<int> get_path(int t)\
+    \ {\n    vector<int> path;\n    while(t != -1) {\n        path.push_back(t);\n\
     \        t = pre[t];\n    }\n    reverse(path.begin(),path.end());\n    return\
     \ path;\n}\n"
   code: "struct edge{\n    int to;\n    ll cost;\n};\n\nint N; //\u9802\u70B9\u6570\
@@ -33,9 +33,9 @@ data:
     \u53D6\u308A\u51FA\u305B\u308B\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>\
     \ que;\n    fill(dist,dist + N,INF);\n    fill(pre,pre + N,-1);\n    dist[s] =\
     \ 0;\n    que.push(P(0,s));\n\n    while(!que.empty()) {\n        auto [cost,v]\
-    \ = que.top();\n        que.pop();\n        if(dist[v] < p.first) continue;\n\
-    \        for(auto x:graph[v]) {\n            if(chmin(dist[x.to],dist[v] + cost))\
-    \ {\n                pre[x.to] = v;\n                que.push(P(dist[x.to],x.to));\n\
+    \ = que.top();\n        que.pop();\n        if(dist[v] < cost) continue;\n   \
+    \     for(auto [d,to]:graph[v]) {\n            if(chmin(dist[to],dist[v] + d))\
+    \ {\n                pre[to] = v;\n                que.push({dist[to],to});\n\
     \            }\n        }\n    }\n}\n\n//\u6700\u77ED\u8DEF\u3092\u53D6\u5F97\n\
     vector<int> get_path(int t) {\n    vector<int> path;\n    while(t != -1) {\n \
     \       path.push_back(t);\n        t = pre[t];\n    }\n    reverse(path.begin(),path.end());\n\
@@ -44,7 +44,7 @@ data:
   isVerificationFile: false
   path: Graph/Dijkstra.cpp
   requiredBy: []
-  timestamp: '2021-06-05 10:38:27+09:00'
+  timestamp: '2021-06-08 16:42:37+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/AOJ/Dijkstra.test.cpp

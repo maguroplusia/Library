@@ -20,7 +20,7 @@ data:
       title: DataStructure/UnionFind.cpp
   - name: Graph
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/BellmanFord.cpp
       title: Graph/BellmanFord.cpp
     - icon: ':x:'
@@ -32,7 +32,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/LowestCommonAncestor.cpp
       title: Graph/LowestCommonAncestor.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/Prim.cpp
       title: Graph/Prim.cpp
     - icon: ':heavy_check_mark:'
@@ -41,7 +41,7 @@ data:
     - icon: ':x:'
       path: Graph/TopologicalSort.cpp
       title: Topological Sort
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/WarshallFloyd.cpp
       title: Graph/WarshallFloyd.cpp
   - name: Mathematics
@@ -74,7 +74,7 @@ data:
   verificationCategories:
   - name: Test/AOJ
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/BellmanFord.test.cpp
       title: Test/AOJ/BellmanFord.test.cpp
     - icon: ':x:'
@@ -86,7 +86,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/LazySegmentTree.test.cpp
       title: Test/AOJ/LazySegmentTree.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/Prim.test.cpp
       title: Test/AOJ/Prim.test.cpp
     - icon: ':heavy_check_mark:'
@@ -104,7 +104,7 @@ data:
     - icon: ':x:'
       path: Test/AOJ/TopologicalSort.test.cpp
       title: Test/AOJ/TopologicalSort.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/WarshallFloyd.test.cpp
       title: Test/AOJ/WarshallFloyd.test.cpp
   - name: Test/yosupo-judge

@@ -20,18 +20,13 @@ data:
   bundledCode: "#line 1 \"Test/AOJ/LazySegmentTree.test.cpp\"\n#define PROBLEM \"\
     https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/all/DSL_2_F\"\n\n#include<bits/stdc++.h>\n\
     using namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\
-    constexpr int Inf = 1000000030;\nconstexpr ll INF= 2000000000000000000;\nconstexpr\
-    \ ll MOD = 1000000007;\nconst double PI = 3.1415926535897;\ntypedef pair<ll,ll>\
-    \ P;\ntypedef pair<ll,P> PP;\n\ntemplate<class T> inline bool chmax(T &a, T b)\
-    \ {\n    if (a < b) {\n        a = b;\n        return 1;\n    }\n    return 0;\n\
-    }\n\ntemplate<class T> inline bool chmin(T &a, T b) {\n    if (a > b) {\n    \
-    \    a = b;\n        return 1;\n    }\n    return 0;\n}\n\n\nll mod(ll val, ll\
-    \ M) {\n    val = val % M;\n    if(val < 0) {\n        val += M;\n    }\n    return\
-    \ val;\n}\n\ntemplate<typename T>\nT RS(T N, T P, T M){\n    if(P == 0) {\n  \
-    \      return 1;\n    }\n    if(P < 0) {\n        return 0;\n    }\n    if(P %\
-    \ 2 == 0){\n        ll t = RS(N, P/2, M);\n        if(M == -1) return t * t;\n\
-    \        return t * t % M;\n    }\n    if(M == -1) {\n        return N * RS(N,P\
-    \ - 1,M);\n    }\n    return N * RS(N, P-1, M) % M;\n}\n#line 1 \"DataStructure/LazySegmentTree.cpp\"\
+    \ntemplate<typename T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return\
+    \ true; } return false; }\ntemplate<typename T> inline bool chmin(T &a, T b) {\
+    \ if (a > b) { a = b; return true; } return false; }\n\ntemplate<typename T>\n\
+    T modpow(T N, T P, T M){\n    if(P == 0) return 1;\n    if(P < 0) return 0;\n\
+    \    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n        if(M == -1) return\
+    \ t * t;\n        return t * t % M;\n    }\n    if(M == -1) return N * modpow(N,P\
+    \ - 1,M);\n    return N * modpow(N, P-1, M) % M;\n}\n#line 1 \"DataStructure/LazySegmentTree.cpp\"\
     \n/*\n    X:\u5024\u914D\u5217\u306E\u578B\n    M:\u9045\u5EF6\u914D\u5217\u306E\
     \u578B\n*/\ntemplate<typename X,typename M>\nclass LazySegmentTree {\n    using\
     \ FX = function<X(X,X)>;\n    using FA = function<X(X,M)>;\n    using FM = function<M(M,M)>;\n\
@@ -96,7 +91,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/LazySegmentTree.test.cpp
   requiredBy: []
-  timestamp: '2021-04-20 16:28:09+09:00'
+  timestamp: '2021-06-08 16:42:39+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/LazySegmentTree.test.cpp
