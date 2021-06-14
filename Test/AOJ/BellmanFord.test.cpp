@@ -14,7 +14,7 @@ int main() {
         int s,t;
         ll d;
         cin >> s >> t >> d;
-        es[i] = (edge{s,t,d});
+        es[i] = {s,t,d};
     }
     BellmanFord(r);
     bool isnegative = false;
