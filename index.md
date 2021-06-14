@@ -25,7 +25,7 @@ data:
       title: Bellman-Ford
     - icon: ':heavy_check_mark:'
       path: Graph/Dijkstra.cpp
-      title: Graph/Dijkstra.cpp
+      title: Dijkstra
     - icon: ':heavy_check_mark:'
       path: Graph/Kruskal.cpp
       title: Graph/Kruskal.cpp
