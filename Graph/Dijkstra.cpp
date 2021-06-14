@@ -5,12 +5,11 @@ struct edge{
 
 int N;
 vector<edge> graph[200010];
-vector<ll> dist;
 vector<int> pre;
 
-void Dijkstra(int s) {
+vector<ll> Dijkstra(int s) {
     priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>> que;
-    dist = vector<ll>(N,INF);
+    vector<ll> dist(N,INF);
     pre = vector<int>(N,-1);
     dist[s] = 0;
     que.push({0,s});
@@ -26,6 +25,8 @@ void Dijkstra(int s) {
             }
         }
     }
+
+    return dist;
 }
 
 vector<int> GetPath(int t) {
