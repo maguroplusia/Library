@@ -4,7 +4,7 @@ struct edge{
 };
 
 int N;
-vector<edge> graph[200010];
+vector<vector<edge>> graph;
 vector<int> pre;
 
 vector<ll> Dijkstra(int s) {
