@@ -5,14 +5,13 @@ struct edge{
 
 int N; //頂点数
 vector<edge> graph[200010];
-ll dist[200010]; //頂点sからの最短距離
-int pre[200010];
+vector<ll> dist; //頂点sからの最短距離
+vector<int> pre;
 
 void Dijkstra(int s) {
-    //greater<P>を指定することでfirstが小さい順に取り出せる
     priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>> que;
-    fill(dist,dist + N,INF);
-    fill(pre,pre + N,-1);
+    dist = vector<ll>(N,INF);
+    pre = vector<int>(N,-1);
     dist[s] = 0;
     que.push(P(0,s));
 
@@ -20,7 +19,7 @@ void Dijkstra(int s) {
         auto [cost,v] = que.top();
         que.pop();
         if(dist[v] < cost) continue;
-        for(auto [d,to]:graph[v]) {
+        for(const auto& [d,to]:graph[v]) {
             if(chmin(dist[to],dist[v] + d)) {
                 pre[to] = v;
                 que.push({dist[to],to});
