@@ -22,7 +22,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: Graph/BellmanFord.cpp
-      title: Graph/BellmanFord.cpp
+      title: Bellman-Ford
     - icon: ':x:'
       path: Graph/Dijkstra.cpp
       title: Graph/Dijkstra.cpp
