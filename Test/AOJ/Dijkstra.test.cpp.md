@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Dijkstra.cpp
     title: Graph/Dijkstra.cpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
@@ -29,9 +29,9 @@ data:
     \ que;\n    dist = vector<ll>(N,INF);\n    pre = vector<int>(N,-1);\n    dist[s]\
     \ = 0;\n    que.push({0,s});\n\n    while(!que.empty()) {\n        auto [cost,v]\
     \ = que.top();\n        que.pop();\n        if(dist[v] < cost) continue;\n   \
-    \     for(const auto& [d,to]:graph[v]) {\n            if(chmin(dist[to],dist[v]\
+    \     for(const auto& [to,d]:graph[v]) {\n            if(chmin(dist[to],dist[v]\
     \ + d)) {\n                pre[to] = v;\n                que.push({dist[to],to});\n\
-    \            }\n        }\n    }\n}\n\nvector<int> get_path(int t) {\n    vector<int>\
+    \            }\n        }\n    }\n}\n\nvector<int> GetPath(int t) {\n    vector<int>\
     \ path;\n    while(t != -1) {\n        path.push_back(t);\n        t = pre[t];\n\
     \    }\n    reverse(path.begin(),path.end());\n    return path;\n}\n#line 8 \"\
     Test/AOJ/Dijkstra.test.cpp\"\n\nint main() {\n    cin >> N;\n    int M,r;\n  \
@@ -53,8 +53,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/Dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 20:44:53+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-14 22:10:24+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Dijkstra.test.cpp
 layout: document
