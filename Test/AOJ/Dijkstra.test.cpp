@@ -10,6 +10,7 @@ int main() {
     cin >> N;
     int M,r;
     cin >> M >> r;
+    graph = vector<vector<edge>>(N);
     for(int i = 0;i < M;i++) {
         int s,t;
         ll d;
