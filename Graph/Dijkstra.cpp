@@ -3,9 +3,9 @@ struct edge{
     ll cost;
 };
 
-int N; //頂点数
+int N;
 vector<edge> graph[200010];
-vector<ll> dist; //頂点sからの最短距離
+vector<ll> dist;
 vector<int> pre;
 
 void Dijkstra(int s) {
@@ -28,7 +28,6 @@ void Dijkstra(int s) {
     }
 }
 
-//最短路を取得
 vector<int> get_path(int t) {
     vector<int> path;
     while(t != -1) {
