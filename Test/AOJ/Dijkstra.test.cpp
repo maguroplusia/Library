@@ -14,7 +14,7 @@ int main() {
         int s,t;
         ll d;
         cin >> s >> t >> d;
-        graph[s].push_back(edge{t,d});
+        graph[s].push_back({t,d});
     }
     Dijkstra(r);
     for(int i = 0;i < N;i++) {
