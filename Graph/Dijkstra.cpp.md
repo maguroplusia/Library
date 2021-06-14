@@ -13,7 +13,7 @@ data:
     links: []
   bundledCode: "#line 1 \"Graph/Dijkstra.cpp\"\nstruct edge{\n    int to;\n    ll\
     \ cost;\n};\n\nint N;\nvector<edge> graph[200010];\nvector<ll> dist;\nvector<int>\
-    \ pre;\n\nvoid Dijkstra(int s) {\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>\
+    \ pre;\n\nvoid Dijkstra(int s) {\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>>\
     \ que;\n    dist = vector<ll>(N,INF);\n    pre = vector<int>(N,-1);\n    dist[s]\
     \ = 0;\n    que.push({0,s});\n\n    while(!que.empty()) {\n        auto [cost,v]\
     \ = que.top();\n        que.pop();\n        if(dist[v] < cost) continue;\n   \
@@ -23,7 +23,7 @@ data:
     \ path;\n    while(t != -1) {\n        path.push_back(t);\n        t = pre[t];\n\
     \    }\n    reverse(path.begin(),path.end());\n    return path;\n}\n"
   code: "struct edge{\n    int to;\n    ll cost;\n};\n\nint N;\nvector<edge> graph[200010];\n\
-    vector<ll> dist;\nvector<int> pre;\n\nvoid Dijkstra(int s) {\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>\
+    vector<ll> dist;\nvector<int> pre;\n\nvoid Dijkstra(int s) {\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>>\
     \ que;\n    dist = vector<ll>(N,INF);\n    pre = vector<int>(N,-1);\n    dist[s]\
     \ = 0;\n    que.push({0,s});\n\n    while(!que.empty()) {\n        auto [cost,v]\
     \ = que.top();\n        que.pop();\n        if(dist[v] < cost) continue;\n   \
@@ -36,7 +36,7 @@ data:
   isVerificationFile: false
   path: Graph/Dijkstra.cpp
   requiredBy: []
-  timestamp: '2021-06-14 20:20:10+09:00'
+  timestamp: '2021-06-14 20:44:53+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/AOJ/Dijkstra.test.cpp
