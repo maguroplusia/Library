@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/BellmanFord.cpp
     title: Graph/BellmanFord.cpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B
@@ -33,11 +33,11 @@ data:
     \u5834\u5408\u306F-INF\uFF09\nvoid BellmanFord(int s) {\n    dist = vector<ll>(N,INF);\n\
     \    dist[s] = 0;\n\n    for(int i = 0;i < N * 2;i++) {\n        for(const auto&\
     \ [from,to,cost]:es) {\n            if(dist[from] < INF && dist[from] + cost <\
-    \ dist[to])  {\n                if(i >= N - 1) dist[e.to] = -INF;\n          \
-    \      else dist[e.to] = dist[e.from] + e.cost;\n            }\n        }\n  \
-    \  }\n}\n\n//true\u306A\u3089\u8CA0\u306E\u9589\u8DEF\u304C\u5B58\u5728\u3059\u308B\
-    \nbool find_negative_roop() {\n    dist = vector<ll>(N);\n    for(int i = 0;i\
-    \ < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n            if(chmin(dist[to],dist[from]\
+    \ dist[to])  {\n                if(i >= N - 1) dist[to] = -INF;\n            \
+    \    else dist[to] = dist[from] + cost;\n            }\n        }\n    }\n}\n\n\
+    //true\u306A\u3089\u8CA0\u306E\u9589\u8DEF\u304C\u5B58\u5728\u3059\u308B\nbool\
+    \ find_negative_roop() {\n    dist = vector<ll>(N);\n    for(int i = 0;i < N;i++)\
+    \ {\n        for(const auto& [from,to,cost]:es) {\n            if(chmin(dist[to],dist[from]\
     \ + cost) && i == N - 1) return true;\n        }\n    }\n    return false;\n}\n\
     #line 8 \"Test/AOJ/BellmanFord.test.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
     \    int r;\n    cin >> r;\n    es = vector<edge>(M);\n    for(int i = 0;i < M;i++)\
@@ -63,8 +63,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 18:12:15+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-14 20:17:50+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp
 layout: document
