@@ -16,8 +16,8 @@ void BellmanFord(int s) {
     for(int i = 0;i < N * 2;i++) {
         for(const auto& [from,to,cost]:es) {
             if(dist[from] < INF && dist[from] + cost < dist[to])  {
-                if(i >= N - 1) dist[e.to] = -INF;
-                else dist[e.to] = dist[e.from] + e.cost;
+                if(i >= N - 1) dist[to] = -INF;
+                else dist[to] = dist[from] + cost;
             }
         }
     }
