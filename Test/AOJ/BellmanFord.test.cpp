@@ -10,6 +10,7 @@ int main() {
     cin >> N >> M;
     int r;
     cin >> r;
+    es = vector<edge>(M);
     for(int i = 0;i < M;i++) {
         int s,t;
         ll d;
