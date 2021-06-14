@@ -13,7 +13,7 @@ void Dijkstra(int s) {
     dist = vector<ll>(N,INF);
     pre = vector<int>(N,-1);
     dist[s] = 0;
-    que.push(P(0,s));
+    que.push({0,s});
 
     while(!que.empty()) {
         auto [cost,v] = que.top();
