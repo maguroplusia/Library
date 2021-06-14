@@ -19,7 +19,7 @@ void Dijkstra(int s) {
         auto [cost,v] = que.top();
         que.pop();
         if(dist[v] < cost) continue;
-        for(const auto& [d,to]:graph[v]) {
+        for(const auto& [to,d]:graph[v]) {
             if(chmin(dist[to],dist[v] + d)) {
                 pre[to] = v;
                 que.push({dist[to],to});
@@ -28,7 +28,7 @@ void Dijkstra(int s) {
     }
 }
 
-vector<int> get_path(int t) {
+vector<int> GetPath(int t) {
     vector<int> path;
     while(t != -1) {
         path.push_back(t);
