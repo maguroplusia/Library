@@ -16,7 +16,7 @@ int main() {
         cin >> s >> t >> d;
         graph[s].push_back({t,d});
     }
-    Dijkstra(r);
+    vector<ll> dist = Dijkstra(r);
     for(int i = 0;i < N;i++) {
         if(dist[i] == INF) cout << "INF" << endl;
         else cout << dist[i] << endl;
