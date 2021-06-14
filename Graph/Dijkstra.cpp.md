@@ -16,7 +16,7 @@ data:
     \ dist; //\u9802\u70B9s\u304B\u3089\u306E\u6700\u77ED\u8DDD\u96E2\nvector<int>\
     \ pre;\n\nvoid Dijkstra(int s) {\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>\
     \ que;\n    dist = vector<ll>(N,INF);\n    pre = vector<int>(N,-1);\n    dist[s]\
-    \ = 0;\n    que.push(P(0,s));\n\n    while(!que.empty()) {\n        auto [cost,v]\
+    \ = 0;\n    que.push({0,s});\n\n    while(!que.empty()) {\n        auto [cost,v]\
     \ = que.top();\n        que.pop();\n        if(dist[v] < cost) continue;\n   \
     \     for(const auto& [d,to]:graph[v]) {\n            if(chmin(dist[to],dist[v]\
     \ + d)) {\n                pre[to] = v;\n                que.push({dist[to],to});\n\
@@ -28,7 +28,7 @@ data:
     \nvector<edge> graph[200010];\nvector<ll> dist; //\u9802\u70B9s\u304B\u3089\u306E\
     \u6700\u77ED\u8DDD\u96E2\nvector<int> pre;\n\nvoid Dijkstra(int s) {\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>\
     \ que;\n    dist = vector<ll>(N,INF);\n    pre = vector<int>(N,-1);\n    dist[s]\
-    \ = 0;\n    que.push(P(0,s));\n\n    while(!que.empty()) {\n        auto [cost,v]\
+    \ = 0;\n    que.push({0,s});\n\n    while(!que.empty()) {\n        auto [cost,v]\
     \ = que.top();\n        que.pop();\n        if(dist[v] < cost) continue;\n   \
     \     for(const auto& [d,to]:graph[v]) {\n            if(chmin(dist[to],dist[v]\
     \ + d)) {\n                pre[to] = v;\n                que.push({dist[to],to});\n\
@@ -40,7 +40,7 @@ data:
   isVerificationFile: false
   path: Graph/Dijkstra.cpp
   requiredBy: []
-  timestamp: '2021-06-14 17:23:19+09:00'
+  timestamp: '2021-06-14 18:10:24+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/AOJ/Dijkstra.test.cpp

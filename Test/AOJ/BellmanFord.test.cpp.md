@@ -40,30 +40,30 @@ data:
     \ < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n            if(chmin(dist[to],dist[from]\
     \ + cost) && i == N - 1) return true;\n        }\n    }\n    return false;\n}\n\
     #line 8 \"Test/AOJ/BellmanFord.test.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
-    \    int r;\n    cin >> r;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
-    \        ll d;\n        cin >> s >> t >> d;\n        es[i] = {s,t,d};\n    }\n\
-    \    BellmanFord(r);\n    bool isnegative = false;\n    for(int i = 0;i < N;i++)\
-    \ {\n        if(dist[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
-    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
-    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
-    \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
+    \    int r;\n    cin >> r;\n    es = vector<edge>(M);\n    for(int i = 0;i < M;i++)\
+    \ {\n        int s,t;\n        ll d;\n        cin >> s >> t >> d;\n        es[i]\
+    \ = {s,t,d};\n    }\n    BellmanFord(r);\n    bool isnegative = false;\n    for(int\
+    \ i = 0;i < N;i++) {\n        if(dist[i] == -INF) isnegative = true;\n    }\n\
+    \    if(isnegative) {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return\
+    \ 0;\n    }\n    for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout <<\
+    \ \"INF\" << endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
-    \    int r;\n    cin >> r;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
-    \        ll d;\n        cin >> s >> t >> d;\n        es[i] = {s,t,d};\n    }\n\
-    \    BellmanFord(r);\n    bool isnegative = false;\n    for(int i = 0;i < N;i++)\
-    \ {\n        if(dist[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
-    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
-    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
-    \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
+    \    int r;\n    cin >> r;\n    es = vector<edge>(M);\n    for(int i = 0;i < M;i++)\
+    \ {\n        int s,t;\n        ll d;\n        cin >> s >> t >> d;\n        es[i]\
+    \ = {s,t,d};\n    }\n    BellmanFord(r);\n    bool isnegative = false;\n    for(int\
+    \ i = 0;i < N;i++) {\n        if(dist[i] == -INF) isnegative = true;\n    }\n\
+    \    if(isnegative) {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return\
+    \ 0;\n    }\n    for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout <<\
+    \ \"INF\" << endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - Graph/BellmanFord.cpp
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 17:23:23+09:00'
+  timestamp: '2021-06-14 18:12:15+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp
