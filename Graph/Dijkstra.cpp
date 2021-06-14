@@ -9,7 +9,7 @@ vector<ll> dist;
 vector<int> pre;
 
 void Dijkstra(int s) {
-    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>> que;
+    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>> que;
     dist = vector<ll>(N,INF);
     pre = vector<int>(N,-1);
     dist[s] = 0;
