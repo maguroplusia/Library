@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Prim.cpp
     title: Graph/Prim.cpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A&lang=jp
@@ -19,14 +19,11 @@ data:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A&lang=jp
   bundledCode: "#line 1 \"Test/AOJ/Prim.test.cpp\"\n#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_12_A&lang=jp\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#line 1 \"Other/Template.cpp\"\
-    \ntypedef long long ll;\n\ntemplate<typename T> inline bool chmax(T &a, T b) {\
-    \ if (a < b) { a = b; return true; } return false; }\ntemplate<typename T> inline\
-    \ bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false; }\n\
-    \ntemplate<typename T>\nT modpow(T N, T P, T M){\n    if(P == 0) return 1;\n \
-    \   if(P < 0) return 0;\n    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n\
-    \        if(M == -1) return t * t;\n        return t * t % M;\n    }\n    if(M\
-    \ == -1) return N * modpow(N,P - 1,M);\n    return N * modpow(N, P-1, M) % M;\n\
-    }\n#line 1 \"Graph/Prim.cpp\"\nll cost[2010][2010]; // cost[u][v]\u306F\u8FBA\
+    \ntypedef long long ll;\nconstexpr int Inf = 2000000030;\nconstexpr long long\
+    \ INF= 2000000000000000000;\n\ntemplate<typename T> inline bool chmax(T &a, T\
+    \ b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename T>\
+    \ inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false;\
+    \ }\n#line 1 \"Graph/Prim.cpp\"\nll cost[2010][2010]; // cost[u][v]\u306F\u8FBA\
     e=(u,v)\u306E\u30B3\u30B9\u30C8\nll mincost[2010]; // \u96C6\u5408X\u304B\u3089\
     \u306E\u3078\u8FBA\u306E\u6700\u5C0F\u30B3\u30B9\u30C8\nbool used[2010]; //\u3059\
     \u3067\u306B\u9802\u70B9i\u304CX\u306B\u542B\u307E\u308C\u3066\u3044\u308B\u304B\
@@ -56,8 +53,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/Prim.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-14 17:23:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Prim.test.cpp
 layout: document

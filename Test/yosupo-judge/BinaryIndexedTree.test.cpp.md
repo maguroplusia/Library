@@ -20,13 +20,10 @@ data:
   bundledCode: "#line 1 \"Test/yosupo-judge/BinaryIndexedTree.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/static_range_sum\"\n\n#include<bits/stdc++.h>\n\
     using namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\
+    constexpr int Inf = 2000000030;\nconstexpr long long INF= 2000000000000000000;\n\
     \ntemplate<typename T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return\
     \ true; } return false; }\ntemplate<typename T> inline bool chmin(T &a, T b) {\
-    \ if (a > b) { a = b; return true; } return false; }\n\ntemplate<typename T>\n\
-    T modpow(T N, T P, T M){\n    if(P == 0) return 1;\n    if(P < 0) return 0;\n\
-    \    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n        if(M == -1) return\
-    \ t * t;\n        return t * t % M;\n    }\n    if(M == -1) return N * modpow(N,P\
-    \ - 1,M);\n    return N * modpow(N, P-1, M) % M;\n}\n#line 1 \"DataStructure/BinaryIndexedTree.cpp\"\
+    \ if (a > b) { a = b; return true; } return false; }\n#line 1 \"DataStructure/BinaryIndexedTree.cpp\"\
     \ntemplate <typename T>\nclass BinaryIndexedTree {\n    int N;\n    vector<T>\
     \ bit;\n\n    T sum_sub(int a) {\n        a++;\n        T ret = 0;\n        if(a\
     \ == 0) return ret;\n        while(a > 0) {\n            ret += bit[a];\n    \
@@ -55,7 +52,7 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
+  timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/BinaryIndexedTree.test.cpp

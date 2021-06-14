@@ -19,14 +19,11 @@ data:
     - https://judge.yosupo.jp/problem/staticrmq
   bundledCode: "#line 1 \"Test/yosupo-judge/SparseTable.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.yosupo.jp/problem/staticrmq\"\n\n#include<bits/stdc++.h>\nusing\
-    \ namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\n\
-    template<typename T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return\
-    \ true; } return false; }\ntemplate<typename T> inline bool chmin(T &a, T b) {\
-    \ if (a > b) { a = b; return true; } return false; }\n\ntemplate<typename T>\n\
-    T modpow(T N, T P, T M){\n    if(P == 0) return 1;\n    if(P < 0) return 0;\n\
-    \    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n        if(M == -1) return\
-    \ t * t;\n        return t * t % M;\n    }\n    if(M == -1) return N * modpow(N,P\
-    \ - 1,M);\n    return N * modpow(N, P-1, M) % M;\n}\n#line 1 \"DataStructure/SparseTable.cpp\"\
+    \ namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\nconstexpr\
+    \ int Inf = 2000000030;\nconstexpr long long INF= 2000000000000000000;\n\ntemplate<typename\
+    \ T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return true; } return\
+    \ false; }\ntemplate<typename T> inline bool chmin(T &a, T b) { if (a > b) { a\
+    \ = b; return true; } return false; }\n#line 1 \"DataStructure/SparseTable.cpp\"\
     \ntemplate <typename T>\nclass SparseTable {\n    vector<vector<T>> table; //table[i][j]\
     \ = j\u756A\u76EE\u304B\u3089\u898B\u30662^i\u500B\u306E\u8981\u7D20\u306E\u6700\
     \u5C0F\u5024\n    vector<int> lookup;\n\npublic:\n\n    //Sparse Table\u306E\u69CB\
@@ -58,7 +55,7 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/SparseTable.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
+  timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/SparseTable.test.cpp

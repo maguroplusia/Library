@@ -19,14 +19,11 @@ data:
     - https://yukicoder.me/problems/447
   bundledCode: "#line 1 \"Test/yukicoder/ChineseRemainderTheorem.test.cpp\"\n#define\
     \ PROBLEM \"https://yukicoder.me/problems/447\"\n\n#include<bits/stdc++.h>\nusing\
-    \ namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\n\
-    template<typename T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return\
-    \ true; } return false; }\ntemplate<typename T> inline bool chmin(T &a, T b) {\
-    \ if (a > b) { a = b; return true; } return false; }\n\ntemplate<typename T>\n\
-    T modpow(T N, T P, T M){\n    if(P == 0) return 1;\n    if(P < 0) return 0;\n\
-    \    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n        if(M == -1) return\
-    \ t * t;\n        return t * t % M;\n    }\n    if(M == -1) return N * modpow(N,P\
-    \ - 1,M);\n    return N * modpow(N, P-1, M) % M;\n}\n#line 1 \"Mathematics/ChineseRemainderTheorem.cpp\"\
+    \ namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\nconstexpr\
+    \ int Inf = 2000000030;\nconstexpr long long INF= 2000000000000000000;\n\ntemplate<typename\
+    \ T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return true; } return\
+    \ false; }\ntemplate<typename T> inline bool chmin(T &a, T b) { if (a > b) { a\
+    \ = b; return true; } return false; }\n#line 1 \"Mathematics/ChineseRemainderTheorem.cpp\"\
     \n//extgcd(a,b,x,y):ax+by=gcd(a,b)\u3092\u6E80\u305F\u3059(x,y)\u304C\u683C\u7D0D\
     \u3055\u308C\u308B\u3000\u8FD4\u308A\u5024\u306Fgcd(a,b)\nll extgcd(ll a,ll b,ll\
     \ &x,ll &y) {\n    if(b == 0) {\n        x = 1;\n        y = 0;\n        return\
@@ -57,7 +54,7 @@ data:
   isVerificationFile: true
   path: Test/yukicoder/ChineseRemainderTheorem.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
+  timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yukicoder/ChineseRemainderTheorem.test.cpp

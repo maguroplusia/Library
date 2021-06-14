@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/WarshallFloyd.cpp
     title: Graph/WarshallFloyd.cpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C
@@ -19,14 +19,11 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C
   bundledCode: "#line 1 \"Test/AOJ/WarshallFloyd.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#line 1 \"Other/Template.cpp\"\
-    \ntypedef long long ll;\n\ntemplate<typename T> inline bool chmax(T &a, T b) {\
-    \ if (a < b) { a = b; return true; } return false; }\ntemplate<typename T> inline\
-    \ bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false; }\n\
-    \ntemplate<typename T>\nT modpow(T N, T P, T M){\n    if(P == 0) return 1;\n \
-    \   if(P < 0) return 0;\n    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n\
-    \        if(M == -1) return t * t;\n        return t * t % M;\n    }\n    if(M\
-    \ == -1) return N * modpow(N,P - 1,M);\n    return N * modpow(N, P-1, M) % M;\n\
-    }\n#line 1 \"Graph/WarshallFloyd.cpp\"\nint N; //\u9802\u70B9\u6570\nll dist[500][500];\
+    \ntypedef long long ll;\nconstexpr int Inf = 2000000030;\nconstexpr long long\
+    \ INF= 2000000000000000000;\n\ntemplate<typename T> inline bool chmax(T &a, T\
+    \ b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename T>\
+    \ inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false;\
+    \ }\n#line 1 \"Graph/WarshallFloyd.cpp\"\nint N; //\u9802\u70B9\u6570\nll dist[500][500];\
     \ //d[u][v]\u306F\u8FBAe=(u,v)\u306E\u30B3\u30B9\u30C8\uFF08\u5B58\u5728\u3057\
     \u306A\u3044\u5834\u5408\u306FINF\u3001\u305F\u3060\u3057d[i][i]=0\u3068\u3059\
     \u308B\uFF09\n\nvoid init() {\n    for(int i = 0;i < 500;i++) {\n        for(int\
@@ -64,8 +61,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/WarshallFloyd.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-14 17:23:21+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/WarshallFloyd.test.cpp
 layout: document

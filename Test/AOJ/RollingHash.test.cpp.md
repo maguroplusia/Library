@@ -19,18 +19,15 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_B
   bundledCode: "#line 1 \"Test/AOJ/RollingHash.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/problems/ALDS1_14_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#line 1 \"Other/Template.cpp\"\
-    \ntypedef long long ll;\n\ntemplate<typename T> inline bool chmax(T &a, T b) {\
-    \ if (a < b) { a = b; return true; } return false; }\ntemplate<typename T> inline\
-    \ bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false; }\n\
-    \ntemplate<typename T>\nT modpow(T N, T P, T M){\n    if(P == 0) return 1;\n \
-    \   if(P < 0) return 0;\n    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n\
-    \        if(M == -1) return t * t;\n        return t * t % M;\n    }\n    if(M\
-    \ == -1) return N * modpow(N,P - 1,M);\n    return N * modpow(N, P-1, M) % M;\n\
-    }\n#line 1 \"String/RollingHash.cpp\"\nclass RollingHash {\n    static const uint64_t\
-    \ mod = (1ull << 61ull) - 1;\n    vector<uint64_t> power;\n    const uint64_t\
-    \ base;\n\n    //1\u4EE5\u4E0Amod - 1\u4EE5\u4E0B\u306E\u30E9\u30F3\u30C0\u30E0\
-    \u306Abase\u3092\u751F\u6210\n    static inline uint64_t generate_base() {\n \
-    \       mt19937_64 engine(chrono::steady_clock::now().time_since_epoch().count());\n\
+    \ntypedef long long ll;\nconstexpr int Inf = 2000000030;\nconstexpr long long\
+    \ INF= 2000000000000000000;\n\ntemplate<typename T> inline bool chmax(T &a, T\
+    \ b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename T>\
+    \ inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false;\
+    \ }\n#line 1 \"String/RollingHash.cpp\"\nclass RollingHash {\n    static const\
+    \ uint64_t mod = (1ull << 61ull) - 1;\n    vector<uint64_t> power;\n    const\
+    \ uint64_t base;\n\n    //1\u4EE5\u4E0Amod - 1\u4EE5\u4E0B\u306E\u30E9\u30F3\u30C0\
+    \u30E0\u306Abase\u3092\u751F\u6210\n    static inline uint64_t generate_base()\
+    \ {\n        mt19937_64 engine(chrono::steady_clock::now().time_since_epoch().count());\n\
     \        uniform_int_distribution<uint64_t> rand((uint64_t)1,(uint64_t)mod - 1);\n\
     \        return rand(engine);\n    }\n\n    //\u8DB3\u3057\u7B97\n    static inline\
     \ uint64_t add(uint64_t a, uint64_t b) {\n        if((a += b) >= mod) a -= mod;\n\
@@ -80,7 +77,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/RollingHash.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
+  timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/RollingHash.test.cpp

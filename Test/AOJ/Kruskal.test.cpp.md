@@ -22,14 +22,11 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/2/GRL_2_A
   bundledCode: "#line 1 \"Test/AOJ/Kruskal.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/2/GRL_2_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#line 1 \"Other/Template.cpp\"\
-    \ntypedef long long ll;\n\ntemplate<typename T> inline bool chmax(T &a, T b) {\
-    \ if (a < b) { a = b; return true; } return false; }\ntemplate<typename T> inline\
-    \ bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false; }\n\
-    \ntemplate<typename T>\nT modpow(T N, T P, T M){\n    if(P == 0) return 1;\n \
-    \   if(P < 0) return 0;\n    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n\
-    \        if(M == -1) return t * t;\n        return t * t % M;\n    }\n    if(M\
-    \ == -1) return N * modpow(N,P - 1,M);\n    return N * modpow(N, P-1, M) % M;\n\
-    }\n#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n    vector<int>\
+    \ntypedef long long ll;\nconstexpr int Inf = 2000000030;\nconstexpr long long\
+    \ INF= 2000000000000000000;\n\ntemplate<typename T> inline bool chmax(T &a, T\
+    \ b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename T>\
+    \ inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false;\
+    \ }\n#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n    vector<int>\
     \ par; //\u89AA\n    vector<int> siz; //\u6839\u30CE\u30FC\u30C9i\u306E\u6728\u306B\
     \u542B\u307E\u308C\u308B\u8981\u7D20\u6570\u3002i\u304C\u6839\u30CE\u30FC\u30C9\
     \u51FA\u306A\u3044\u5834\u5408\u7121\u610F\u5473\u306A\u5024\u3068\u306A\u308B\
@@ -70,7 +67,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/Kruskal.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
+  timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Kruskal.test.cpp

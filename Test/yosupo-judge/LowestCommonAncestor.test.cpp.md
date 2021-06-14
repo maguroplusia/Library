@@ -20,13 +20,10 @@ data:
   bundledCode: "#line 1 \"Test/yosupo-judge/LowestCommonAncestor.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#include<bits/stdc++.h>\n\
     using namespace std;\n\n#line 1 \"Other/Template.cpp\"\ntypedef long long ll;\n\
+    constexpr int Inf = 2000000030;\nconstexpr long long INF= 2000000000000000000;\n\
     \ntemplate<typename T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return\
     \ true; } return false; }\ntemplate<typename T> inline bool chmin(T &a, T b) {\
-    \ if (a > b) { a = b; return true; } return false; }\n\ntemplate<typename T>\n\
-    T modpow(T N, T P, T M){\n    if(P == 0) return 1;\n    if(P < 0) return 0;\n\
-    \    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n        if(M == -1) return\
-    \ t * t;\n        return t * t % M;\n    }\n    if(M == -1) return N * modpow(N,P\
-    \ - 1,M);\n    return N * modpow(N, P-1, M) % M;\n}\n#line 1 \"Graph/LowestCommonAncestor.cpp\"\
+    \ if (a > b) { a = b; return true; } return false; }\n#line 1 \"Graph/LowestCommonAncestor.cpp\"\
     \nint N;\nvector<int> graph[500010];\n\nint root = 0;\n\nint parent[50][500010];\n\
     int depth[500010];\n\nvoid dfs(int v,int p,int d) {\n    parent[0][v] = p;\n \
     \   depth[v] = d;\n    for(int i = 0;i < graph[v].size();i++) {\n        if(graph[v][i]\
@@ -59,7 +56,7 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
+  timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/LowestCommonAncestor.test.cpp

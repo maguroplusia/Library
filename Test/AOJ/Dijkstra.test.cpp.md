@@ -19,23 +19,19 @@ data:
     - https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
   bundledCode: "#line 1 \"Test/AOJ/Dijkstra.test.cpp\"\n#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#line 1 \"Other/Template.cpp\"\
-    \ntypedef long long ll;\n\ntemplate<typename T> inline bool chmax(T &a, T b) {\
-    \ if (a < b) { a = b; return true; } return false; }\ntemplate<typename T> inline\
-    \ bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false; }\n\
-    \ntemplate<typename T>\nT modpow(T N, T P, T M){\n    if(P == 0) return 1;\n \
-    \   if(P < 0) return 0;\n    if(P % 2 == 0){\n        T t = modpow(N, P/2, M);\n\
-    \        if(M == -1) return t * t;\n        return t * t % M;\n    }\n    if(M\
-    \ == -1) return N * modpow(N,P - 1,M);\n    return N * modpow(N, P-1, M) % M;\n\
-    }\n#line 1 \"Graph/Dijkstra.cpp\"\nstruct edge{\n    int to;\n    ll cost;\n};\n\
-    \nint N; //\u9802\u70B9\u6570\nvector<edge> graph[200010];\nll dist[200010]; //\u9802\
-    \u70B9s\u304B\u3089\u306E\u6700\u77ED\u8DDD\u96E2\nint pre[200010];\n\nvoid Dijkstra(int\
-    \ s) {\n    //greater<P>\u3092\u6307\u5B9A\u3059\u308B\u3053\u3068\u3067first\u304C\
-    \u5C0F\u3055\u3044\u9806\u306B\u53D6\u308A\u51FA\u305B\u308B\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>\
-    \ que;\n    fill(dist,dist + N,INF);\n    fill(pre,pre + N,-1);\n    dist[s] =\
-    \ 0;\n    que.push(P(0,s));\n\n    while(!que.empty()) {\n        auto [cost,v]\
+    \ntypedef long long ll;\nconstexpr int Inf = 2000000030;\nconstexpr long long\
+    \ INF= 2000000000000000000;\n\ntemplate<typename T> inline bool chmax(T &a, T\
+    \ b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename T>\
+    \ inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false;\
+    \ }\n#line 1 \"Graph/Dijkstra.cpp\"\nstruct edge{\n    int to;\n    ll cost;\n\
+    };\n\nint N; //\u9802\u70B9\u6570\nvector<edge> graph[200010];\nvector<ll> dist;\
+    \ //\u9802\u70B9s\u304B\u3089\u306E\u6700\u77ED\u8DDD\u96E2\nvector<int> pre;\n\
+    \nvoid Dijkstra(int s) {\n    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>\
+    \ que;\n    dist = vector<ll>(N,INF);\n    pre = vector<int>(N,-1);\n    dist[s]\
+    \ = 0;\n    que.push(P(0,s));\n\n    while(!que.empty()) {\n        auto [cost,v]\
     \ = que.top();\n        que.pop();\n        if(dist[v] < cost) continue;\n   \
-    \     for(auto [d,to]:graph[v]) {\n            if(chmin(dist[to],dist[v] + d))\
-    \ {\n                pre[to] = v;\n                que.push({dist[to],to});\n\
+    \     for(const auto& [d,to]:graph[v]) {\n            if(chmin(dist[to],dist[v]\
+    \ + d)) {\n                pre[to] = v;\n                que.push({dist[to],to});\n\
     \            }\n        }\n    }\n}\n\n//\u6700\u77ED\u8DEF\u3092\u53D6\u5F97\n\
     vector<int> get_path(int t) {\n    vector<int> path;\n    while(t != -1) {\n \
     \       path.push_back(t);\n        t = pre[t];\n    }\n    reverse(path.begin(),path.end());\n\
@@ -59,7 +55,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/Dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2021-06-08 16:42:39+09:00'
+  timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/Dijkstra.test.cpp
