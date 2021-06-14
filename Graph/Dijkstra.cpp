@@ -13,7 +13,6 @@ vector<ll> Dijkstra(int s) {
     pre = vector<int>(N,-1);
     dist[s] = 0;
     que.push({0,s});
-
     while(!que.empty()) {
         auto [cost,v] = que.top();
         que.pop();
@@ -25,7 +24,6 @@ vector<ll> Dijkstra(int s) {
             }
         }
     }
-
     return dist;
 }
 
