@@ -2,7 +2,7 @@
 
 struct edge {
     int u,v;
-    ll cost;
+    long long cost;
 
     bool operator<(const edge& b) const {
         return cost < b.cost;
@@ -12,10 +12,10 @@ struct edge {
 int N,M;
 edge graph[200010];
 
-ll Kruskal() {
+long long Kruskal() {
     sort(graph,graph + M);
     UnionFind uf(N);
-    ll ret = 0;
+    long long ret = 0;
     for(int i = 0;i < M;i++) {
         edge e = graph[i];
         if(!uf.same(e.u,e.v)) {

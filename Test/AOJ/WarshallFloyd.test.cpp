@@ -13,7 +13,7 @@ int main() {
     init();
     for(int i = 0;i < M;i++) {
         int s,t;
-        ll d;
+        long long d;
         cin >> s >> t >> d;
         dist[s][t] = d;
     }

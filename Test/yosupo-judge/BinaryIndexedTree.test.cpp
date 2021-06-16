@@ -9,11 +9,11 @@ using namespace std;
 int main() {
     int N,Q;
     cin >> N >> Q;
-    vector<ll> vec(N);
+    vector<long long> vec(N);
     for(int i = 0;i < N;i++) {
         cin >> vec.at(i);
     }
-    BinaryIndexedTree<ll> bit(N);
+    BinaryIndexedTree<long long> bit(N);
     for(int i = 0;i < N;i++) {
         bit.add(i,vec.at(i));
     }

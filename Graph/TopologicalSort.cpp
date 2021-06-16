@@ -35,7 +35,7 @@ vector<int> topological_sort() {
 }
 
 //トポロジカルソートする通り数、O(2^N)が間に合う程度で
-ll counting() {
+long long counting() {
     for(int i = 0;i < N;i++) {
         outdegree[i] = 0;
     }
@@ -44,7 +44,7 @@ ll counting() {
             outdegree[i] += (1 << x);
         }
     }
-    vector<ll> dp(1 << N);
+    vector<long long> dp(1 << N);
     dp.at(0) = 1;
     for(int i = 0;i < (1 << N);i++) {
         for(int j = 0;j < N;j++) {

@@ -1,15 +1,15 @@
-ll cost[2010][2010]; // cost[u][v]は辺e=(u,v)のコスト
-ll mincost[2010]; // 集合Xからのへ辺の最小コスト
+long long cost[2010][2010]; // cost[u][v]は辺e=(u,v)のコスト
+long long mincost[2010]; // 集合Xからのへ辺の最小コスト
 bool used[2010]; //すでに頂点iがXに含まれているか
 int N,M; //頂点の個数、辺の本数
 
-ll prim() {
+long long prim() {
     for(int i = 0;i < N;i++) {
         mincost[i] = INF;
         used[i] = false;
     }
     mincost[0] = 0;
-    ll res = 0;
+    long long res = 0;
     while(true) {
         int v = -1;
         //Xに属さない頂点のうちXからの辺のコストが最小になる頂点を探す

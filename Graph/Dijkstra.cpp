@@ -1,15 +1,13 @@
 struct edge{
     int to;
-    ll cost;
+    long long cost;
 };
 
-int N;
-vector<vector<edge>> graph;
 vector<int> pre;
 
-vector<ll> Dijkstra(int s) {
-    priority_queue<pair<ll,int>,vector<pair<ll,int>>,greater<pair<ll,int>>> que;
-    vector<ll> dist(N,INF);
+vector<long long> Dijkstra(const int& N,const vector<vector<edge>>& graph,const int& s) {
+    priority_queue<pair<long long,int>,vector<pair<long long,int>>,greater<pair<long long,int>>> que;
+    vector<long long> dist(N,INF);
     pre = vector<int>(N,-1);
     dist[s] = 0;
     que.push({0,s});
@@ -36,7 +34,7 @@ vector<int> GetPath(int t) {
         path.push_back(t);
         t = pre[t];
     }
-    
+
     reverse(path.begin(),path.end());
     return path;
 }

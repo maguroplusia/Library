@@ -10,7 +10,7 @@ int main() {
     cin >> N >> M;
     for(int i = 0;i < M;i++) {
         int s,t;
-        ll w;
+        long long w;
         cin >> s >> t >> w;
         graph[i] = edge{s,t,w};
     }

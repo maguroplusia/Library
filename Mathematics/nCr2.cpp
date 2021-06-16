@@ -1,4 +1,4 @@
-ll com[2000010];
+long long com[2000010];
 
 long long modpow(long long a, long long n, long long mod) {
     long long res = 1;
@@ -16,7 +16,7 @@ long long modinv(long long a, long long mod) {
 
 void COM(int n) {
     com[0] = 1;
-    for(int i = 1;i < min(n + 1,2000010ll);i++) {
+    for(int i = 1;i < min(n + 1,2000010long long);i++) {
         com[i] = com[i - 1] * (n - (i - 1)) % MOD * modinv(i,MOD) % MOD;
     }
     return;

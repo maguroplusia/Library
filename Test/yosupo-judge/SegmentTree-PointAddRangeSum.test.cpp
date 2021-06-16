@@ -9,11 +9,11 @@ using namespace std;
 int main() {
     int N,Q;
     cin >> N >> Q;
-    SegmentTree<ll> seg(N,(ll)0,
-    [](ll a,ll b){return a + b;},
-    [](ll a,ll b){return a + b;});
+    SegmentTree<long long> seg(N,(long long)0,
+    [](long long a,long long b){return a + b;},
+    [](long long a,long long b){return a + b;});
     for(int i = 0;i < N;i++) {
-        ll A;
+        long long A;
         cin >> A;
         seg.set(i,A);
     }
@@ -23,7 +23,7 @@ int main() {
         cin >> t;
         if(t == 0) {
             int p;
-            ll x;
+            long long x;
             cin >> p >> x;
             seg.update(p,x);
         }

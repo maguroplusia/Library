@@ -1,5 +1,5 @@
 int N; //頂点数
-ll dist[500][500]; //d[u][v]は辺e=(u,v)のコスト（存在しない場合はINF、ただしd[i][i]=0とする）
+long long dist[500][500]; //d[u][v]は辺e=(u,v)のコスト（存在しない場合はINF、ただしd[i][i]=0とする）
 
 void init() {
     for(int i = 0;i < 500;i++) {
@@ -14,7 +14,7 @@ void init() {
     }
 }
 
-void WarshallFloyd() {
+void Warshalong longFloyd() {
     for(int k = 0;k < N;k++) {
         for(int i = 0;i < N;i++) {
             for(int j = 0;j < N;j++) {

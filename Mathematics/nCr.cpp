@@ -1,4 +1,4 @@
-ll fac[1000010], finv[1000010], inv[1000010];
+long long fac[1000010], finv[1000010], inv[1000010];
 
 // テーブルを作る前処理
 void COMinit()
@@ -17,9 +17,7 @@ void COMinit()
 // 二項係数計算
 long long COM(int n, int k)
 {
-    if (n < k)
-        return 0;
-    if (n < 0 || k < 0)
-        return 0;
+    if (n < k) return 0;
+    if (n < 0 || k < 0) return 0;
     return fac[n] * (finv[k] * finv[n - k] % MOD) % MOD;
 }

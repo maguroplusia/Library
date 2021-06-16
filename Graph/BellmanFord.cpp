@@ -1,10 +1,10 @@
 struct edge{
     int from,to;
-    ll cost;
+    long long cost;
 };
 
-vector<ll> BellmanFord(const int& N,const int& M,const vector<edge>& es,const int& s) {
-    vector<ll> dist(N,INF);
+vector<long long> BellmanFord(const int& N,const int& M,const vector<edge>& es,const int& s) {
+    vector<long long> dist(N,INF);
     dist[s] = 0;
 
     for(int i = 0;i < N * 2;i++) {
@@ -20,7 +20,7 @@ vector<ll> BellmanFord(const int& N,const int& M,const vector<edge>& es,const in
 }
 
 bool FindNegativeLoop(const int& N,const int& M,const vector<edge>& es) {
-    vector<ll> dist(N);
+    vector<long long> dist(N);
 
     for(int i = 0;i < N;i++) {
         for(const auto& [from,to,cost]:es) {

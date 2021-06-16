@@ -7,17 +7,16 @@ using namespace std;
 #include"../../Graph/Dijkstra.cpp"
 
 int main() {
-    cin >> N;
-    int M,r;
-    cin >> M >> r;
-    graph = vector<vector<edge>>(N);
+    int N,M,r;
+    cin >> N >> M >> r;
+    vector<vector<edge>> graph(N);
     for(int i = 0;i < M;i++) {
         int s,t;
-        ll d;
+        long long d;
         cin >> s >> t >> d;
         graph[s].push_back({t,d});
     }
-    vector<ll> dist = Dijkstra(r);
+    vector<long long> dist = Dijkstra(N,graph,r);
     for(int i = 0;i < N;i++) {
         if(dist[i] == INF) cout << "INF" << endl;
         else cout << dist[i] << endl;

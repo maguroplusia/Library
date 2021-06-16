@@ -12,7 +12,7 @@ int main() {
     vector<edge> es(M);
     for(int i = 0;i < M;i++) {
         int s,t;
-        ll d;
+        long long d;
         cin >> s >> t >> d;
         es[i] = {s,t,d};
     }
