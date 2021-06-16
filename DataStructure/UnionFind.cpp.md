@@ -2,22 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Kruskal.cpp
     title: Graph/Kruskal.cpp
   _extendedVerifiedWith:
-  - icon: ':x:'
-    path: Test/AOJ/Kruskal.test.cpp
-    title: Test/AOJ/Kruskal.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/Kruskal.test.cpp
     title: Test/AOJ/Kruskal.test.cpp
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/UnionFind.test.cpp
     title: Test/yosupo-judge/UnionFind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n    vector<int>\
@@ -48,10 +45,9 @@ data:
   requiredBy:
   - Graph/Kruskal.cpp
   timestamp: '2021-06-16 19:56:29+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/UnionFind.test.cpp
-  - Test/AOJ/Kruskal.test.cpp
   - Test/AOJ/Kruskal.test.cpp
 documentation_of: DataStructure/UnionFind.cpp
 layout: document

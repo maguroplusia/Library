@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/UnionFind.cpp
     title: Union-Find
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/Kruskal.test.cpp
     title: Test/AOJ/Kruskal.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/UnionFind.cpp\"\nclass UnionFind {\n    vector<int>\
@@ -44,7 +44,7 @@ data:
   path: Graph/Kruskal.cpp
   requiredBy: []
   timestamp: '2021-06-16 19:56:29+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/AOJ/Kruskal.test.cpp
 documentation_of: Graph/Kruskal.cpp

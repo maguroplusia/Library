@@ -15,7 +15,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: Sparse Table
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/UnionFind.cpp
       title: Union-Find
   - name: Graph
@@ -26,7 +26,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Dijkstra.cpp
       title: Dijkstra
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/Kruskal.cpp
       title: Graph/Kruskal.cpp
     - icon: ':heavy_check_mark:'
@@ -80,7 +80,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Dijkstra.test.cpp
       title: Test/AOJ/Dijkstra.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/Kruskal.test.cpp
       title: Test/AOJ/Kruskal.test.cpp
     - icon: ':heavy_check_mark:'

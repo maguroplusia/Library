@@ -9,7 +9,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/AOJ/Dijkstra.test.cpp
     title: Test/AOJ/Dijkstra.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/Kruskal.test.cpp
     title: Test/AOJ/Kruskal.test.cpp
   - icon: ':heavy_check_mark:'
