@@ -13,6 +13,7 @@ vector<ll> Dijkstra(int s) {
     pre = vector<int>(N,-1);
     dist[s] = 0;
     que.push({0,s});
+
     while(!que.empty()) {
         auto [cost,v] = que.top();
         que.pop();
@@ -24,15 +25,18 @@ vector<ll> Dijkstra(int s) {
             }
         }
     }
+
     return dist;
 }
 
 vector<int> GetPath(int t) {
     vector<int> path;
+
     while(t != -1) {
         path.push_back(t);
         t = pre[t];
     }
+    
     reverse(path.begin(),path.end());
     return path;
 }

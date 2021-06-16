@@ -1,18 +1,19 @@
-//UnionFindライブラリを呼び出すこと
+#include"../DataStructure/UnionFind.cpp"
+
 struct edge {
     int u,v;
     ll cost;
+
+    bool operator<(const edge& b) const {
+        return cost < b.cost;
+    }
 };
 
-bool comp(const edge &e1,const edge &e2) {
-    return e1.cost < e2.cost;
-}
-
-int N,M; //頂点の本数、点の個数
+int N,M;
 edge graph[200010];
 
 ll Kruskal() {
-    sort(graph,graph + M,comp);
+    sort(graph,graph + M);
     UnionFind uf(N);
     ll ret = 0;
     for(int i = 0;i < M;i++) {

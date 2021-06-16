@@ -26,10 +26,12 @@ vector<ll> BellmanFord(int s) {
 //trueなら負の閉路が存在する
 bool FindNegativeLoop() {
     vector<ll> dist(N);
+
     for(int i = 0;i < N;i++) {
         for(const auto& [from,to,cost]:es) {
             if(chmin(dist[to],dist[from] + cost) && i == N - 1) return true;
         }
     }
+    
     return false;
 }
