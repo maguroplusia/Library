@@ -41,32 +41,34 @@ data:
     \           dat[i] = operation_(dat[i * 2 + 1],dat[i * 2 + 2]);\n        }\n \
     \   }\n\n    T query(int a,int b) {return query_sub(a,b,0,N,0);}\n\n    T operator[](int\
     \ i) {return dat[i + N - 1];}\n};\n#line 8 \"Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp\"\
-    \n\nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n\
-    \    [](ll a,ll b){return a + b;},\n    [](ll a,ll b){return a + b;});\n    for(int\
-    \ i = 0;i < N;i++) {\n        ll A;\n        cin >> A;\n        seg.set(i,A);\n\
-    \    }\n    seg.build();\n    for(int i = 0;i < Q;i++) {\n        int t;\n   \
-    \     cin >> t;\n        if(t == 0) {\n            int p;\n            ll x;\n\
-    \            cin >> p >> x;\n            seg.update(p,x);\n        }\n       \
-    \ else {\n            int l,r;\n            cin >> l >> r;\n            cout <<\
-    \ seg.query(l,r) << endl;\n        }\n    }\n}\n"
+    \n\nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<long long>\
+    \ seg(N,(long long)0,\n    [](long long a,long long b){return a + b;},\n    [](long\
+    \ long a,long long b){return a + b;});\n    for(int i = 0;i < N;i++) {\n     \
+    \   long long A;\n        cin >> A;\n        seg.set(i,A);\n    }\n    seg.build();\n\
+    \    for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
+    \ == 0) {\n            int p;\n            long long x;\n            cin >> p\
+    \ >> x;\n            seg.update(p,x);\n        }\n        else {\n           \
+    \ int l,r;\n            cin >> l >> r;\n            cout << seg.query(l,r) <<\
+    \ endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/point_add_range_sum\"\n\
     \n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n\
-    \    cin >> N >> Q;\n    SegmentTree<ll> seg(N,(ll)0,\n    [](ll a,ll b){return\
-    \ a + b;},\n    [](ll a,ll b){return a + b;});\n    for(int i = 0;i < N;i++) {\n\
-    \        ll A;\n        cin >> A;\n        seg.set(i,A);\n    }\n    seg.build();\n\
-    \    for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
-    \ == 0) {\n            int p;\n            ll x;\n            cin >> p >> x;\n\
-    \            seg.update(p,x);\n        }\n        else {\n            int l,r;\n\
-    \            cin >> l >> r;\n            cout << seg.query(l,r) << endl;\n   \
-    \     }\n    }\n}\n"
+    \    cin >> N >> Q;\n    SegmentTree<long long> seg(N,(long long)0,\n    [](long\
+    \ long a,long long b){return a + b;},\n    [](long long a,long long b){return\
+    \ a + b;});\n    for(int i = 0;i < N;i++) {\n        long long A;\n        cin\
+    \ >> A;\n        seg.set(i,A);\n    }\n    seg.build();\n    for(int i = 0;i <\
+    \ Q;i++) {\n        int t;\n        cin >> t;\n        if(t == 0) {\n        \
+    \    int p;\n            long long x;\n            cin >> p >> x;\n          \
+    \  seg.update(p,x);\n        }\n        else {\n            int l,r;\n       \
+    \     cin >> l >> r;\n            cout << seg.query(l,r) << endl;\n        }\n\
+    \    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - DataStructure/SegmentTree.cpp
   isVerificationFile: true
   path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 17:23:21+09:00'
+  timestamp: '2021-06-16 21:34:35+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp

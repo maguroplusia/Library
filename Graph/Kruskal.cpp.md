@@ -25,17 +25,17 @@ data:
     \        }\n        par[y] = x;\n        siz[x] += siz[y];\n    }\n\n    bool\
     \ same(int x,int y) {\n        return find(x) == find(y);\n    }\n\n    int size(int\
     \ x) {\n        return siz[find(x)];\n    }\n};\n#line 2 \"Graph/Kruskal.cpp\"\
-    \n\nstruct edge {\n    int u,v;\n    ll cost;\n\n    bool operator<(const edge&\
-    \ b) const {\n        return cost < b.cost;\n    }\n};\n\nint N,M;\nedge graph[200010];\n\
-    \nll Kruskal() {\n    sort(graph,graph + M);\n    UnionFind uf(N);\n    ll ret\
-    \ = 0;\n    for(int i = 0;i < M;i++) {\n        edge e = graph[i];\n        if(!uf.same(e.u,e.v))\
-    \ {\n            uf.unite(e.u,e.v);\n            ret += e.cost;\n        }\n \
-    \   }\n    return ret;\n}\n"
+    \n\nstruct edge {\n    int u,v;\n    long long cost;\n\n    bool operator<(const\
+    \ edge& b) const {\n        return cost < b.cost;\n    }\n};\n\nint N,M;\nedge\
+    \ graph[200010];\n\nlong long Kruskal() {\n    sort(graph,graph + M);\n    UnionFind\
+    \ uf(N);\n    long long ret = 0;\n    for(int i = 0;i < M;i++) {\n        edge\
+    \ e = graph[i];\n        if(!uf.same(e.u,e.v)) {\n            uf.unite(e.u,e.v);\n\
+    \            ret += e.cost;\n        }\n    }\n    return ret;\n}\n"
   code: "#include\"../DataStructure/UnionFind.cpp\"\n\nstruct edge {\n    int u,v;\n\
-    \    ll cost;\n\n    bool operator<(const edge& b) const {\n        return cost\
-    \ < b.cost;\n    }\n};\n\nint N,M;\nedge graph[200010];\n\nll Kruskal() {\n  \
-    \  sort(graph,graph + M);\n    UnionFind uf(N);\n    ll ret = 0;\n    for(int\
-    \ i = 0;i < M;i++) {\n        edge e = graph[i];\n        if(!uf.same(e.u,e.v))\
+    \    long long cost;\n\n    bool operator<(const edge& b) const {\n        return\
+    \ cost < b.cost;\n    }\n};\n\nint N,M;\nedge graph[200010];\n\nlong long Kruskal()\
+    \ {\n    sort(graph,graph + M);\n    UnionFind uf(N);\n    long long ret = 0;\n\
+    \    for(int i = 0;i < M;i++) {\n        edge e = graph[i];\n        if(!uf.same(e.u,e.v))\
     \ {\n            uf.unite(e.u,e.v);\n            ret += e.cost;\n        }\n \
     \   }\n    return ret;\n}\n"
   dependsOn:
@@ -43,7 +43,7 @@ data:
   isVerificationFile: false
   path: Graph/Kruskal.cpp
   requiredBy: []
-  timestamp: '2021-06-16 19:56:29+09:00'
+  timestamp: '2021-06-16 21:34:35+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/AOJ/Kruskal.test.cpp

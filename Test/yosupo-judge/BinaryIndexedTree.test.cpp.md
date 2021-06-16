@@ -33,26 +33,26 @@ data:
     \ < bit.size()) {\n            bit[i] += x;\n            i += i & -i;\n      \
     \  }\n    }\n\n    T sum(int l,int r) {\n        return sum_sub(r - 1) - sum_sub(l\
     \ - 1);\n    }\n};\n#line 8 \"Test/yosupo-judge/BinaryIndexedTree.test.cpp\"\n\
-    \nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    vector<ll> vec(N);\n   \
-    \ for(int i = 0;i < N;i++) {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<ll>\
-    \ bit(N);\n    for(int i = 0;i < N;i++) {\n        bit.add(i,vec.at(i));\n   \
-    \ }\n    for(int i = 0;i < Q;i++) {\n        int l,r;\n        cin >> l >> r;\n\
-    \        cout << bit.sum(l,r) << endl;\n    }\n}\n"
+    \nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    vector<long long> vec(N);\n\
+    \    for(int i = 0;i < N;i++) {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<long\
+    \ long> bit(N);\n    for(int i = 0;i < N;i++) {\n        bit.add(i,vec.at(i));\n\
+    \    }\n    for(int i = 0;i < Q;i++) {\n        int l,r;\n        cin >> l >>\
+    \ r;\n        cout << bit.sum(l,r) << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/static_range_sum\"\n\n\
     #include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../DataStructure/BinaryIndexedTree.cpp\"\n\nint main() {\n    int\
-    \ N,Q;\n    cin >> N >> Q;\n    vector<ll> vec(N);\n    for(int i = 0;i < N;i++)\
-    \ {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<ll> bit(N);\n   \
-    \ for(int i = 0;i < N;i++) {\n        bit.add(i,vec.at(i));\n    }\n    for(int\
-    \ i = 0;i < Q;i++) {\n        int l,r;\n        cin >> l >> r;\n        cout <<\
-    \ bit.sum(l,r) << endl;\n    }\n}\n"
+    \ N,Q;\n    cin >> N >> Q;\n    vector<long long> vec(N);\n    for(int i = 0;i\
+    \ < N;i++) {\n        cin >> vec.at(i);\n    }\n    BinaryIndexedTree<long long>\
+    \ bit(N);\n    for(int i = 0;i < N;i++) {\n        bit.add(i,vec.at(i));\n   \
+    \ }\n    for(int i = 0;i < Q;i++) {\n        int l,r;\n        cin >> l >> r;\n\
+    \        cout << bit.sum(l,r) << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - DataStructure/BinaryIndexedTree.cpp
   isVerificationFile: true
   path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 17:23:21+09:00'
+  timestamp: '2021-06-16 21:34:35+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/BinaryIndexedTree.test.cpp

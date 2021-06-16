@@ -9,22 +9,23 @@ data:
   attributes:
     links: []
   bundledCode: "#line 1 \"Mathematics/nCr3.cpp\"\n//nCr(mod\u3092\u4F7F\u308F\u306A\
-    \u3044)\nll com[200][200];\n\nvoid init() {\n    for (size_t i = 0; i < 200; i++)\
-    \ {\n        for (size_t j = 0; j < 200; j++) {\n            com[i][j] = -1;\n\
-    \        }\n    }\n}\n\nll nCr(int n,int r) {\n    if(0 > n || r > n) return 0;\n\
-    \    if(n == 0 || r == 0) return com[n][r] = 1;\n    if(com[n][r] != -1) return\
-    \ com[n][r];\n    return com[n][r] = nCr(n - 1,r - 1) + nCr(n - 1,r);\n}\n"
-  code: "//nCr(mod\u3092\u4F7F\u308F\u306A\u3044)\nll com[200][200];\n\nvoid init()\
-    \ {\n    for (size_t i = 0; i < 200; i++) {\n        for (size_t j = 0; j < 200;\
-    \ j++) {\n            com[i][j] = -1;\n        }\n    }\n}\n\nll nCr(int n,int\
-    \ r) {\n    if(0 > n || r > n) return 0;\n    if(n == 0 || r == 0) return com[n][r]\
-    \ = 1;\n    if(com[n][r] != -1) return com[n][r];\n    return com[n][r] = nCr(n\
-    \ - 1,r - 1) + nCr(n - 1,r);\n}\n"
+    \u3044)\nlong long com[200][200];\n\nvoid init() {\n    for (size_t i = 0; i <\
+    \ 200; i++) {\n        for (size_t j = 0; j < 200; j++) {\n            com[i][j]\
+    \ = -1;\n        }\n    }\n}\n\nlong long nCr(int n,int r) {\n    if(0 > n ||\
+    \ r > n) return 0;\n    if(n == 0 || r == 0) return com[n][r] = 1;\n    if(com[n][r]\
+    \ != -1) return com[n][r];\n    return com[n][r] = nCr(n - 1,r - 1) + nCr(n -\
+    \ 1,r);\n}\n"
+  code: "//nCr(mod\u3092\u4F7F\u308F\u306A\u3044)\nlong long com[200][200];\n\nvoid\
+    \ init() {\n    for (size_t i = 0; i < 200; i++) {\n        for (size_t j = 0;\
+    \ j < 200; j++) {\n            com[i][j] = -1;\n        }\n    }\n}\n\nlong long\
+    \ nCr(int n,int r) {\n    if(0 > n || r > n) return 0;\n    if(n == 0 || r ==\
+    \ 0) return com[n][r] = 1;\n    if(com[n][r] != -1) return com[n][r];\n    return\
+    \ com[n][r] = nCr(n - 1,r - 1) + nCr(n - 1,r);\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: Mathematics/nCr3.cpp
   requiredBy: []
-  timestamp: '2021-06-05 10:38:37+09:00'
+  timestamp: '2021-06-16 21:34:35+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Mathematics/nCr3.cpp

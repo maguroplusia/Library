@@ -37,20 +37,21 @@ data:
     \        }\n        par[y] = x;\n        siz[x] += siz[y];\n    }\n\n    bool\
     \ same(int x,int y) {\n        return find(x) == find(y);\n    }\n\n    int size(int\
     \ x) {\n        return siz[find(x)];\n    }\n};\n#line 2 \"Graph/Kruskal.cpp\"\
-    \n\nstruct edge {\n    int u,v;\n    ll cost;\n\n    bool operator<(const edge&\
-    \ b) const {\n        return cost < b.cost;\n    }\n};\n\nint N,M;\nedge graph[200010];\n\
-    \nll Kruskal() {\n    sort(graph,graph + M);\n    UnionFind uf(N);\n    ll ret\
-    \ = 0;\n    for(int i = 0;i < M;i++) {\n        edge e = graph[i];\n        if(!uf.same(e.u,e.v))\
-    \ {\n            uf.unite(e.u,e.v);\n            ret += e.cost;\n        }\n \
-    \   }\n    return ret;\n}\n#line 8 \"Test/AOJ/Kruskal.test.cpp\"\n\nint main()\
-    \ {\n    cin >> N >> M;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n  \
-    \      ll w;\n        cin >> s >> t >> w;\n        graph[i] = edge{s,t,w};\n \
-    \   }\n    cout << Kruskal() << endl;\n}\n"
+    \n\nstruct edge {\n    int u,v;\n    long long cost;\n\n    bool operator<(const\
+    \ edge& b) const {\n        return cost < b.cost;\n    }\n};\n\nint N,M;\nedge\
+    \ graph[200010];\n\nlong long Kruskal() {\n    sort(graph,graph + M);\n    UnionFind\
+    \ uf(N);\n    long long ret = 0;\n    for(int i = 0;i < M;i++) {\n        edge\
+    \ e = graph[i];\n        if(!uf.same(e.u,e.v)) {\n            uf.unite(e.u,e.v);\n\
+    \            ret += e.cost;\n        }\n    }\n    return ret;\n}\n#line 8 \"\
+    Test/AOJ/Kruskal.test.cpp\"\n\nint main() {\n    cin >> N >> M;\n    for(int i\
+    \ = 0;i < M;i++) {\n        int s,t;\n        long long w;\n        cin >> s >>\
+    \ t >> w;\n        graph[i] = edge{s,t,w};\n    }\n    cout << Kruskal() << endl;\n\
+    }\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/2/GRL_2_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/Kruskal.cpp\"\n\nint main() {\n    cin >> N >> M;\n  \
-    \  for(int i = 0;i < M;i++) {\n        int s,t;\n        ll w;\n        cin >>\
-    \ s >> t >> w;\n        graph[i] = edge{s,t,w};\n    }\n    cout << Kruskal()\
+    \  for(int i = 0;i < M;i++) {\n        int s,t;\n        long long w;\n      \
+    \  cin >> s >> t >> w;\n        graph[i] = edge{s,t,w};\n    }\n    cout << Kruskal()\
     \ << endl;\n}\n"
   dependsOn:
   - Other/Template.cpp
@@ -59,7 +60,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/Kruskal.test.cpp
   requiredBy: []
-  timestamp: '2021-06-16 20:38:26+09:00'
+  timestamp: '2021-06-16 21:34:35+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Kruskal.test.cpp

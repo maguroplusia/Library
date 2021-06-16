@@ -25,13 +25,13 @@ data:
     \ {\n                st.push(x);\n            }\n        }\n    }\n    return\
     \ res;\n}\n\n//\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\u3059\u308B\
     \u901A\u308A\u6570\u3001O(2^N)\u304C\u9593\u306B\u5408\u3046\u7A0B\u5EA6\u3067\
-    \nll counting() {\n    for(int i = 0;i < N;i++) {\n        outdegree[i] = 0;\n\
-    \    }\n    for(int i = 0;i < N;i++) {\n        for(auto x:graph[i]) {\n     \
-    \       outdegree[i] += (1 << x);\n        }\n    }\n    vector<ll> dp(1 << N);\n\
-    \    dp.at(0) = 1;\n    for(int i = 0;i < (1 << N);i++) {\n        for(int j =\
-    \ 0;j < N;j++) {\n            if(!(i & (1 << j)) && !(i & outdegree[j])) {\n \
-    \               dp.at(i | (1 << j)) += dp.at(i);\n            }\n        }\n \
-    \   }\n    return dp.at((1 << N) - 1);\n}\n"
+    \nlong long counting() {\n    for(int i = 0;i < N;i++) {\n        outdegree[i]\
+    \ = 0;\n    }\n    for(int i = 0;i < N;i++) {\n        for(auto x:graph[i]) {\n\
+    \            outdegree[i] += (1 << x);\n        }\n    }\n    vector<long long>\
+    \ dp(1 << N);\n    dp.at(0) = 1;\n    for(int i = 0;i < (1 << N);i++) {\n    \
+    \    for(int j = 0;j < N;j++) {\n            if(!(i & (1 << j)) && !(i & outdegree[j]))\
+    \ {\n                dp.at(i | (1 << j)) += dp.at(i);\n            }\n       \
+    \ }\n    }\n    return dp.at((1 << N) - 1);\n}\n"
   code: "int N;\nvector<int> graph[500010];\nint indegree[500010];\nint outdegree[500010];\n\
     \n//graph\u3092\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8\u3059\u308B\
     \u3002\u8FD4\u308A\u5024\u306Evector\u306B\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\
@@ -45,18 +45,19 @@ data:
     \            if(indegree[x] == 0) {\n                st.push(x);\n           \
     \ }\n        }\n    }\n    return res;\n}\n\n//\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\
     \u30BD\u30FC\u30C8\u3059\u308B\u901A\u308A\u6570\u3001O(2^N)\u304C\u9593\u306B\
-    \u5408\u3046\u7A0B\u5EA6\u3067\nll counting() {\n    for(int i = 0;i < N;i++)\
-    \ {\n        outdegree[i] = 0;\n    }\n    for(int i = 0;i < N;i++) {\n      \
-    \  for(auto x:graph[i]) {\n            outdegree[i] += (1 << x);\n        }\n\
-    \    }\n    vector<ll> dp(1 << N);\n    dp.at(0) = 1;\n    for(int i = 0;i < (1\
-    \ << N);i++) {\n        for(int j = 0;j < N;j++) {\n            if(!(i & (1 <<\
-    \ j)) && !(i & outdegree[j])) {\n                dp.at(i | (1 << j)) += dp.at(i);\n\
-    \            }\n        }\n    }\n    return dp.at((1 << N) - 1);\n}\n"
+    \u5408\u3046\u7A0B\u5EA6\u3067\nlong long counting() {\n    for(int i = 0;i <\
+    \ N;i++) {\n        outdegree[i] = 0;\n    }\n    for(int i = 0;i < N;i++) {\n\
+    \        for(auto x:graph[i]) {\n            outdegree[i] += (1 << x);\n     \
+    \   }\n    }\n    vector<long long> dp(1 << N);\n    dp.at(0) = 1;\n    for(int\
+    \ i = 0;i < (1 << N);i++) {\n        for(int j = 0;j < N;j++) {\n            if(!(i\
+    \ & (1 << j)) && !(i & outdegree[j])) {\n                dp.at(i | (1 << j)) +=\
+    \ dp.at(i);\n            }\n        }\n    }\n    return dp.at((1 << N) - 1);\n\
+    }\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/TopologicalSort.cpp
   requiredBy: []
-  timestamp: '2021-04-20 17:11:58+09:00'
+  timestamp: '2021-06-16 21:34:35+09:00'
   verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/AOJ/TopologicalSort.test.cpp

@@ -33,7 +33,7 @@ data:
   - icon: ':x:'
     path: Test/AOJ/TopologicalSort.test.cpp
     title: Test/AOJ/TopologicalSort.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Test/AOJ/WarshallFloyd.test.cpp
     title: Test/AOJ/WarshallFloyd.test.cpp
   - icon: ':heavy_check_mark:'
