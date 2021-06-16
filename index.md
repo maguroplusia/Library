@@ -14,10 +14,10 @@ data:
       title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
-      title: DataStructure/SparseTable.cpp
-    - icon: ':heavy_check_mark:'
+      title: Sparse Table
+    - icon: ':question:'
       path: DataStructure/UnionFind.cpp
-      title: DataStructure/UnionFind.cpp
+      title: Union-Find
   - name: Graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -26,7 +26,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/Dijkstra.cpp
       title: Dijkstra
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/Kruskal.cpp
       title: Graph/Kruskal.cpp
     - icon: ':heavy_check_mark:'
@@ -80,7 +80,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/Dijkstra.test.cpp
       title: Test/AOJ/Dijkstra.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/Kruskal.test.cpp
       title: Test/AOJ/Kruskal.test.cpp
     - icon: ':heavy_check_mark:'

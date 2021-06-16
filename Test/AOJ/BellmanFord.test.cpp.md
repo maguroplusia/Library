@@ -32,11 +32,11 @@ data:
     \ dist[to])  {\n                if(i >= N - 1) dist[to] = -INF;\n            \
     \    else dist[to] = dist[from] + cost;\n            }\n        }\n    }\n\n \
     \   return dist;\n}\n\n//true\u306A\u3089\u8CA0\u306E\u9589\u8DEF\u304C\u5B58\u5728\
-    \u3059\u308B\nbool FindNegativeLoop() {\n    vector<ll> dist(N);\n    for(int\
+    \u3059\u308B\nbool FindNegativeLoop() {\n    vector<ll> dist(N);\n\n    for(int\
     \ i = 0;i < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n         \
     \   if(chmin(dist[to],dist[from] + cost) && i == N - 1) return true;\n       \
-    \ }\n    }\n    return false;\n}\n#line 8 \"Test/AOJ/BellmanFord.test.cpp\"\n\n\
-    int main() {\n    cin >> N >> M;\n    int r;\n    cin >> r;\n    es = vector<edge>(M);\n\
+    \ }\n    }\n    \n    return false;\n}\n#line 8 \"Test/AOJ/BellmanFord.test.cpp\"\
+    \n\nint main() {\n    cin >> N >> M;\n    int r;\n    cin >> r;\n    es = vector<edge>(M);\n\
     \    for(int i = 0;i < M;i++) {\n        int s,t;\n        ll d;\n        cin\
     \ >> s >> t >> d;\n        es[i] = {s,t,d};\n    }\n    vector<ll> dist = BellmanFord(r);\n\
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
@@ -61,7 +61,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 21:31:05+09:00'
+  timestamp: '2021-06-16 19:56:29+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp

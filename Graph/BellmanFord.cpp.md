@@ -21,9 +21,9 @@ data:
     \             else dist[to] = dist[from] + cost;\n            }\n        }\n \
     \   }\n\n    return dist;\n}\n\n//true\u306A\u3089\u8CA0\u306E\u9589\u8DEF\u304C\
     \u5B58\u5728\u3059\u308B\nbool FindNegativeLoop() {\n    vector<ll> dist(N);\n\
-    \    for(int i = 0;i < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n\
+    \n    for(int i = 0;i < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n\
     \            if(chmin(dist[to],dist[from] + cost) && i == N - 1) return true;\n\
-    \        }\n    }\n    return false;\n}\n"
+    \        }\n    }\n    \n    return false;\n}\n"
   code: "//\u9802\u70B9from\u304B\u3089\u9802\u70B9to\u3078\u306E\u30B3\u30B9\u30C8\
     cost\u306E\u8FBA\nstruct edge{\n    int from,to;\n    ll cost;\n};\n\nint N,M;\
     \ //\u9802\u70B9\u6570\u3001\u8FBA\u6570\nvector<edge> es; //\u8FBA\n\nvector<ll>\
@@ -33,14 +33,14 @@ data:
     \    if(i >= N - 1) dist[to] = -INF;\n                else dist[to] = dist[from]\
     \ + cost;\n            }\n        }\n    }\n\n    return dist;\n}\n\n//true\u306A\
     \u3089\u8CA0\u306E\u9589\u8DEF\u304C\u5B58\u5728\u3059\u308B\nbool FindNegativeLoop()\
-    \ {\n    vector<ll> dist(N);\n    for(int i = 0;i < N;i++) {\n        for(const\
+    \ {\n    vector<ll> dist(N);\n\n    for(int i = 0;i < N;i++) {\n        for(const\
     \ auto& [from,to,cost]:es) {\n            if(chmin(dist[to],dist[from] + cost)\
-    \ && i == N - 1) return true;\n        }\n    }\n    return false;\n}\n"
+    \ && i == N - 1) return true;\n        }\n    }\n    \n    return false;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/BellmanFord.cpp
   requiredBy: []
-  timestamp: '2021-06-14 21:31:02+09:00'
+  timestamp: '2021-06-16 19:56:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/AOJ/BellmanFord.test.cpp
