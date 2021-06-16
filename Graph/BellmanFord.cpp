@@ -1,13 +1,9 @@
-//頂点fromから頂点toへのコストcostの辺
 struct edge{
     int from,to;
     ll cost;
 };
 
-int N,M; //頂点数、辺数
-vector<edge> es; //辺
-
-vector<ll> BellmanFord(int s) {
+vector<ll> BellmanFord(const int& N,const int& M,const vector<edge>& es,const int& s) {
     vector<ll> dist(N,INF);
     dist[s] = 0;
 
@@ -23,8 +19,7 @@ vector<ll> BellmanFord(int s) {
     return dist;
 }
 
-//trueなら負の閉路が存在する
-bool FindNegativeLoop() {
+bool FindNegativeLoop(const int& N,const int& M,const vector<edge>& es) {
     vector<ll> dist(N);
 
     for(int i = 0;i < N;i++) {
@@ -32,6 +27,6 @@ bool FindNegativeLoop() {
             if(chmin(dist[to],dist[from] + cost) && i == N - 1) return true;
         }
     }
-    
+
     return false;
 }

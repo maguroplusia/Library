@@ -7,17 +7,16 @@ using namespace std;
 #include"../../Graph/BellmanFord.cpp"
 
 int main() {
-    cin >> N >> M;
-    int r;
-    cin >> r;
-    es = vector<edge>(M);
+    int N,M,r;
+    cin >> N >> M >> r;
+    vector<edge> es(M);
     for(int i = 0;i < M;i++) {
         int s,t;
         ll d;
         cin >> s >> t >> d;
         es[i] = {s,t,d};
     }
-    vector<ll> dist = BellmanFord(r);
+    vector<ll> dist = BellmanFord(N,M,es,r);
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
         if(dist[i] == -INF) isnegative = true;
