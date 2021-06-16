@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/WarshallFloyd.cpp
     title: Graph/WarshallFloyd.cpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C
@@ -29,11 +29,11 @@ data:
     \u3059\u308B\uFF09\n\nvoid init() {\n    for(int i = 0;i < 500;i++) {\n      \
     \  for(int j = 0;j < 500;j++) {\n            if(i == j) {\n                dist[i][j]\
     \ = 0;\n            }\n            else {\n                dist[i][j] = INF;\n\
-    \            }\n        }\n    }\n}\n\nvoid Warshalong longFloyd() {\n    for(int\
-    \ k = 0;k < N;k++) {\n        for(int i = 0;i < N;i++) {\n            for(int\
-    \ j = 0;j < N;j++) {\n                if(dist[i][k] != INF && dist[k][j] != INF)\
-    \ {\n                    chmin(dist[i][j],dist[i][k] + dist[k][j]);\n        \
-    \        }\n            }\n        }\n    }\n}\n#line 8 \"Test/AOJ/WarshallFloyd.test.cpp\"\
+    \            }\n        }\n    }\n}\n\nvoid WarshallFloyd() {\n    for(int k =\
+    \ 0;k < N;k++) {\n        for(int i = 0;i < N;i++) {\n            for(int j =\
+    \ 0;j < N;j++) {\n                if(dist[i][k] != INF && dist[k][j] != INF) {\n\
+    \                    chmin(dist[i][j],dist[i][k] + dist[k][j]);\n            \
+    \    }\n            }\n        }\n    }\n}\n#line 8 \"Test/AOJ/WarshallFloyd.test.cpp\"\
     \n\nint main() {\n    cin >> N;\n    int M;\n    cin >> M;\n    init();\n    for(int\
     \ i = 0;i < M;i++) {\n        int s,t;\n        long long d;\n        cin >> s\
     \ >> t >> d;\n        dist[s][t] = d;\n    }\n    WarshallFloyd();\n    bool isnegative\
@@ -61,8 +61,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/WarshallFloyd.test.cpp
   requiredBy: []
-  timestamp: '2021-06-16 21:34:35+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-16 21:47:42+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/WarshallFloyd.test.cpp
 layout: document

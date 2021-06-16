@@ -41,7 +41,7 @@ data:
     - icon: ':x:'
       path: Graph/TopologicalSort.cpp
       title: Topological Sort
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Graph/WarshallFloyd.cpp
       title: Graph/WarshallFloyd.cpp
   - name: Mathematics
@@ -104,7 +104,7 @@ data:
     - icon: ':x:'
       path: Test/AOJ/TopologicalSort.test.cpp
       title: Test/AOJ/TopologicalSort.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/AOJ/WarshallFloyd.test.cpp
       title: Test/AOJ/WarshallFloyd.test.cpp
   - name: Test/yosupo-judge
