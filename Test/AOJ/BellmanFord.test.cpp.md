@@ -23,22 +23,20 @@ data:
     \ INF= 2000000000000000000;\n\ntemplate<typename T> inline bool chmax(T &a, T\
     \ b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename T>\
     \ inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false;\
-    \ }\n#line 1 \"Graph/BellmanFord.cpp\"\n//\u9802\u70B9from\u304B\u3089\u9802\u70B9\
-    to\u3078\u306E\u30B3\u30B9\u30C8cost\u306E\u8FBA\nstruct edge{\n    int from,to;\n\
-    \    ll cost;\n};\n\nint N,M; //\u9802\u70B9\u6570\u3001\u8FBA\u6570\nvector<edge>\
-    \ es; //\u8FBA\n\nvector<ll> BellmanFord(int s) {\n    vector<ll> dist(N,INF);\n\
-    \    dist[s] = 0;\n\n    for(int i = 0;i < N * 2;i++) {\n        for(const auto&\
-    \ [from,to,cost]:es) {\n            if(dist[from] < INF && dist[from] + cost <\
-    \ dist[to])  {\n                if(i >= N - 1) dist[to] = -INF;\n            \
-    \    else dist[to] = dist[from] + cost;\n            }\n        }\n    }\n\n \
-    \   return dist;\n}\n\n//true\u306A\u3089\u8CA0\u306E\u9589\u8DEF\u304C\u5B58\u5728\
-    \u3059\u308B\nbool FindNegativeLoop() {\n    vector<ll> dist(N);\n\n    for(int\
-    \ i = 0;i < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n         \
-    \   if(chmin(dist[to],dist[from] + cost) && i == N - 1) return true;\n       \
-    \ }\n    }\n    \n    return false;\n}\n#line 8 \"Test/AOJ/BellmanFord.test.cpp\"\
-    \n\nint main() {\n    cin >> N >> M;\n    int r;\n    cin >> r;\n    es = vector<edge>(M);\n\
+    \ }\n#line 1 \"Graph/BellmanFord.cpp\"\nstruct edge{\n    int from,to;\n    ll\
+    \ cost;\n};\n\nvector<ll> BellmanFord(const int& N,const int& M,const vector<edge>&\
+    \ es,const int& s) {\n    vector<ll> dist(N,INF);\n    dist[s] = 0;\n\n    for(int\
+    \ i = 0;i < N * 2;i++) {\n        for(const auto& [from,to,cost]:es) {\n     \
+    \       if(dist[from] < INF && dist[from] + cost < dist[to])  {\n            \
+    \    if(i >= N - 1) dist[to] = -INF;\n                else dist[to] = dist[from]\
+    \ + cost;\n            }\n        }\n    }\n\n    return dist;\n}\n\nbool FindNegativeLoop(const\
+    \ int& N,const int& M,const vector<edge>& es) {\n    vector<ll> dist(N);\n\n \
+    \   for(int i = 0;i < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n\
+    \            if(chmin(dist[to],dist[from] + cost) && i == N - 1) return true;\n\
+    \        }\n    }\n\n    return false;\n}\n#line 8 \"Test/AOJ/BellmanFord.test.cpp\"\
+    \n\nint main() {\n    int N,M,r;\n    cin >> N >> M >> r;\n    vector<edge> es(M);\n\
     \    for(int i = 0;i < M;i++) {\n        int s,t;\n        ll d;\n        cin\
-    \ >> s >> t >> d;\n        es[i] = {s,t,d};\n    }\n    vector<ll> dist = BellmanFord(r);\n\
+    \ >> s >> t >> d;\n        es[i] = {s,t,d};\n    }\n    vector<ll> dist = BellmanFord(N,M,es,r);\n\
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
     \ == -INF) isnegative = true;\n    }\n    if(isnegative) {\n        cout << \"\
     NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++)\
@@ -46,10 +44,10 @@ data:
     \ dist[i] << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
-    \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    cin >> N >> M;\n\
-    \    int r;\n    cin >> r;\n    es = vector<edge>(M);\n    for(int i = 0;i < M;i++)\
+    \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    int N,M,r;\n  \
+    \  cin >> N >> M >> r;\n    vector<edge> es(M);\n    for(int i = 0;i < M;i++)\
     \ {\n        int s,t;\n        ll d;\n        cin >> s >> t >> d;\n        es[i]\
-    \ = {s,t,d};\n    }\n    vector<ll> dist = BellmanFord(r);\n    bool isnegative\
+    \ = {s,t,d};\n    }\n    vector<ll> dist = BellmanFord(N,M,es,r);\n    bool isnegative\
     \ = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i] == -INF) isnegative\
     \ = true;\n    }\n    if(isnegative) {\n        cout << \"NEGATIVE CYCLE\" <<\
     \ endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
@@ -61,7 +59,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2021-06-16 19:56:29+09:00'
+  timestamp: '2021-06-16 20:30:59+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp
