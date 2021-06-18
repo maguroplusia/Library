@@ -16,7 +16,7 @@ int main() {
         cin >> s >> t >> d;
         es[i] = {s,t,d};
     }
-    vector<ll> dist = BellmanFord(N,M,es,r);
+    vector<long long> dist = BellmanFord(N,M,es,r);
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
         if(dist[i] == -INF) isnegative = true;

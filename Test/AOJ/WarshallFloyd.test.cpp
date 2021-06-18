@@ -9,7 +9,8 @@ using namespace std;
 int main() {
     int N,M;
     cin >> N >> M;
-    vector<vector<long long>> dist(N,vector<long long>(N));
+    vector<vector<long long>> dist(N,vector<long long>(N,INF));
+    for(int i = 0;i < N;i++) dist[i][i] = 0;
     for(int i = 0;i < M;i++) {
         int s,t;
         long long d;
