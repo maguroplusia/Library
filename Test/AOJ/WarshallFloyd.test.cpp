@@ -16,7 +16,7 @@ int main() {
         cin >> s >> t >> d;
         dist[s][t] = d;
     }
-    dist = WarshallFloyd();
+    dist = WarshallFloyd(N,dist);
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
         if(dist[i][i] < 0) isnegative = true;

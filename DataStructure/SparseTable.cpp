@@ -25,13 +25,12 @@ public:
         }
 
         lookup.resize(v.size() + 1);
-        
+
         for(int i = 2;i < lookup.size();i++) {
             lookup[i] = lookup[i >> 1] + 1;
         }
     }
 
-    //query(l,r) = 区間[l,r)の最小値を返す
     T query(int l,int r) {
         int b = lookup[r - l];
         return min(table[b][l],table[b][r - (1 << b)]);

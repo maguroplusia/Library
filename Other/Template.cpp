@@ -1,4 +1,3 @@
-typedef long long ll;
 constexpr int Inf = 2000000030;
 constexpr long long INF= 2000000000000000000;
 
