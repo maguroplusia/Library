@@ -7,17 +7,16 @@ using namespace std;
 #include"../../Graph/WarshallFloyd.cpp"
 
 int main() {
-    cin >> N;
-    int M;
-    cin >> M;
-    init();
+    int N,M;
+    cin >> N >> M;
+    vector<vector<long long>> dist(N,vector<long long>(N));
     for(int i = 0;i < M;i++) {
         int s,t;
         long long d;
         cin >> s >> t >> d;
         dist[s][t] = d;
     }
-    WarshallFloyd();
+    dist = WarshallFloyd();
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
         if(dist[i][i] < 0) isnegative = true;
