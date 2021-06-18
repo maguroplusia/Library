@@ -33,7 +33,7 @@ data:
   - icon: ':x:'
     path: Test/AOJ/TopologicalSort.test.cpp
     title: Test/AOJ/TopologicalSort.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Test/AOJ/WarshallFloyd.test.cpp
     title: Test/AOJ/WarshallFloyd.test.cpp
   - icon: ':heavy_check_mark:'
@@ -96,23 +96,23 @@ data:
   timestamp: '2021-06-14 17:23:21+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - Test/yosupo-judge/SparseTable.test.cpp
-  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+  - Test/yukicoder/ChineseRemainderTheorem.test.cpp
   - Test/yosupo-judge/UnionFind.test.cpp
+  - Test/yosupo-judge/SparseTable.test.cpp
   - Test/yosupo-judge/BinaryIndexedTree.test.cpp
   - Test/yosupo-judge/LowestCommonAncestor.test.cpp
-  - Test/yukicoder/ChineseRemainderTheorem.test.cpp
-  - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-  - Test/AOJ/TopologicalSort.test.cpp
+  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   - Test/AOJ/WarshallFloyd.test.cpp
+  - Test/AOJ/TopologicalSort.test.cpp
+  - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   - Test/AOJ/LazySegmentTree.test.cpp
-  - Test/AOJ/StronglyConnectedComponent.test.cpp
   - Test/AOJ/Prim.test.cpp
   - Test/AOJ/BellmanFord.test.cpp
+  - Test/AOJ/RollingHash.test.cpp
+  - Test/AOJ/StronglyConnectedComponent.test.cpp
+  - Test/AOJ/Kruskal.test.cpp
   - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/Dijkstra.test.cpp
-  - Test/AOJ/Kruskal.test.cpp
-  - Test/AOJ/RollingHash.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

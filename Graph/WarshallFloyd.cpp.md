@@ -3,47 +3,42 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Test/AOJ/WarshallFloyd.test.cpp
     title: Test/AOJ/WarshallFloyd.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Graph/WarshallFloyd.cpp\"\nint N; //\u9802\u70B9\u6570\n\
-    long long dist[500][500]; //d[u][v]\u306F\u8FBAe=(u,v)\u306E\u30B3\u30B9\u30C8\
-    \uFF08\u5B58\u5728\u3057\u306A\u3044\u5834\u5408\u306FINF\u3001\u305F\u3060\u3057\
-    d[i][i]=0\u3068\u3059\u308B\uFF09\n\nvoid init() {\n    for(int i = 0;i < 500;i++)\
-    \ {\n        for(int j = 0;j < 500;j++) {\n            if(i == j) {\n        \
-    \        dist[i][j] = 0;\n            }\n            else {\n                dist[i][j]\
-    \ = INF;\n            }\n        }\n    }\n}\n\nvoid WarshallFloyd() {\n    for(int\
-    \ k = 0;k < N;k++) {\n        for(int i = 0;i < N;i++) {\n            for(int\
-    \ j = 0;j < N;j++) {\n                if(dist[i][k] != INF && dist[k][j] != INF)\
-    \ {\n                    chmin(dist[i][j],dist[i][k] + dist[k][j]);\n        \
-    \        }\n            }\n        }\n    }\n}\n"
-  code: "int N; //\u9802\u70B9\u6570\nlong long dist[500][500]; //d[u][v]\u306F\u8FBA\
-    e=(u,v)\u306E\u30B3\u30B9\u30C8\uFF08\u5B58\u5728\u3057\u306A\u3044\u5834\u5408\
-    \u306FINF\u3001\u305F\u3060\u3057d[i][i]=0\u3068\u3059\u308B\uFF09\n\nvoid init()\
-    \ {\n    for(int i = 0;i < 500;i++) {\n        for(int j = 0;j < 500;j++) {\n\
-    \            if(i == j) {\n                dist[i][j] = 0;\n            }\n  \
-    \          else {\n                dist[i][j] = INF;\n            }\n        }\n\
-    \    }\n}\n\nvoid WarshallFloyd() {\n    for(int k = 0;k < N;k++) {\n        for(int\
-    \ i = 0;i < N;i++) {\n            for(int j = 0;j < N;j++) {\n               \
-    \ if(dist[i][k] != INF && dist[k][j] != INF) {\n                    chmin(dist[i][j],dist[i][k]\
-    \ + dist[k][j]);\n                }\n            }\n        }\n    }\n}\n"
+  bundledCode: "#line 1 \"Graph/WarshallFloyd.cpp\"\nvector<vector<long long>> WarshallFloyd(const\
+    \ int& N,const vector<vector<long long>> dist) {\n    vector<vector<long long>>\
+    \ ret = dist;\n    for(int k = 0;k < N;k++) {\n        for(int i = 0;i < N;i++)\
+    \ {\n            for(int j = 0;j < N;j++) {\n                if(ret[i][k] != INF\
+    \ && ret[k][j] != INF) {\n                    chmin(ret[i][j],ret[i][k] + ret[k][j]);\n\
+    \                }\n            }\n        }\n    }\n    return ret;\n}\n"
+  code: "vector<vector<long long>> WarshallFloyd(const int& N,const vector<vector<long\
+    \ long>> dist) {\n    vector<vector<long long>> ret = dist;\n    for(int k = 0;k\
+    \ < N;k++) {\n        for(int i = 0;i < N;i++) {\n            for(int j = 0;j\
+    \ < N;j++) {\n                if(ret[i][k] != INF && ret[k][j] != INF) {\n   \
+    \                 chmin(ret[i][j],ret[i][k] + ret[k][j]);\n                }\n\
+    \            }\n        }\n    }\n    return ret;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/WarshallFloyd.cpp
   requiredBy: []
-  timestamp: '2021-06-16 21:47:42+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2021-06-18 20:59:19+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/AOJ/WarshallFloyd.test.cpp
 documentation_of: Graph/WarshallFloyd.cpp
 layout: document
-redirect_from:
-- /library/Graph/WarshallFloyd.cpp
-- /library/Graph/WarshallFloyd.cpp.html
-title: Graph/WarshallFloyd.cpp
+title: Warshall-Floyd
 ---
+
+## 説明
+重み付き（有向）グラフにおける全頂点間の最短距離を求める。
+
+- `vector<vector<long long>> WarshallFloyd(int N,vector<vector<long long>> dist)` : `dist[i][j]` = 頂点`i`と頂点`j`を結ぶ辺の距離（ただし`i`と`j`の間に辺が存在しないならば`INF`）である頂点数が`N`のグラフに対して、全頂点間の最短距離を求める。返り値は2次元配列に格納される（ただし頂点間に経路が存在しないならば`INF`）。計算量 $O(N^3)$
+
+tips : このアルゴリズムは負の辺でも動作する。返り値の配列を`ret`とすると、`ret[i][i] < 0`となる`i`が存在するならばグラフには負閉路が含まれている。
