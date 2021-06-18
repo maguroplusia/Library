@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/BellmanFord.cpp
     title: Bellman-Ford
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B
@@ -36,9 +36,9 @@ data:
     \ }\n    }\n\n    return false;\n}\n#line 8 \"Test/AOJ/BellmanFord.test.cpp\"\n\
     \nint main() {\n    int N,M,r;\n    cin >> N >> M >> r;\n    vector<edge> es(M);\n\
     \    for(int i = 0;i < M;i++) {\n        int s,t;\n        long long d;\n    \
-    \    cin >> s >> t >> d;\n        es[i] = {s,t,d};\n    }\n    vector<ll> dist\
-    \ = BellmanFord(N,M,es,r);\n    bool isnegative = false;\n    for(int i = 0;i\
-    \ < N;i++) {\n        if(dist[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
+    \    cin >> s >> t >> d;\n        es[i] = {s,t,d};\n    }\n    vector<long long>\
+    \ dist = BellmanFord(N,M,es,r);\n    bool isnegative = false;\n    for(int i =\
+    \ 0;i < N;i++) {\n        if(dist[i] == -INF) isnegative = true;\n    }\n    if(isnegative)\
     \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
     \   for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
     \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
@@ -47,7 +47,7 @@ data:
     \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    int N,M,r;\n  \
     \  cin >> N >> M >> r;\n    vector<edge> es(M);\n    for(int i = 0;i < M;i++)\
     \ {\n        int s,t;\n        long long d;\n        cin >> s >> t >> d;\n   \
-    \     es[i] = {s,t,d};\n    }\n    vector<ll> dist = BellmanFord(N,M,es,r);\n\
+    \     es[i] = {s,t,d};\n    }\n    vector<long long> dist = BellmanFord(N,M,es,r);\n\
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
     \ == -INF) isnegative = true;\n    }\n    if(isnegative) {\n        cout << \"\
     NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++)\
@@ -59,8 +59,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2021-06-18 21:14:35+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-18 21:34:36+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp
 layout: document

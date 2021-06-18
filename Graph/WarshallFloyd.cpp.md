@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/WarshallFloyd.test.cpp
     title: Test/AOJ/WarshallFloyd.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Graph/WarshallFloyd.cpp\"\nvector<vector<long long>> WarshallFloyd(const\
@@ -28,7 +28,7 @@ data:
   path: Graph/WarshallFloyd.cpp
   requiredBy: []
   timestamp: '2021-06-18 20:59:19+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/AOJ/WarshallFloyd.test.cpp
 documentation_of: Graph/WarshallFloyd.cpp

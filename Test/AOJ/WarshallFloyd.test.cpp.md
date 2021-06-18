@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/WarshallFloyd.cpp
     title: Warshall-Floyd
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C
@@ -30,35 +30,36 @@ data:
     \                 chmin(ret[i][j],ret[i][k] + ret[k][j]);\n                }\n\
     \            }\n        }\n    }\n    return ret;\n}\n#line 8 \"Test/AOJ/WarshallFloyd.test.cpp\"\
     \n\nint main() {\n    int N,M;\n    cin >> N >> M;\n    vector<vector<long long>>\
-    \ dist(N,vector<long long>(N));\n    for(int i = 0;i < M;i++) {\n        int s,t;\n\
-    \        long long d;\n        cin >> s >> t >> d;\n        dist[s][t] = d;\n\
-    \    }\n    dist = WarshallFloyd(N,dist);\n    bool isnegative = false;\n    for(int\
-    \ i = 0;i < N;i++) {\n        if(dist[i][i] < 0) isnegative = true;\n    }\n \
-    \   if(isnegative) {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return\
-    \ 0;\n    }\n    for(int i = 0;i < N;i++) {\n        for(int j = 0;j < N;j++)\
-    \ {\n            if(dist[i][j] == INF) cout << \"INF\";\n            else cout\
-    \ << dist[i][j];\n            if(j != N - 1) cout << \" \";\n        }\n     \
-    \   cout << endl;\n    }\n}\n"
-  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C\"\
-    \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
-    \n#include\"../../Graph/WarshallFloyd.cpp\"\n\nint main() {\n    int N,M;\n  \
-    \  cin >> N >> M;\n    vector<vector<long long>> dist(N,vector<long long>(N));\n\
-    \    for(int i = 0;i < M;i++) {\n        int s,t;\n        long long d;\n    \
-    \    cin >> s >> t >> d;\n        dist[s][t] = d;\n    }\n    dist = WarshallFloyd(N,dist);\n\
+    \ dist(N,vector<long long>(N,INF));\n    for(int i = 0;i < N;i++) dist[i][i] =\
+    \ 0;\n    for(int i = 0;i < M;i++) {\n        int s,t;\n        long long d;\n\
+    \        cin >> s >> t >> d;\n        dist[s][t] = d;\n    }\n    dist = WarshallFloyd(N,dist);\n\
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i][i]\
     \ < 0) isnegative = true;\n    }\n    if(isnegative) {\n        cout << \"NEGATIVE\
     \ CYCLE\" << endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++) {\n\
     \        for(int j = 0;j < N;j++) {\n            if(dist[i][j] == INF) cout <<\
     \ \"INF\";\n            else cout << dist[i][j];\n            if(j != N - 1) cout\
     \ << \" \";\n        }\n        cout << endl;\n    }\n}\n"
+  code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_C\"\
+    \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
+    \n#include\"../../Graph/WarshallFloyd.cpp\"\n\nint main() {\n    int N,M;\n  \
+    \  cin >> N >> M;\n    vector<vector<long long>> dist(N,vector<long long>(N,INF));\n\
+    \    for(int i = 0;i < N;i++) dist[i][i] = 0;\n    for(int i = 0;i < M;i++) {\n\
+    \        int s,t;\n        long long d;\n        cin >> s >> t >> d;\n       \
+    \ dist[s][t] = d;\n    }\n    dist = WarshallFloyd(N,dist);\n    bool isnegative\
+    \ = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i][i] < 0) isnegative\
+    \ = true;\n    }\n    if(isnegative) {\n        cout << \"NEGATIVE CYCLE\" <<\
+    \ endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++) {\n        for(int\
+    \ j = 0;j < N;j++) {\n            if(dist[i][j] == INF) cout << \"INF\";\n   \
+    \         else cout << dist[i][j];\n            if(j != N - 1) cout << \" \";\n\
+    \        }\n        cout << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - Graph/WarshallFloyd.cpp
   isVerificationFile: true
   path: Test/AOJ/WarshallFloyd.test.cpp
   requiredBy: []
-  timestamp: '2021-06-18 21:14:35+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-18 21:34:36+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/WarshallFloyd.test.cpp
 layout: document
