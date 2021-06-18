@@ -20,7 +20,7 @@ data:
       title: Union-Find
   - name: Graph
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/BellmanFord.cpp
       title: Bellman-Ford
     - icon: ':heavy_check_mark:'
@@ -74,7 +74,7 @@ data:
   verificationCategories:
   - name: Test/AOJ
     pages:
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/BellmanFord.test.cpp
       title: Test/AOJ/BellmanFord.test.cpp
     - icon: ':heavy_check_mark:'

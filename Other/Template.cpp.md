@@ -3,7 +3,7 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Test/AOJ/BellmanFord.test.cpp
     title: Test/AOJ/BellmanFord.test.cpp
   - icon: ':heavy_check_mark:'
@@ -61,8 +61,6 @@ data:
     links: []
   bundledCode: '#line 1 "Other/Template.cpp"
 
-    typedef long long ll;
-
     constexpr int Inf = 2000000030;
 
     constexpr long long INF= 2000000000000000000;
@@ -75,9 +73,7 @@ data:
     true; } return false; }
 
     '
-  code: 'typedef long long ll;
-
-    constexpr int Inf = 2000000030;
+  code: 'constexpr int Inf = 2000000030;
 
     constexpr long long INF= 2000000000000000000;
 
@@ -93,7 +89,7 @@ data:
   isVerificationFile: false
   path: Other/Template.cpp
   requiredBy: []
-  timestamp: '2021-06-14 17:23:21+09:00'
+  timestamp: '2021-06-18 21:14:35+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - Test/yukicoder/ChineseRemainderTheorem.test.cpp

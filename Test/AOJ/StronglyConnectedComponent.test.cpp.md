@@ -20,13 +20,12 @@ data:
   bundledCode: "#line 1 \"Test/AOJ/StronglyConnectedComponent.test.cpp\"\n#define\
     \ PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/3/GRL_3_C\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#line 1 \"Other/Template.cpp\"\
-    \ntypedef long long ll;\nconstexpr int Inf = 2000000030;\nconstexpr long long\
-    \ INF= 2000000000000000000;\n\ntemplate<typename T> inline bool chmax(T &a, T\
-    \ b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename T>\
-    \ inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return false;\
-    \ }\n#line 1 \"Graph/StronglyConnectedComponent.cpp\"\nclass SCC {\n    int N;\n\
-    \    vector<int> graph[100010];\n    vector<int> rgraph[100010];//\u8FBA\u3092\
-    \u9006\u306B\u306F\u3063\u305F\u30B0\u30E9\u30D5\n    vector<int> vs; //\u5E30\
+    \nconstexpr int Inf = 2000000030;\nconstexpr long long INF= 2000000000000000000;\n\
+    \ntemplate<typename T> inline bool chmax(T &a, T b) { if (a < b) { a = b; return\
+    \ true; } return false; }\ntemplate<typename T> inline bool chmin(T &a, T b) {\
+    \ if (a > b) { a = b; return true; } return false; }\n#line 1 \"Graph/StronglyConnectedComponent.cpp\"\
+    \nclass SCC {\n    int N;\n    vector<int> graph[100010];\n    vector<int> rgraph[100010];//\u8FBA\
+    \u3092\u9006\u306B\u306F\u3063\u305F\u30B0\u30E9\u30D5\n    vector<int> vs; //\u5E30\
     \u308A\u304C\u3051\u9806\u306E\u4E26\u3073\n    bool used[100010]; //\u65E2\u306B\
     \u9802\u70B9\u306B\u8A2A\u308C\u305F\u304B\n    int cmp[100010]; //\u5C5E\u3059\
     \u308B\u5F37\u9023\u7D50\u6210\u5206\u306E\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\
@@ -63,7 +62,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/StronglyConnectedComponent.test.cpp
   requiredBy: []
-  timestamp: '2021-06-14 17:23:21+09:00'
+  timestamp: '2021-06-18 21:14:35+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/StronglyConnectedComponent.test.cpp
