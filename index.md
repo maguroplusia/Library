@@ -50,6 +50,9 @@ data:
       path: Mathematics/ChineseRemainderTheorem.cpp
       title: Mathematics/ChineseRemainderTheorem.cpp
     - icon: ':warning:'
+      path: Mathematics/Factorize.cpp
+      title: Mathematics/Factorize.cpp
+    - icon: ':warning:'
       path: Mathematics/MatrixPower.cpp
       title: Mathematics/MatrixPower.cpp
     - icon: ':warning:'
@@ -112,6 +115,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
       title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
+    - icon: ':x:'
+      path: Test/yosupo-judge/Factorize.test.cpp
+      title: Test/yosupo-judge/Factorize.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
       title: Test/yosupo-judge/LowestCommonAncestor.test.cpp
