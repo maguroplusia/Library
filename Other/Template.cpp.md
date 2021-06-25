@@ -40,6 +40,9 @@ data:
     path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
     title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
   - icon: ':heavy_check_mark:'
+    path: Test/yosupo-judge/Factorize.test.cpp
+    title: Test/yosupo-judge/Factorize.test.cpp
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
     title: Test/yosupo-judge/LowestCommonAncestor.test.cpp
   - icon: ':heavy_check_mark:'
@@ -109,6 +112,7 @@ data:
   - Test/yosupo-judge/BinaryIndexedTree.test.cpp
   - Test/yosupo-judge/LowestCommonAncestor.test.cpp
   - Test/yosupo-judge/SparseTable.test.cpp
+  - Test/yosupo-judge/Factorize.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

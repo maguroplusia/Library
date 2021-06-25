@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: Test/yosupo-judge/Factorize.test.cpp
+    title: Test/yosupo-judge/Factorize.test.cpp
   _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"Mathematics/Factorize.cpp\"\nlong long mul(long long  A,long\
@@ -71,8 +74,9 @@ data:
   path: Mathematics/Factorize.cpp
   requiredBy: []
   timestamp: '2021-06-25 22:26:01+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - Test/yosupo-judge/Factorize.test.cpp
 documentation_of: Mathematics/Factorize.cpp
 layout: document
 redirect_from:

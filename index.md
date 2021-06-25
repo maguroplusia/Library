@@ -49,7 +49,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Mathematics/ChineseRemainderTheorem.cpp
       title: Mathematics/ChineseRemainderTheorem.cpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: Mathematics/Factorize.cpp
       title: Mathematics/Factorize.cpp
     - icon: ':warning:'
@@ -115,7 +115,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/BinaryIndexedTree.test.cpp
       title: Test/yosupo-judge/BinaryIndexedTree.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/Factorize.test.cpp
       title: Test/yosupo-judge/Factorize.test.cpp
     - icon: ':heavy_check_mark:'

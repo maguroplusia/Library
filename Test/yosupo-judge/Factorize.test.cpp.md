@@ -1,33 +1,75 @@
 ---
 data:
-  _extendedDependsOn: []
+  _extendedDependsOn:
+  - icon: ':heavy_check_mark:'
+    path: Mathematics/Factorize.cpp
+    title: Mathematics/Factorize.cpp
+  - icon: ':question:'
+    path: Other/Template.cpp
+    title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
-  attributes: {}
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/onlinejudge_verify/documentation/build.py\"\
-    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
-    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n  File \"/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
-    \  File \"/opt/hostedtoolcache/Python/3.9.5/x64/lib/python3.9/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
-    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
-    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../../Math/Factorize.cpp:\
-    \ line -1: no such header\n"
-  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/factorize\"\n\n#include<bits/stdc++.h>\n\
-    using namespace std;\n\n#include\"../../Other/Template.cpp\"\n#include\"../../Math/Factorize.cpp\"\
+  _verificationStatusIcon: ':heavy_check_mark:'
+  attributes:
+    '*NOT_SPECIAL_COMMENTS*': ''
+    PROBLEM: https://judge.yosupo.jp/problem/factorize
+    links:
+    - https://judge.yosupo.jp/problem/factorize
+  bundledCode: "#line 1 \"Test/yosupo-judge/Factorize.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.yosupo.jp/problem/factorize\"\n\n#include<bits/stdc++.h>\nusing\
+    \ namespace std;\n\n#line 1 \"Other/Template.cpp\"\nconstexpr int Inf = 2000000030;\n\
+    constexpr long long INF= 2000000000000000000;\n\ntemplate<typename T> inline bool\
+    \ chmax(T &a, T b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename\
+    \ T> inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return\
+    \ false; }\n#line 1 \"Mathematics/Factorize.cpp\"\nlong long mul(long long  A,long\
+    \ long B,long long M) {\n    __int128 a = A;\n    __int128 b = B;\n    __int128\
+    \ m = M;\n    __int128 ret = a * b % m;\n    long long res = ret;\n    return\
+    \ res;\n}\n\nbool is_prime(const long long& N) {\n    if(N == 1) return false;\n\
+    \    for(long long p : {2,3,5,7,11,13,17,19,23,29,31,37}) {\n        if(N == p)\
+    \ return true;\n        if(N % p == 0) return false;\n    }\n\n    long long d\
+    \ = N - 1;\n    int k = 0;\n    while(!(d & 1)) {\n        k++;\n        d >>=\
+    \ 1;\n    }\n\n    auto modpow = [](long long A,long long B,const long long& M)\
+    \ -> long long {\n        long long ret = 1;\n        while(B) {\n           \
+    \ if(B & 1) ret = mul(ret,A,M);\n            B /= 2;\n            A = mul(A,A,M);\n\
+    \        }\n        return ret;\n    };\n\n    random_device rnd;\n    default_random_engine\
+    \ engine(rnd());\n    uniform_int_distribution<long long> rand(2,N - 1);\n\n \
+    \   for(int tmp = 0;tmp < 50;tmp++) {\n        long long a = rand(engine);\n \
+    \       long long y = modpow(a,d,N);\n        if(y == 1 || y == N - 1) continue;\n\
+    \n        int i = 0;\n        for(i = 1;i < k;i++) {\n            y = mul(y,y,N);\n\
+    \            if(y == N - 1) break;\n        }\n        if(i == k) return false;\n\
+    \    }\n\n    return true;\n}\n\nlong long rho(const long long &N) {\n    if(is_prime(N))\
+    \ return N;\n\n    random_device rnd;\n    default_random_engine engine(rnd());\n\
+    \    uniform_int_distribution<long long> rand(2,N - 1);\n\n    for(int c = 1;;++c)\
+    \ {\n        long long x = rand(engine);\n        long long y = x;\n        long\
+    \ long d = 1;\n        auto f = [&](long long a) -> long long {\n            return\
+    \ (mul(a,a,N) + c) % N;\n        };\n        while(d == 1) {\n            x =\
+    \ f(x);\n            y = f(f(y));\n            d = gcd(abs(x - y),N);\n      \
+    \      if(1 < d && d < N) {\n                return rho(d);\n            }\n \
+    \       }\n    }\n}\n\nvector<long long> factorize(long long N) {\n    vector<long\
+    \ long> ret;\n\n    while(!(N & 1)) {\n        N >>= 1;\n        ret.push_back(2);\n\
+    \    }\n\n    while(N > 1) {\n        long long d = rho(N);\n        while(N %\
+    \ d == 0) {\n            N /= d;\n            ret.push_back(d);\n        }\n \
+    \   }\n\n    sort(ret.begin(),ret.end());\n    return ret;\n}\n#line 8 \"Test/yosupo-judge/Factorize.test.cpp\"\
     \n\nint main() {\n    int Q;\n    cin >> Q;\n    for(int tmp = 0;tmp < Q;tmp++)\
     \ {\n        long long N;\n        cin >> N;\n        vector<long long> ret =\
     \ factorize(N);\n        cout << (int)ret.size() << \" \";\n        for(const\
     \ auto& x:ret) cout << x << \" \";\n        cout << endl;\n    }\n}\n"
-  dependsOn: []
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/factorize\"\n\n#include<bits/stdc++.h>\n\
+    using namespace std;\n\n#include\"../../Other/Template.cpp\"\n#include\"../../Mathematics/Factorize.cpp\"\
+    \n\nint main() {\n    int Q;\n    cin >> Q;\n    for(int tmp = 0;tmp < Q;tmp++)\
+    \ {\n        long long N;\n        cin >> N;\n        vector<long long> ret =\
+    \ factorize(N);\n        cout << (int)ret.size() << \" \";\n        for(const\
+    \ auto& x:ret) cout << x << \" \";\n        cout << endl;\n    }\n}\n"
+  dependsOn:
+  - Other/Template.cpp
+  - Mathematics/Factorize.cpp
   isVerificationFile: true
   path: Test/yosupo-judge/Factorize.test.cpp
   requiredBy: []
-  timestamp: '1970-01-01 00:00:00+00:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-06-25 22:40:15+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/Factorize.test.cpp
 layout: document
