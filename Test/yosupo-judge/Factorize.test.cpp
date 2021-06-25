@@ -4,7 +4,7 @@
 using namespace std;
 
 #include"../../Other/Template.cpp"
-#include"../../Math/Factorize.cpp"
+#include"../../Mathematics/Factorize.cpp"
 
 int main() {
     int Q;
