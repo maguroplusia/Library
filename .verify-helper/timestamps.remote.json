@@ -10,6 +10,7 @@
 "Test/AOJ/StronglyConnectedComponent.test.cpp": "2021-06-18 21:14:35 +0900",
 "Test/AOJ/WarshallFloyd.test.cpp": "2021-06-18 21:34:36 +0900",
 "Test/yosupo-judge/BinaryIndexedTree.test.cpp": "2021-06-18 21:14:35 +0900",
+"Test/yosupo-judge/Factorize.test.cpp": "2021-06-25 22:40:15 +0900",
 "Test/yosupo-judge/LowestCommonAncestor.test.cpp": "2021-06-18 21:14:35 +0900",
 "Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp": "2021-06-18 21:14:35 +0900",
 "Test/yosupo-judge/SparseTable.test.cpp": "2021-06-18 21:14:35 +0900",
