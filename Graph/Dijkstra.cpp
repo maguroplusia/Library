@@ -1,13 +1,15 @@
-struct edge{
+template<typename T>
+struct edge {
     int to;
-    long long cost;
+    T cost;
 };
 
 vector<int> pre;
 
-vector<long long> Dijkstra(const int& N,const vector<vector<edge>>& graph,const int& s) {
-    priority_queue<pair<long long,int>,vector<pair<long long,int>>,greater<pair<long long,int>>> que;
-    vector<long long> dist(N,INF);
+template<typename T>
+vector<T> Dijkstra(const int& N,const vector<vector<edge<T>>>& graph,const int& s) {
+    priority_queue<pair<T,int>,vector<pair<T,int>>,greater<pair<T,int>>> que;
+    vector<T> dist(N,numeric_limits<T>::max());
     pre = vector<int>(N,-1);
     dist[s] = 0;
     que.push({0,s});
@@ -27,7 +29,7 @@ vector<long long> Dijkstra(const int& N,const vector<vector<edge>>& graph,const 
     return dist;
 }
 
-vector<int> GetPath(int t) {
+vector<int> GetPath(cosnt int& t) {
     vector<int> path;
 
     while(t != -1) {
