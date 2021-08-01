@@ -23,7 +23,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/BellmanFord.cpp
       title: Bellman-Ford
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Graph/Dijkstra.cpp
       title: Dijkstra
     - icon: ':heavy_check_mark:'
@@ -80,7 +80,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/BellmanFord.test.cpp
       title: Test/AOJ/BellmanFord.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/Dijkstra.test.cpp
       title: Test/AOJ/Dijkstra.test.cpp
     - icon: ':heavy_check_mark:'

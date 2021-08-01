@@ -57,9 +57,9 @@ data:
   timestamp: '2021-04-20 19:31:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
+  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
 documentation_of: DataStructure/SegmentTree.cpp
 layout: document
 title: Segment Tree
