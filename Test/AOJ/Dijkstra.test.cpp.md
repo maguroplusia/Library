@@ -35,27 +35,26 @@ data:
     \ int& t) {\n    vector<int> path;\n\n    while(t != -1) {\n        path.push_back(t);\n\
     \        t = pre[t];\n    }\n\n    reverse(path.begin(),path.end());\n    return\
     \ path;\n}\n#line 8 \"Test/AOJ/Dijkstra.test.cpp\"\n\nint main() {\n    int N,M,r;\n\
-    \    cin >> N >> M >> r;\n    vector<vector<edge>> graph(N);\n    for(int i =\
-    \ 0;i < M;i++) {\n        int s,t;\n        long long d;\n        cin >> s >>\
-    \ t >> d;\n        graph[s].push_back({t,d});\n    }\n    vector<long long> dist\
-    \ = Dijkstra(N,graph,r);\n    for(int i = 0;i < N;i++) {\n        if(dist[i] ==\
-    \ INF) cout << \"INF\" << endl;\n        else cout << dist[i] << endl;\n    }\n\
-    }\n"
+    \    cin >> N >> M >> r;\n    vector<vector<edge<int>>> graph(N);\n    for(int\
+    \ i = 0;i < M;i++) {\n        int s,t,d;\n        cin >> s >> t >> d;\n      \
+    \  graph[s].push_back({t,d});\n    }\n    vector<int> dist = Dijkstra(N,graph,r);\n\
+    \    for(const auto& x:dist) {\n        if(x == numeric_limits<int>::max()) cout\
+    \ << \"INF\" << endl;\n        else cout << x << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/Dijkstra.cpp\"\n\nint main() {\n    int N,M,r;\n    cin\
-    \ >> N >> M >> r;\n    vector<vector<edge>> graph(N);\n    for(int i = 0;i < M;i++)\
-    \ {\n        int s,t;\n        long long d;\n        cin >> s >> t >> d;\n   \
-    \     graph[s].push_back({t,d});\n    }\n    vector<long long> dist = Dijkstra(N,graph,r);\n\
-    \    for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
-    \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
+    \ >> N >> M >> r;\n    vector<vector<edge<int>>> graph(N);\n    for(int i = 0;i\
+    \ < M;i++) {\n        int s,t,d;\n        cin >> s >> t >> d;\n        graph[s].push_back({t,d});\n\
+    \    }\n    vector<int> dist = Dijkstra(N,graph,r);\n    for(const auto& x:dist)\
+    \ {\n        if(x == numeric_limits<int>::max()) cout << \"INF\" << endl;\n  \
+    \      else cout << x << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - Graph/Dijkstra.cpp
   isVerificationFile: true
   path: Test/AOJ/Dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2021-08-01 20:14:39+09:00'
+  timestamp: '2021-08-01 20:25:30+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/Dijkstra.test.cpp
