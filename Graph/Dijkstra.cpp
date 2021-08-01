@@ -29,7 +29,7 @@ vector<T> Dijkstra(const int& N,const vector<vector<edge<T>>>& graph,const int& 
     return dist;
 }
 
-vector<int> GetPath(cosnt int& t) {
+vector<int> GetPath(int t) {
     vector<int> path;
 
     while(t != -1) {
