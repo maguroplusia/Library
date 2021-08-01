@@ -9,16 +9,15 @@ using namespace std;
 int main() {
     int N,M,r;
     cin >> N >> M >> r;
-    vector<vector<edge>> graph(N);
+    vector<vector<edge<int>>> graph(N);
     for(int i = 0;i < M;i++) {
-        int s,t;
-        long long d;
+        int s,t,d;
         cin >> s >> t >> d;
         graph[s].push_back({t,d});
     }
-    vector<long long> dist = Dijkstra(N,graph,r);
-    for(int i = 0;i < N;i++) {
-        if(dist[i] == INF) cout << "INF" << endl;
-        else cout << dist[i] << endl;
+    vector<int> dist = Dijkstra(N,graph,r);
+    for(const auto& x:dist) {
+        if(x == numeric_limits<int>::max()) cout << "INF" << endl;
+        else cout << x << endl;
     }
 }
