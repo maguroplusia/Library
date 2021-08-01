@@ -1,5 +1,6 @@
 {
 "Test/AOJ/BellmanFord.test.cpp": "2021-06-18 21:34:36 +0900",
+"Test/AOJ/Dijkstra.test.cpp": "2021-08-01 20:48:36 +0900",
 "Test/AOJ/Kruskal.test.cpp": "2021-06-18 21:14:35 +0900",
 "Test/AOJ/LazySegmentTree.test.cpp": "2021-06-18 21:14:35 +0900",
 "Test/AOJ/Prim.test.cpp": "2021-06-18 21:14:35 +0900",
