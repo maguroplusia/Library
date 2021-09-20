@@ -48,7 +48,7 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
     title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
     title: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
   - icon: ':heavy_check_mark:'

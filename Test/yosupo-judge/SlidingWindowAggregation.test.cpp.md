@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SlidingWindowAggregation.cpp
     title: DataStructure/SlidingWindowAggregation.cpp
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/queue_operate_all_composite
@@ -27,12 +27,13 @@ data:
     \ntemplate<class T>\nclass SWAG {\n    class Node {\n    public:\n        T val,sum;\n\
     \        Node(const T& val,const T& sum) : val(val),sum(sum) {}\n    };\n\n  \
     \  std::stack<Node> front_stack,back_stack;\n    function<T(T,T)> op;\n\npublic:\n\
-    \    SWAG(const auto op) : op(op) {}\n\n    bool empty() {\n        return front_stack.empty()\
-    \ && back_stack.empty();\n    }\n\n    T fold_all() {\n        assert(!empty());\n\
-    \        if(front_stack.empty()) {\n            return back_stack.top().sum;\n\
-    \        }\n        else if(back_stack.empty()) {\n            return front_stack.top().sum;\n\
-    \        }\n        else {\n            return op(front_stack.top().sum,back_stack.top().sum);\n\
-    \        }\n    }\n\n    void push(T x) {\n        if(back_stack.empty()) back_stack.emplace(x,x);\n\
+    \    SWAG(const function<T(T,T)> op) : op(op) {}\n\n    bool empty() {\n     \
+    \   return front_stack.empty() && back_stack.empty();\n    }\n\n    T fold_all()\
+    \ {\n        assert(!empty());\n        if(front_stack.empty()) {\n          \
+    \  return back_stack.top().sum;\n        }\n        else if(back_stack.empty())\
+    \ {\n            return front_stack.top().sum;\n        }\n        else {\n  \
+    \          return op(front_stack.top().sum,back_stack.top().sum);\n        }\n\
+    \    }\n\n    void push(T x) {\n        if(back_stack.empty()) back_stack.emplace(x,x);\n\
     \        else back_stack.emplace(x,op(back_stack.top().sum,x));\n    }\n\n   \
     \ void pop() {\n        assert(!empty());\n        if(front_stack.empty()) {\n\
     \            front_stack.emplace(back_stack.top().val,back_stack.top().val);\n\
@@ -69,8 +70,8 @@ data:
   isVerificationFile: true
   path: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
   requiredBy: []
-  timestamp: '2021-09-20 19:22:38+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-09-20 19:48:28+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
 layout: document

@@ -12,7 +12,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: Segment Tree
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: DataStructure/SlidingWindowAggregation.cpp
       title: DataStructure/SlidingWindowAggregation.cpp
     - icon: ':heavy_check_mark:'
@@ -127,7 +127,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
       title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
       title: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
     - icon: ':heavy_check_mark:'
