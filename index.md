@@ -12,6 +12,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/SegmentTree.cpp
       title: Segment Tree
+    - icon: ':x:'
+      path: DataStructure/SlidingWindowAggregation.cpp
+      title: DataStructure/SlidingWindowAggregation.cpp
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: Sparse Table
@@ -124,6 +127,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
       title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+    - icon: ':x:'
+      path: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
+      title: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/SparseTable.test.cpp
       title: Test/yosupo-judge/SparseTable.test.cpp

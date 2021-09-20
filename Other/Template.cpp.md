@@ -48,6 +48,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
     title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+  - icon: ':x:'
+    path: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
+    title: Test/yosupo-judge/SlidingWindowAggregation.test.cpp
   - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SparseTable.test.cpp
     title: Test/yosupo-judge/SparseTable.test.cpp
@@ -95,24 +98,25 @@ data:
   timestamp: '2021-06-18 21:14:35+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
-  - Test/AOJ/Dijkstra.test.cpp
-  - Test/AOJ/TopologicalSort.test.cpp
-  - Test/AOJ/Kruskal.test.cpp
-  - Test/AOJ/Prim.test.cpp
-  - Test/AOJ/RollingHash.test.cpp
-  - Test/AOJ/LazySegmentTree.test.cpp
-  - Test/AOJ/StronglyConnectedComponent.test.cpp
-  - Test/AOJ/WarshallFloyd.test.cpp
-  - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-  - Test/AOJ/BellmanFord.test.cpp
-  - Test/yosupo-judge/BinaryIndexedTree.test.cpp
+  - Test/yosupo-judge/SlidingWindowAggregation.test.cpp
+  - Test/yosupo-judge/Factorize.test.cpp
   - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   - Test/yosupo-judge/SparseTable.test.cpp
-  - Test/yosupo-judge/UnionFind.test.cpp
-  - Test/yosupo-judge/Factorize.test.cpp
   - Test/yosupo-judge/LowestCommonAncestor.test.cpp
+  - Test/yosupo-judge/BinaryIndexedTree.test.cpp
+  - Test/yosupo-judge/UnionFind.test.cpp
   - Test/yukicoder/ChineseRemainderTheorem.test.cpp
+  - Test/AOJ/Dijkstra.test.cpp
+  - Test/AOJ/WarshallFloyd.test.cpp
+  - Test/AOJ/Prim.test.cpp
+  - Test/AOJ/RollingHash.test.cpp
+  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - Test/AOJ/StronglyConnectedComponent.test.cpp
+  - Test/AOJ/LazySegmentTree.test.cpp
+  - Test/AOJ/TopologicalSort.test.cpp
+  - Test/AOJ/Kruskal.test.cpp
+  - Test/AOJ/BellmanFord.test.cpp
+  - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:
