@@ -14,7 +14,7 @@ data:
       title: Segment Tree
     - icon: ':heavy_check_mark:'
       path: DataStructure/SlidingWindowAggregation.cpp
-      title: DataStructure/SlidingWindowAggregation.cpp
+      title: Sliding Window Aggregation (SWAG)
     - icon: ':heavy_check_mark:'
       path: DataStructure/SparseTable.cpp
       title: Sparse Table

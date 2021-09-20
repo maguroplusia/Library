@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: DataStructure/SlidingWindowAggregation.cpp
-    title: DataStructure/SlidingWindowAggregation.cpp
+    title: Sliding Window Aggregation (SWAG)
   - icon: ':question:'
     path: Other/Template.cpp
     title: Other/Template.cpp
