@@ -10,7 +10,7 @@ class SWAG {
     function<T(T,T)> op;
 
 public:
-    SWAG(const auto op) : op(op) {}
+    SWAG(const function<T(T,T)> op) : op(op) {}
 
     bool empty() {
         return front_stack.empty() && back_stack.empty();
