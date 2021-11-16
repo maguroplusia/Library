@@ -69,6 +69,9 @@ data:
       title: Mathematics/nCr3.cpp
   - name: Other
     pages:
+    - icon: ':warning:'
+      path: Other/LambdaRecursion.cpp
+      title: Other/LambdaRecursion.cpp
     - icon: ':question:'
       path: Other/Template.cpp
       title: Other/Template.cpp

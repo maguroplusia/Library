@@ -47,8 +47,8 @@ data:
   timestamp: '2021-06-16 19:56:29+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - Test/yosupo-judge/UnionFind.test.cpp
   - Test/AOJ/Kruskal.test.cpp
+  - Test/yosupo-judge/UnionFind.test.cpp
 documentation_of: DataStructure/UnionFind.cpp
 layout: document
 title: Union-Find
