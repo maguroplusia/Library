@@ -3,18 +3,18 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
     title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
     title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 1 \"DataStructure/SegmentTree.cpp\"\ntemplate<typename T>\n\
@@ -40,10 +40,10 @@ data:
     \ 1;\n        }\n        return ret;\n    }\n\n    int max_right(int l, std::function<bool(T)>\
     \ f) {\n        if(l == internal_size) return internal_size;\n        l += seg_size;\n\
     \        T sum = def;\n        do {\n            while(!(l & 1)) l >>= 1;\n  \
-    \          if(!f(operation(sum, data[l]))) {\n                while(l < seg_size)\
-    \ {\n                    l <<= 1;\n                    if(f(operation(sum, data[l])))\
-    \ sum = operation(sum, data[l++]);\n                }\n                return\
-    \ l - seg_size;\n            }\n        } while((l & -1) != l);\n        return\
+    \          if(!f(operation(sum, dat[l]))) {\n                while(l < seg_size)\
+    \ {\n                    l <<= 1;\n                    if(f(operation(sum, dat[l])))\
+    \ sum = operation(sum, dat[l++]);\n                }\n                return l\
+    \ - seg_size;\n            }\n        } while((l & -1) != l);\n        return\
     \ internal_size;\n    }\n\n    T operator[](int i) {return dat[i + seg_size];}\n\
     };\n"
   code: "template<typename T>\nclass SegmentTree {\n    int internal_size, seg_size;\n\
@@ -68,18 +68,18 @@ data:
     \            r >>= 1;\n        }\n        return ret;\n    }\n\n    int max_right(int\
     \ l, std::function<bool(T)> f) {\n        if(l == internal_size) return internal_size;\n\
     \        l += seg_size;\n        T sum = def;\n        do {\n            while(!(l\
-    \ & 1)) l >>= 1;\n            if(!f(operation(sum, data[l]))) {\n            \
-    \    while(l < seg_size) {\n                    l <<= 1;\n                   \
-    \ if(f(operation(sum, data[l]))) sum = operation(sum, data[l++]);\n          \
-    \      }\n                return l - seg_size;\n            }\n        } while((l\
-    \ & -1) != l);\n        return internal_size;\n    }\n\n    T operator[](int i)\
-    \ {return dat[i + seg_size];}\n};\n"
+    \ & 1)) l >>= 1;\n            if(!f(operation(sum, dat[l]))) {\n             \
+    \   while(l < seg_size) {\n                    l <<= 1;\n                    if(f(operation(sum,\
+    \ dat[l]))) sum = operation(sum, dat[l++]);\n                }\n             \
+    \   return l - seg_size;\n            }\n        } while((l & -1) != l);\n   \
+    \     return internal_size;\n    }\n\n    T operator[](int i) {return dat[i +\
+    \ seg_size];}\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: DataStructure/SegmentTree.cpp
   requiredBy: []
-  timestamp: '2021-11-21 13:14:51+09:00'
-  verificationStatus: LIBRARY_ALL_WA
+  timestamp: '2021-11-21 13:46:02+09:00'
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp

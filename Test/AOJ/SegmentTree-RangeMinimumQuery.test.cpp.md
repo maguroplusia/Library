@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: DataStructure/SegmentTree.cpp
     title: Segment Tree
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A
@@ -46,12 +46,12 @@ data:
     \            r >>= 1;\n        }\n        return ret;\n    }\n\n    int max_right(int\
     \ l, std::function<bool(T)> f) {\n        if(l == internal_size) return internal_size;\n\
     \        l += seg_size;\n        T sum = def;\n        do {\n            while(!(l\
-    \ & 1)) l >>= 1;\n            if(!f(operation(sum, data[l]))) {\n            \
-    \    while(l < seg_size) {\n                    l <<= 1;\n                   \
-    \ if(f(operation(sum, data[l]))) sum = operation(sum, data[l++]);\n          \
-    \      }\n                return l - seg_size;\n            }\n        } while((l\
-    \ & -1) != l);\n        return internal_size;\n    }\n\n    T operator[](int i)\
-    \ {return dat[i + seg_size];}\n};\n#line 8 \"Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp\"\
+    \ & 1)) l >>= 1;\n            if(!f(operation(sum, dat[l]))) {\n             \
+    \   while(l < seg_size) {\n                    l <<= 1;\n                    if(f(operation(sum,\
+    \ dat[l]))) sum = operation(sum, dat[l++]);\n                }\n             \
+    \   return l - seg_size;\n            }\n        } while((l & -1) != l);\n   \
+    \     return internal_size;\n    }\n\n    T operator[](int i) {return dat[i +\
+    \ seg_size];}\n};\n#line 8 \"Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp\"\
     \n\nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,numeric_limits<int>::max(),\n\
     \    [](int a,int b){return min(a,b);},\n    [](int a,int b){return b;});\n  \
     \  for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
@@ -73,8 +73,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   requiredBy: []
-  timestamp: '2021-11-21 13:25:13+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2021-11-21 13:46:02+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
 layout: document
