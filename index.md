@@ -9,7 +9,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: DataStructure/LazySegmentTree.cpp
       title: DataStructure/LazySegmentTree.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: DataStructure/SegmentTree.cpp
       title: Segment Tree
     - icon: ':heavy_check_mark:'
@@ -101,10 +101,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/RollingHash.test.cpp
       title: Test/AOJ/RollingHash.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
       title: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
     - icon: ':heavy_check_mark:'
@@ -127,7 +127,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/yosupo-judge/LowestCommonAncestor.test.cpp
       title: Test/yosupo-judge/LowestCommonAncestor.test.cpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':x:'
       path: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
       title: Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
     - icon: ':heavy_check_mark:'
@@ -148,4 +148,4 @@ layout: toppage
 ---
 ドキュメントがまだ整備されていない物があります。
 
-内容に不備があったら[@maguro3260](https://twitter.com/maguro3260)までリプライかDMしてください。
+内容に不備があったら issue を送るか[@maguro3260](https://twitter.com/maguro3260)までリプライ、DM してください。

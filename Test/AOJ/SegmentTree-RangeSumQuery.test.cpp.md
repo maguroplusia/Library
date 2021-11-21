@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: DataStructure/SegmentTree.cpp
     title: Segment Tree
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B
@@ -24,29 +24,41 @@ data:
     \ chmax(T &a, T b) { if (a < b) { a = b; return true; } return false; }\ntemplate<typename\
     \ T> inline bool chmin(T &a, T b) { if (a > b) { a = b; return true; } return\
     \ false; }\n#line 1 \"DataStructure/SegmentTree.cpp\"\ntemplate<typename T>\n\
-    class SegmentTree {\n    int N;\n    const T def;\n    vector<T> dat;\n    function<T(T,T)>\
-    \ operation_;\n    function<T(T,T)> update_;\n\n    T query_sub(int a,int b,int\
-    \ l,int r,int k) {\n        if(r <= a || b <= l) return def;\n        if(a <=\
-    \ l && r <= b) return dat[k];\n        T c1 = query_sub(a,b,l,(l + r) / 2,2 *\
-    \ k + 1);\n        T c2 = query_sub(a,b,(l + r) / 2,r,2 * k + 2);\n        return\
-    \ operation_(c1,c2);\n    }\n\npublic:\n    SegmentTree(int n,T e,function<T(T,T)>\
-    \ operation,function<T(T,T)> update): def(e),operation_(operation),update_(update)\
-    \ {\n        int n_ = 1;\n        while(n > n_) {\n            n_ *= 2;\n    \
-    \    }\n        N = n_;\n        dat = vector<T>(2 * N - 1,def);\n    }\n\n  \
-    \  void set(int i,T x) { dat[i + N - 1] = x;}\n    void build() {\n        for\
-    \ (int i = N - 2; i >= 0; i--){\n            dat[i] = operation_(dat[i * 2 + 1],dat[i\
-    \ * 2 + 2]);\n        }\n    }\n\n    void update(int i,T x) {\n        i += N\
-    \ - 1;\n        dat[i] = update_(dat[i],x);\n        while(i > 0) {\n        \
-    \    i = (i - 1) / 2;\n            dat[i] = operation_(dat[i * 2 + 1],dat[i *\
-    \ 2 + 2]);\n        }\n    }\n\n    T query(int a,int b) {return query_sub(a,b,0,N,0);}\n\
-    \n    T operator[](int i) {return dat[i + N - 1];}\n};\n#line 8 \"Test/AOJ/SegmentTree-RangeSumQuery.test.cpp\"\
-    \n\nint main() {\n    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n\
-    \    [](int a,int b){return a + b;},\n    [](int a,int b){return a + b;});\n \
-    \   for(int i = 0;i < Q;i++) {\n        int t;\n        cin >> t;\n        if(t\
-    \ == 0) {\n            int p,x;\n            cin >> p >> x;\n            p--;\n\
-    \            seg.update(p,x);\n        }\n        else {\n            int s,t;\n\
-    \            cin >> s >> t;\n            s--;\n            t--;\n            cout\
-    \ << seg.query(s,t + 1) << endl;\n        }\n    }\n}\n"
+    class SegmentTree {\n    int internal_size, seg_size;\n    const T def;\n    std::vector<T>\
+    \ dat;\n    std::function<T(T, T)> operation;\n    std::function<T(T, T)> update;\n\
+    \npublic:\n    explicit SegmentTree(const int size, const T& e, std::function<T(T,\
+    \ T)> operation, std::function<T(T, T)> update): internal_size(size), def(e),\
+    \ operation(operation), update(update) {\n        for(seg_size = 1; seg_size <\
+    \ internal_size; seg_size *= 2);\n        dat = std::vector<T>(2 * seg_size, def);\n\
+    \    }\n\n    explicit SegmentTree(std::vector<T> v, const T& e,std::function<T(T,\
+    \ T)> operation, std::function<T(T, T)> update): internal_size(v.size()), def(e),\
+    \ operation(operation), update(update) {\n        for(seg_size = 1; seg_size <\
+    \ internal_size; seg_size *= 2);\n        dat.resize(2 * seg_size, def);\n\n \
+    \       for(int i = 0; i < seg_size;i++) dat[i + seg_size] = v[i];\n        for(int\
+    \ i = seg_size - 1; i >= 1; i--) {\n            dat[i] = operation(dat[i * 2],\
+    \ dat[i * 2 + 1]);\n        }\n    }\n\n    void set_val(int i, const T& value)\
+    \ {\n        i += seg_size;\n        dat[i] = update(dat[i], value);\n       \
+    \ while(i > 1) {\n            i >>= 1;\n            dat[i] = operation(dat[i *\
+    \ 2], dat[i * 2 + 1]);\n        }\n    }\n\n    T fold(int l,int r) {\n      \
+    \  l += seg_size;\n        r += seg_size;\n        T ret = def;\n        while(l\
+    \ < r) {\n            if(l & 1) ret = operation(ret,dat[l++]);\n            if(r\
+    \ & 1) ret = operation(dat[--r],ret);\n            l >>= 1;\n            r >>=\
+    \ 1;\n        }\n        return ret;\n    }\n\n    int max_right(int l, std::function<bool(T)>\
+    \ f) {\n        if(l == internal_size) return internal_size;\n        l += seg_size;\n\
+    \        T sum = def;\n        do {\n            while(!(l & 1)) l >>= 1;\n  \
+    \          if(!f(operation(sum, data[l]))) {\n                while(l < seg_size)\
+    \ {\n                    l <<= 1;\n                    if(f(operation(sum, data[l])))\
+    \ sum = operation(sum, data[l++]);\n                }\n                return\
+    \ l - seg_size;\n            }\n        } while((l & -1) != l);\n        return\
+    \ internal_size;\n    }\n\n    T operator[](int i) {return dat[i + seg_size];}\n\
+    };\n#line 8 \"Test/AOJ/SegmentTree-RangeSumQuery.test.cpp\"\n\nint main() {\n\
+    \    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n    [](int a,int\
+    \ b){return a + b;},\n    [](int a,int b){return a + b;});\n    for(int i = 0;i\
+    \ < Q;i++) {\n        int t;\n        cin >> t;\n        if(t == 0) {\n      \
+    \      int p,x;\n            cin >> p >> x;\n            p--;\n            seg.update(p,x);\n\
+    \        }\n        else {\n            int s,t;\n            cin >> s >> t;\n\
+    \            s--;\n            t--;\n            cout << seg.query(s,t + 1) <<\
+    \ endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../DataStructure/SegmentTree.cpp\"\n\nint main() {\n    int N,Q;\n\
@@ -63,8 +75,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   requiredBy: []
-  timestamp: '2021-06-18 21:14:35+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2021-11-21 13:14:51+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
 layout: document
