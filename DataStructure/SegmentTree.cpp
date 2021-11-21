@@ -1,46 +1,65 @@
 template<typename T>
 class SegmentTree {
-    int N;
+    int internal_size, seg_size;
     const T def;
-    vector<T> dat;
-    function<T(T,T)> operation_;
-    function<T(T,T)> update_;
-
-    T query_sub(int a,int b,int l,int r,int k) {
-        if(r <= a || b <= l) return def;
-        if(a <= l && r <= b) return dat[k];
-        T c1 = query_sub(a,b,l,(l + r) / 2,2 * k + 1);
-        T c2 = query_sub(a,b,(l + r) / 2,r,2 * k + 2);
-        return operation_(c1,c2);
-    }
+    std::vector<T> dat;
+    std::function<T(T, T)> operation;
+    std::function<T(T, T)> update;
 
 public:
-    SegmentTree(int n,T e,function<T(T,T)> operation,function<T(T,T)> update): def(e),operation_(operation),update_(update) {
-        int n_ = 1;
-        while(n > n_) {
-            n_ *= 2;
-        }
-        N = n_;
-        dat = vector<T>(2 * N - 1,def);
+    explicit SegmentTree(const int size, const T& e, std::function<T(T, T)> operation, std::function<T(T, T)> update): internal_size(size), def(e), operation(operation), update(update) {
+        for(seg_size = 1; seg_size < internal_size; seg_size *= 2);
+        dat = std::vector<T>(2 * seg_size, def);
     }
 
-    void set(int i,T x) { dat[i + N - 1] = x;}
-    void build() {
-        for (int i = N - 2; i >= 0; i--){
-            dat[i] = operation_(dat[i * 2 + 1],dat[i * 2 + 2]);
-        }
-    }
+    explicit SegmentTree(std::vector<T> v, const T& e,std::function<T(T, T)> operation, std::function<T(T, T)> update): internal_size(v.size()), def(e), operation(operation), update(update) {
+        for(seg_size = 1; seg_size < internal_size; seg_size *= 2);
+        dat.resize(2 * seg_size, def);
 
-    void update(int i,T x) {
-        i += N - 1;
-        dat[i] = update_(dat[i],x);
-        while(i > 0) {
-            i = (i - 1) / 2;
-            dat[i] = operation_(dat[i * 2 + 1],dat[i * 2 + 2]);
+        for(int i = 0; i < seg_size;i++) dat[i + seg_size] = v[i];
+        for(int i = seg_size - 1; i >= 1; i--) {
+            dat[i] = operation(dat[i * 2], dat[i * 2 + 1]);
         }
     }
 
-    T query(int a,int b) {return query_sub(a,b,0,N,0);}
+    void set_val(int i, const T& value) {
+        i += seg_size;
+        dat[i] = update(dat[i], value);
+        while(i > 1) {
+            i >>= 1;
+            dat[i] = operation(dat[i * 2], dat[i * 2 + 1]);
+        }
+    }
 
-    T operator[](int i) {return dat[i + N - 1];}
+    T fold(int l,int r) {
+        l += seg_size;
+        r += seg_size;
+        T ret = def;
+        while(l < r) {
+            if(l & 1) ret = operation(ret,dat[l++]);
+            if(r & 1) ret = operation(dat[--r],ret);
+            l >>= 1;
+            r >>= 1;
+        }
+        return ret;
+    }
+
+    int max_right(int l, std::function<bool(T)> f) {
+        if(l == internal_size) return internal_size;
+        l += seg_size;
+        T sum = def;
+        do {
+            while(!(l & 1)) l >>= 1;
+            if(!f(operation(sum, data[l]))) {
+                while(l < seg_size) {
+                    l <<= 1;
+                    if(f(operation(sum, data[l]))) sum = operation(sum, data[l++]);
+                }
+                return l - seg_size;
+            }
+        } while((l & -1) != l);
+        return internal_size;
+    }
+
+    T operator[](int i) {return dat[i + seg_size];}
 };
