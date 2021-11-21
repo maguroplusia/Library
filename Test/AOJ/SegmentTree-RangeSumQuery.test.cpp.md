@@ -55,9 +55,9 @@ data:
     \    int N,Q;\n    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n    [](int a,int\
     \ b){return a + b;},\n    [](int a,int b){return a + b;});\n    for(int i = 0;i\
     \ < Q;i++) {\n        int t;\n        cin >> t;\n        if(t == 0) {\n      \
-    \      int p,x;\n            cin >> p >> x;\n            p--;\n            seg.update(p,x);\n\
+    \      int p,x;\n            cin >> p >> x;\n            p--;\n            seg.set_val(p,x);\n\
     \        }\n        else {\n            int s,t;\n            cin >> s >> t;\n\
-    \            s--;\n            t--;\n            cout << seg.query(s,t + 1) <<\
+    \            s--;\n            t--;\n            cout << seg.fold(s,t + 1) <<\
     \ endl;\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
@@ -65,9 +65,9 @@ data:
     \    cin >> N >> Q;\n    SegmentTree<int> seg(N,0,\n    [](int a,int b){return\
     \ a + b;},\n    [](int a,int b){return a + b;});\n    for(int i = 0;i < Q;i++)\
     \ {\n        int t;\n        cin >> t;\n        if(t == 0) {\n            int\
-    \ p,x;\n            cin >> p >> x;\n            p--;\n            seg.update(p,x);\n\
+    \ p,x;\n            cin >> p >> x;\n            p--;\n            seg.set_val(p,x);\n\
     \        }\n        else {\n            int s,t;\n            cin >> s >> t;\n\
-    \            s--;\n            t--;\n            cout << seg.query(s,t + 1) <<\
+    \            s--;\n            t--;\n            cout << seg.fold(s,t + 1) <<\
     \ endl;\n        }\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
@@ -75,7 +75,7 @@ data:
   isVerificationFile: true
   path: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   requiredBy: []
-  timestamp: '2021-11-21 13:14:51+09:00'
+  timestamp: '2021-11-21 13:25:13+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
