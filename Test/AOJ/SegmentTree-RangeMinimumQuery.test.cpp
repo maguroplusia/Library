@@ -18,12 +18,12 @@ int main() {
         if(t == 0) {
             int p,x;
             cin >> p >> x;
-            seg.update(p,x);
+            seg.set_val(p,x);
         }
         else {
             int s,t;
             cin >> s >> t;
-            cout << seg.query(s,t + 1) << endl;
+            cout << seg.fold(s,t + 1) << endl;
         }
     }
 }
