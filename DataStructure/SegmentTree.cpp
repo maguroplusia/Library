@@ -50,10 +50,10 @@ public:
         T sum = def;
         do {
             while(!(l & 1)) l >>= 1;
-            if(!f(operation(sum, data[l]))) {
+            if(!f(operation(sum, dat[l]))) {
                 while(l < seg_size) {
                     l <<= 1;
-                    if(f(operation(sum, data[l]))) sum = operation(sum, data[l++]);
+                    if(f(operation(sum, dat[l]))) sum = operation(sum, dat[l++]);
                 }
                 return l - seg_size;
             }
