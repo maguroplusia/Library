@@ -70,6 +70,9 @@ data:
   - name: Other
     pages:
     - icon: ':warning:'
+      path: Other/Compress.cpp
+      title: Other/Compress.cpp
+    - icon: ':warning:'
       path: Other/LambdaRecursion.cpp
       title: Other/LambdaRecursion.cpp
     - icon: ':question:'
