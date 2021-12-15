@@ -15,7 +15,7 @@ struct Compress {
 
     void build() {
         std::sort(values.begin(), values.end());
-        std::erase(std::unique(values.begin(), values.end()), values.end());
+        values.erase(std::unique(values.begin(), values.end()), values.end());
     }
 
     int get(T x) {
@@ -24,5 +24,9 @@ struct Compress {
 
     const T& operator[](int x) {
         return values[x];
+    }
+
+    int size() {
+        return values.size();
     }
 };
