@@ -19,7 +19,7 @@ int main() {
     vector<long long> dist = bellman_ford(N,M,es,r);
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
-        if(dist[i] == -INF) isnegative = true;
+        if(dist[i] == -numeric_limits<long long>::max()) isnegative = true;
     }
     if(isnegative) {
         cout << "NEGATIVE CYCLE" << endl;
