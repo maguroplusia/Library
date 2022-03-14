@@ -3,10 +3,10 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Test/AOJ/BellmanFord.test.cpp
     title: Test/AOJ/BellmanFord.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Test/AOJ/Dijkstra.test.cpp
     title: Test/AOJ/Dijkstra.test.cpp
   - icon: ':heavy_check_mark:'
@@ -98,25 +98,25 @@ data:
   timestamp: '2021-06-18 21:14:35+09:00'
   verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
-  - Test/yosupo-judge/SparseTable.test.cpp
-  - Test/yosupo-judge/BinaryIndexedTree.test.cpp
-  - Test/yosupo-judge/LowestCommonAncestor.test.cpp
-  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
-  - Test/yosupo-judge/UnionFind.test.cpp
-  - Test/yosupo-judge/SlidingWindowAggregation.test.cpp
-  - Test/yosupo-judge/Factorize.test.cpp
-  - Test/yukicoder/ChineseRemainderTheorem.test.cpp
+  - Test/AOJ/Kruskal.test.cpp
   - Test/AOJ/SegmentTree-RangeMinimumQuery.test.cpp
   - Test/AOJ/WarshallFloyd.test.cpp
-  - Test/AOJ/TopologicalSort.test.cpp
-  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
   - Test/AOJ/Prim.test.cpp
-  - Test/AOJ/Dijkstra.test.cpp
-  - Test/AOJ/Kruskal.test.cpp
-  - Test/AOJ/StronglyConnectedComponent.test.cpp
-  - Test/AOJ/RollingHash.test.cpp
+  - Test/AOJ/TopologicalSort.test.cpp
   - Test/AOJ/BellmanFord.test.cpp
+  - Test/AOJ/SegmentTree-RangeSumQuery.test.cpp
+  - Test/AOJ/Dijkstra.test.cpp
+  - Test/AOJ/StronglyConnectedComponent.test.cpp
   - Test/AOJ/LazySegmentTree.test.cpp
+  - Test/AOJ/RollingHash.test.cpp
+  - Test/yukicoder/ChineseRemainderTheorem.test.cpp
+  - Test/yosupo-judge/Factorize.test.cpp
+  - Test/yosupo-judge/SparseTable.test.cpp
+  - Test/yosupo-judge/SlidingWindowAggregation.test.cpp
+  - Test/yosupo-judge/LowestCommonAncestor.test.cpp
+  - Test/yosupo-judge/UnionFind.test.cpp
+  - Test/yosupo-judge/SegmentTree-PointAddRangeSum.test.cpp
+  - Test/yosupo-judge/BinaryIndexedTree.test.cpp
 documentation_of: Other/Template.cpp
 layout: document
 redirect_from:

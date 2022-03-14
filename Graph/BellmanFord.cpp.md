@@ -3,43 +3,48 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: Test/AOJ/BellmanFord.test.cpp
     title: Test/AOJ/BellmanFord.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Graph/BellmanFord.cpp\"\nstruct edge{\n    int from,to;\n\
-    \    long long cost;\n};\n\nvector<long long> BellmanFord(const int& N,const int&\
-    \ M,const vector<edge>& es,const int& s) {\n    vector<long long> dist(N,INF);\n\
-    \    dist[s] = 0;\n\n    for(int i = 0;i < N * 2;i++) {\n        for(const auto&\
-    \ [from,to,cost]:es) {\n            if(dist[from] < INF && dist[from] + cost <\
-    \ dist[to])  {\n                if(i >= N - 1) dist[to] = -INF;\n            \
-    \    else dist[to] = dist[from] + cost;\n            }\n        }\n    }\n\n \
-    \   return dist;\n}\n\nbool FindNegativeLoop(const int& N,const int& M,const vector<edge>&\
-    \ es) {\n    vector<long long> dist(N);\n\n    for(int i = 0;i < N;i++) {\n  \
-    \      for(const auto& [from,to,cost]:es) {\n            if(chmin(dist[to],dist[from]\
-    \ + cost) && i == N - 1) return true;\n        }\n    }\n\n    return false;\n\
+  bundledCode: "#line 1 \"Graph/BellmanFord.cpp\"\ntemplate<typename T>\nstruct Edge{\n\
+    \    int from,to;\n    T cost;\n};\n\ntemplate<typename T>\nstd::vector<T> bellman_ford(const\
+    \ int& node,const int& edge,const std::vector<Edge<T>>& graph,const int& start)\
+    \ {\n    std::vector<T> dist(node,std::numeric_limits<T>::max());\n    dist[start]\
+    \ = 0;\n\n    for(int i = 0;i < node * 2;i++) {\n        for(const auto& [from,to,cost]:\
+    \ graph) {\n            if(dist[from] < std::numeric_limits<T>::max() && dist[from]\
+    \ + cost < dist[to])  {\n                if(i >= node - 1) dist[to] = std::numeric_limits<T>::max()\
+    \ * static_cast<T>(-1);\n                else dist[to] = dist[from] + cost;\n\
+    \            }\n        }\n    }\n\n    return dist;\n}\n\ntemplate<typename T>\n\
+    bool find_negative_loop(const int& node,const int& edge,const std::vector<Edge<T>>&\
+    \ graph) {\n    std::vector<T> dist(node);\n\n    for(int i = 0;i < node;i++)\
+    \ {\n        for(const auto& [from,to,cost]: graph) {\n            if(dist[to]\
+    \ > dist[from] + cost && i == node - 1) {\n                return true;\n    \
+    \        }\n        }\n    }\n\n    return false;\n}\n"
+  code: "template<typename T>\nstruct Edge{\n    int from,to;\n    T cost;\n};\n\n\
+    template<typename T>\nstd::vector<T> bellman_ford(const int& node,const int& edge,const\
+    \ std::vector<Edge<T>>& graph,const int& start) {\n    std::vector<T> dist(node,std::numeric_limits<T>::max());\n\
+    \    dist[start] = 0;\n\n    for(int i = 0;i < node * 2;i++) {\n        for(const\
+    \ auto& [from,to,cost]: graph) {\n            if(dist[from] < std::numeric_limits<T>::max()\
+    \ && dist[from] + cost < dist[to])  {\n                if(i >= node - 1) dist[to]\
+    \ = std::numeric_limits<T>::max() * static_cast<T>(-1);\n                else\
+    \ dist[to] = dist[from] + cost;\n            }\n        }\n    }\n\n    return\
+    \ dist;\n}\n\ntemplate<typename T>\nbool find_negative_loop(const int& node,const\
+    \ int& edge,const std::vector<Edge<T>>& graph) {\n    std::vector<T> dist(node);\n\
+    \n    for(int i = 0;i < node;i++) {\n        for(const auto& [from,to,cost]: graph)\
+    \ {\n            if(dist[to] > dist[from] + cost && i == node - 1) {\n       \
+    \         return true;\n            }\n        }\n    }\n\n    return false;\n\
     }\n"
-  code: "struct edge{\n    int from,to;\n    long long cost;\n};\n\nvector<long long>\
-    \ BellmanFord(const int& N,const int& M,const vector<edge>& es,const int& s) {\n\
-    \    vector<long long> dist(N,INF);\n    dist[s] = 0;\n\n    for(int i = 0;i <\
-    \ N * 2;i++) {\n        for(const auto& [from,to,cost]:es) {\n            if(dist[from]\
-    \ < INF && dist[from] + cost < dist[to])  {\n                if(i >= N - 1) dist[to]\
-    \ = -INF;\n                else dist[to] = dist[from] + cost;\n            }\n\
-    \        }\n    }\n\n    return dist;\n}\n\nbool FindNegativeLoop(const int& N,const\
-    \ int& M,const vector<edge>& es) {\n    vector<long long> dist(N);\n\n    for(int\
-    \ i = 0;i < N;i++) {\n        for(const auto& [from,to,cost]:es) {\n         \
-    \   if(chmin(dist[to],dist[from] + cost) && i == N - 1) return true;\n       \
-    \ }\n    }\n\n    return false;\n}\n"
   dependsOn: []
   isVerificationFile: false
   path: Graph/BellmanFord.cpp
   requiredBy: []
-  timestamp: '2021-06-16 21:34:35+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-03-14 18:12:26+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - Test/AOJ/BellmanFord.test.cpp
 documentation_of: Graph/BellmanFord.cpp
@@ -51,5 +56,6 @@ title: Bellman-Ford
 
 重み付き（有向）グラフにおける最短経路問題を解くアルゴリズム。グラフの辺の重みは負になってもよい。また負閉路（重みの総和が負になる閉路）の検出も可能。
 
-- `vector<long long> BellmanFord(int N,int M,vector<edge> es,int s)` : `N`頂点`M`辺のグラフ`es`の頂点`s`から全頂点の最短距離を求める。`s` からのパスが存在しない場合は `INF` を、負閉路の影響で最短距離が求まらない場合は `-INF` が返り値の配列に格納される。計算量 $O(NM)$
-- `bool FindNegativeLoop(int N,int M,vector<edge> es,int s)` : グラフに負閉路が含まれているかどうかを確かめる。計算量 $O(NM)$
+- `vector<T> bellman_ford(int node,int edge,vector<Edge<T>> graph,int start)` : 辺の情報をもった配列 `graph` で表される、頂点数 `node`、変数 `edge` のグラフにおいて、頂点 `start` から各頂点への最短経路を求める。返り値として長さ `node` の配列 `dist` が返される。
+    - `dist[i]` = 頂点 `start` から頂点 `i` への最短距離、ただしパスが存在しない場合は `std::numeric_limits<T>::max()` を、負閉路の影響で最短距離が求まらない場合は `-std::numeric_limits<T>::max()` が返り値の配列に格納される。計算量 $O(node \times edge)$
+- `bool find_negative_loop(int node,int edge,vector<Edge<T>> graph)` : グラフに負閉路が含まれているかどうかを確かめる。計算量 $O(node \times edge)$
