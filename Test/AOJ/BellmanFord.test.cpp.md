@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/BellmanFord.cpp
     title: Bellman-Ford
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B
@@ -43,8 +43,8 @@ data:
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
     \ == -numeric_limits<long long>::max()) isnegative = true;\n    }\n    if(isnegative)\
     \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
-    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
-    \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
+    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == numeric_limits<long long>::max())\
+    \ cout << \"INF\" << endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    int N,M,r;\n  \
@@ -54,16 +54,16 @@ data:
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
     \ == -numeric_limits<long long>::max()) isnegative = true;\n    }\n    if(isnegative)\
     \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
-    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
-    \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
+    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == numeric_limits<long long>::max())\
+    \ cout << \"INF\" << endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - Graph/BellmanFord.cpp
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2022-03-14 20:37:28+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-03-14 20:51:37+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp
 layout: document
