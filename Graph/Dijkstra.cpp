@@ -8,7 +8,7 @@ std::vector<int> pre;
 
 template<typename T>
 std::vector<T> dijkstra(const int& node,const vector<vector<Edge<T>>>& graph,const int& start) {
-    priority_queue<pair<T,int>,vector<pair<T,int>>,greater<pair<T,int>>> que;
+    std::priority_queue<pair<T,int>,vector<pair<T,int>>,greater<pair<T,int>>> que;
     vector<T> dist(node,numeric_limits<T>::max());
     pre = vector<int>(node,-1);
     dist[start] = 0;
