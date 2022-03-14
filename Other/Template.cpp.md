@@ -6,7 +6,7 @@ data:
   - icon: ':x:'
     path: Test/AOJ/BellmanFord.test.cpp
     title: Test/AOJ/BellmanFord.test.cpp
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Test/AOJ/Dijkstra.test.cpp
     title: Test/AOJ/Dijkstra.test.cpp
   - icon: ':heavy_check_mark:'

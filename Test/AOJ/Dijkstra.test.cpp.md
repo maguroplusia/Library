@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: Graph/Dijkstra.cpp
     title: Dijkstra
   - icon: ':question:'
@@ -9,9 +9,9 @@ data:
     title: Other/Template.cpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A
@@ -36,17 +36,17 @@ data:
     \ path;\n\n    while(t != -1) {\n        path.push_back(t);\n        t = pre[t];\n\
     \    }\n\n    reverse(path.begin(),path.end());\n    return path;\n}\n#line 8\
     \ \"Test/AOJ/Dijkstra.test.cpp\"\n\nint main() {\n    int N,M,r;\n    cin >> N\
-    \ >> M >> r;\n    vector<vector<edge<int>>> graph(N);\n    for(int i = 0;i < M;i++)\
+    \ >> M >> r;\n    vector<vector<Edge<int>>> graph(N);\n    for(int i = 0;i < M;i++)\
     \ {\n        int s,t,d;\n        cin >> s >> t >> d;\n        graph[s].push_back({t,d});\n\
-    \    }\n    vector<int> dist = Dijkstra(N,graph,r);\n    for(const auto& x:dist)\
+    \    }\n    vector<int> dist = dijkstra(N,graph,r);\n    for(const auto& x:dist)\
     \ {\n        if(x == numeric_limits<int>::max()) cout << \"INF\" << endl;\n  \
     \      else cout << x << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_A\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/Dijkstra.cpp\"\n\nint main() {\n    int N,M,r;\n    cin\
-    \ >> N >> M >> r;\n    vector<vector<edge<int>>> graph(N);\n    for(int i = 0;i\
+    \ >> N >> M >> r;\n    vector<vector<Edge<int>>> graph(N);\n    for(int i = 0;i\
     \ < M;i++) {\n        int s,t,d;\n        cin >> s >> t >> d;\n        graph[s].push_back({t,d});\n\
-    \    }\n    vector<int> dist = Dijkstra(N,graph,r);\n    for(const auto& x:dist)\
+    \    }\n    vector<int> dist = dijkstra(N,graph,r);\n    for(const auto& x:dist)\
     \ {\n        if(x == numeric_limits<int>::max()) cout << \"INF\" << endl;\n  \
     \      else cout << x << endl;\n    }\n}\n"
   dependsOn:
@@ -55,8 +55,8 @@ data:
   isVerificationFile: true
   path: Test/AOJ/Dijkstra.test.cpp
   requiredBy: []
-  timestamp: '2022-03-14 18:12:26+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2022-03-14 20:21:31+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: Test/AOJ/Dijkstra.test.cpp
 layout: document
