@@ -26,7 +26,7 @@ int main() {
         return 0;
     }
     for(int i = 0;i < N;i++) {
-        if(dist[i] == INF) cout << "INF" << endl;
+        if(dist[i] == numeric_limits<long long>::max()) cout << "INF" << endl;
         else cout << dist[i] << endl;
     }
 }
