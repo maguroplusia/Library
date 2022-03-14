@@ -9,14 +9,14 @@ using namespace std;
 int main() {
     int N,M,r;
     cin >> N >> M >> r;
-    vector<edge> es(M);
+    vector<Edge<long long>> es(M);
     for(int i = 0;i < M;i++) {
         int s,t;
         long long d;
         cin >> s >> t >> d;
         es[i] = {s,t,d};
     }
-    vector<long long> dist = BellmanFord(N,M,es,r);
+    vector<long long> dist = bellman_ford(N,M,es,r);
     bool isnegative = false;
     for(int i = 0;i < N;i++) {
         if(dist[i] == -INF) isnegative = true;
