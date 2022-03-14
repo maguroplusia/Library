@@ -41,10 +41,10 @@ data:
     \ 0;i < M;i++) {\n        int s,t;\n        long long d;\n        cin >> s >>\
     \ t >> d;\n        es[i] = {s,t,d};\n    }\n    vector<long long> dist = bellman_ford(N,M,es,r);\n\
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
-    \ == -INF) isnegative = true;\n    }\n    if(isnegative) {\n        cout << \"\
-    NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++)\
-    \ {\n        if(dist[i] == INF) cout << \"INF\" << endl;\n        else cout <<\
-    \ dist[i] << endl;\n    }\n}\n"
+    \ == -numeric_limits<long long>::max()) isnegative = true;\n    }\n    if(isnegative)\
+    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
+    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
+    \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
   code: "#define PROBLEM \"https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/1/GRL_1_B\"\
     \n\n#include<bits/stdc++.h>\nusing namespace std;\n\n#include\"../../Other/Template.cpp\"\
     \n#include\"../../Graph/BellmanFord.cpp\"\n\nint main() {\n    int N,M,r;\n  \
@@ -52,17 +52,17 @@ data:
     \ < M;i++) {\n        int s,t;\n        long long d;\n        cin >> s >> t >>\
     \ d;\n        es[i] = {s,t,d};\n    }\n    vector<long long> dist = bellman_ford(N,M,es,r);\n\
     \    bool isnegative = false;\n    for(int i = 0;i < N;i++) {\n        if(dist[i]\
-    \ == -INF) isnegative = true;\n    }\n    if(isnegative) {\n        cout << \"\
-    NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n    for(int i = 0;i < N;i++)\
-    \ {\n        if(dist[i] == INF) cout << \"INF\" << endl;\n        else cout <<\
-    \ dist[i] << endl;\n    }\n}\n"
+    \ == -numeric_limits<long long>::max()) isnegative = true;\n    }\n    if(isnegative)\
+    \ {\n        cout << \"NEGATIVE CYCLE\" << endl;\n        return 0;\n    }\n \
+    \   for(int i = 0;i < N;i++) {\n        if(dist[i] == INF) cout << \"INF\" <<\
+    \ endl;\n        else cout << dist[i] << endl;\n    }\n}\n"
   dependsOn:
   - Other/Template.cpp
   - Graph/BellmanFord.cpp
   isVerificationFile: true
   path: Test/AOJ/BellmanFord.test.cpp
   requiredBy: []
-  timestamp: '2022-03-14 20:21:31+09:00'
+  timestamp: '2022-03-14 20:37:28+09:00'
   verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: Test/AOJ/BellmanFord.test.cpp
