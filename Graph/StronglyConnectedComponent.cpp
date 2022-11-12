@@ -1,16 +1,17 @@
+#include<bits/stdc++.h>
 class SCC {
-    int N;
-    vector<int> graph[100010];
-    vector<int> rgraph[100010];//辺を逆にはったグラフ
-    vector<int> vs; //帰りがけ順の並び
-    bool used[100010]; //既に頂点に訪れたか
-    int cmp[100010]; //属する強連結成分のトポロジカル順序
+    int n;
+    std::vector<std::vector<int>> graph;
+    std::vector<std::vector<int>> rgraph;//辺を逆にはったグラフ
+    std::vector<int> vs; //帰りがけ順の並び
+    std::vector<bool> used; //既に頂点に訪れたか
+    std::vector<int> cmp; //属する強連結成分のトポロジカル順序
 
 
     void dfs(int v) {
         used[v] = true;
         for(auto x:graph[v]) {
-            if(!used[x]) dfs(x);
+            if(not used[x]) dfs(x);
         }
         vs.push_back(v);
     }
@@ -25,8 +26,11 @@ class SCC {
 
 public:
 
-    SCC(int n) {
-        N = n;
+    SCC(int n): n(n) {
+        graph.resize(n);
+        rgraph.resize(n);
+        used.resize(n);
+        cmp.resize(n);
     }
 
     void add_edge(int from,int to) {
@@ -36,15 +40,18 @@ public:
 
     //返り値は分解した後の頂点の数
     int scc() {
-        memset(used,0,sizeof(used));
         vs.clear();
-        for(int v = 0;v < N;v++) {
-            if(!used[v]) dfs(v);
+        for(int v = 0;v < n;v++) {
+            if(not used[v]) dfs(v);
         }
-        memset(used,0,sizeof(used));
+
+        for(int i = 0;i < n;i++) {
+            used[i] = false;
+        }
+
         int k = 0;
         for(int i = vs.size() - 1;i >= 0;i--) {
-            if(!used[vs[i]]) rdfs(vs[i],k++);
+            if(not used[vs[i]]) rdfs(vs[i],k++);
         }
         return k;
     }

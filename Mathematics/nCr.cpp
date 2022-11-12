@@ -1,20 +1,27 @@
-long long fac[1000010], finv[1000010], inv[1000010];
+struct Comb {
+    int size;
+    long long mod;
+    std::vector<long long> factorial;
+    std::vector<long long> inversion_factorial;
+    std::vector<long long> inversion;
 
-// テーブルを作る前処理
-void COMinit() {
-    fac[0] = fac[1] = 1;
-    finv[0] = finv[1] = 1;
-    inv[1] = 1;
-    for (int i = 2; i < 1000010; i++) {
-        fac[i] = fac[i - 1] * i % MOD;
-        inv[i] = MOD - inv[MOD % i] * (MOD / i) % MOD;
-        finv[i] = finv[i - 1] * inv[i] % MOD;
+    Comb(int n,long long mod): size(n),mod(mod) {
+        factorial.resize(n + 1);
+        inversion_factorial.resize(n + 1);
+        inversion.resize(n + 1);
+        factorial[0] = factorial[1] = 1;
+        inversion_factorial[0] = inversion_factorial[1] = 1;
+        inversion[1] = 1;
+        for (long long i = 2; i <= n; i++) {
+            factorial[i] = factorial[i - 1] * i % mod;
+            inversion[i] = mod - inversion[mod % i] * (mod / i) % mod;
+            inversion_factorial[i] = inversion_factorial[i - 1] * inversion[i] % mod;
+        }
     }
-}
 
-// 二項係数計算
-long long COM(int n, int k) {
-    if (n < k) return 0;
-    if (n < 0 || k < 0) return 0;
-    return fac[n] * (finv[k] * finv[n - k] % MOD) % MOD;
-}
+    long long comb(int n, int k) {
+        if (n < k) return 0;
+        if (n < 0 || k < 0) return 0;
+        return factorial[n] * (inversion_factorial[k] * inversion_factorial[n - k] % mod) % mod;
+    }
+};

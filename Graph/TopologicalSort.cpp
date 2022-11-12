@@ -1,30 +1,24 @@
-int N;
-vector<int> graph[500010];
-int indegree[500010];
-int outdegree[500010];
-
-//graphをトポロジカルソートする。返り値のvectorにトポロジカル順序が格納される
-vector<int> topological_sort() {
-    for(int i = 0;i < N;i++) {
-        indegree[i] = 0;
-    }
-    for(auto x:graph) {
-        for(auto y:x) {
+std::vector<int> topological_sort(int n, std::vector<std::vector<int>> graph) {
+    std::vector<int> indegree(n);
+    for(auto& x: graph) {
+        for(auto& y: x) {
             indegree[y]++;
         }
     }
-    stack<int> st;
-    for(int i = 0;i < N;i++) {
+
+    std::stack<int> st;
+    for(int i = 0;i < n;i++) {
         if(indegree[i] == 0) {
             st.push(i);
         }
     }
-    vector<int> res;
-    while(!st.empty()) {
-        int i = st.top();
+
+    std::vector<int> res;
+    while(not st.empty()) {
+        int v = st.top();
         st.pop();
-        res.push_back(i);
-        for(auto x:graph[i]) {
+        res.push_back(v);
+        for(auto& x: graph[v]) {
             indegree[x]--;
             if(indegree[x] == 0) {
                 st.push(x);
@@ -34,24 +28,22 @@ vector<int> topological_sort() {
     return res;
 }
 
-//トポロジカルソートする通り数、O(2^N)が間に合う程度で
-long long counting() {
-    for(int i = 0;i < N;i++) {
-        outdegree[i] = 0;
-    }
-    for(int i = 0;i < N;i++) {
-        for(auto x:graph[i]) {
+long long counting(int n,std::vector<std::vector<int>> graph) {
+    std::vector<int> outdegree(n);
+    for(int i = 0;i < n;i++) {
+        for(auto& x: graph[i]) {
             outdegree[i] += (1 << x);
         }
     }
-    vector<long long> dp(1 << N);
-    dp.at(0) = 1;
-    for(int i = 0;i < (1 << N);i++) {
-        for(int j = 0;j < N;j++) {
+
+    std::vector<long long> dp(1 << n);
+    dp[0] = 1;
+    for(int i = 0;i < (1 << n);i++) {
+        for(int j = 0;j < n;j++) {
             if(!(i & (1 << j)) && !(i & outdegree[j])) {
-                dp.at(i | (1 << j)) += dp.at(i);
+                dp[i | (1 << j)] += dp.at(i);
             }
         }
     }
-    return dp.at((1 << N) - 1);
+    return dp[(1 << n) - 1];
 }
