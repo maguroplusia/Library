@@ -8,28 +8,37 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"Mathematics/nCr.cpp\"\nlong long fac[1000010], finv[1000010],\
-    \ inv[1000010];\n\n// \u30C6\u30FC\u30D6\u30EB\u3092\u4F5C\u308B\u524D\u51E6\u7406\
-    \nvoid COMinit() {\n    fac[0] = fac[1] = 1;\n    finv[0] = finv[1] = 1;\n   \
-    \ inv[1] = 1;\n    for (int i = 2; i < 1000010; i++) {\n        fac[i] = fac[i\
-    \ - 1] * i % MOD;\n        inv[i] = MOD - inv[MOD % i] * (MOD / i) % MOD;\n  \
-    \      finv[i] = finv[i - 1] * inv[i] % MOD;\n    }\n}\n\n// \u4E8C\u9805\u4FC2\
-    \u6570\u8A08\u7B97\nlong long COM(int n, int k) {\n    if (n < k) return 0;\n\
-    \    if (n < 0 || k < 0) return 0;\n    return fac[n] * (finv[k] * finv[n - k]\
-    \ % MOD) % MOD;\n}\n"
-  code: "long long fac[1000010], finv[1000010], inv[1000010];\n\n// \u30C6\u30FC\u30D6\
-    \u30EB\u3092\u4F5C\u308B\u524D\u51E6\u7406\nvoid COMinit() {\n    fac[0] = fac[1]\
-    \ = 1;\n    finv[0] = finv[1] = 1;\n    inv[1] = 1;\n    for (int i = 2; i < 1000010;\
-    \ i++) {\n        fac[i] = fac[i - 1] * i % MOD;\n        inv[i] = MOD - inv[MOD\
-    \ % i] * (MOD / i) % MOD;\n        finv[i] = finv[i - 1] * inv[i] % MOD;\n   \
-    \ }\n}\n\n// \u4E8C\u9805\u4FC2\u6570\u8A08\u7B97\nlong long COM(int n, int k)\
-    \ {\n    if (n < k) return 0;\n    if (n < 0 || k < 0) return 0;\n    return fac[n]\
-    \ * (finv[k] * finv[n - k] % MOD) % MOD;\n}\n"
+  bundledCode: "#line 1 \"Mathematics/nCr.cpp\"\nstruct Comb {\n    int size;\n  \
+    \  long long mod;\n    std::vector<long long> factorial;\n    std::vector<long\
+    \ long> inversion_factorial;\n    std::vector<long long> inversion;\n\n    Comb(int\
+    \ n,long long mod): size(n),mod(mod) {\n        factorial.resize(n + 1);\n   \
+    \     inversion_factorial.resize(n + 1);\n        inversion.resize(n + 1);\n \
+    \       factorial[0] = factorial[1] = 1;\n        inversion_factorial[0] = inversion_factorial[1]\
+    \ = 1;\n        inversion[1] = 1;\n        for (long long i = 2; i <= n; i++)\
+    \ {\n            factorial[i] = factorial[i - 1] * i % mod;\n            inversion[i]\
+    \ = mod - inversion[mod % i] * (mod / i) % mod;\n            inversion_factorial[i]\
+    \ = inversion_factorial[i - 1] * inversion[i] % mod;\n        }\n    }\n\n   \
+    \ long long comb(int n, int k) {\n        if (n < k) return 0;\n        if (n\
+    \ < 0 || k < 0) return 0;\n        return factorial[n] * (inversion_factorial[k]\
+    \ * inversion_factorial[n - k] % mod) % mod;\n    }\n};\n"
+  code: "struct Comb {\n    int size;\n    long long mod;\n    std::vector<long long>\
+    \ factorial;\n    std::vector<long long> inversion_factorial;\n    std::vector<long\
+    \ long> inversion;\n\n    Comb(int n,long long mod): size(n),mod(mod) {\n    \
+    \    factorial.resize(n + 1);\n        inversion_factorial.resize(n + 1);\n  \
+    \      inversion.resize(n + 1);\n        factorial[0] = factorial[1] = 1;\n  \
+    \      inversion_factorial[0] = inversion_factorial[1] = 1;\n        inversion[1]\
+    \ = 1;\n        for (long long i = 2; i <= n; i++) {\n            factorial[i]\
+    \ = factorial[i - 1] * i % mod;\n            inversion[i] = mod - inversion[mod\
+    \ % i] * (mod / i) % mod;\n            inversion_factorial[i] = inversion_factorial[i\
+    \ - 1] * inversion[i] % mod;\n        }\n    }\n\n    long long comb(int n, int\
+    \ k) {\n        if (n < k) return 0;\n        if (n < 0 || k < 0) return 0;\n\
+    \        return factorial[n] * (inversion_factorial[k] * inversion_factorial[n\
+    \ - k] % mod) % mod;\n    }\n};\n"
   dependsOn: []
   isVerificationFile: false
   path: Mathematics/nCr.cpp
   requiredBy: []
-  timestamp: '2021-06-16 21:35:13+09:00'
+  timestamp: '2022-11-12 23:12:17+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: Mathematics/nCr.cpp

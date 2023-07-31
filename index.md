@@ -41,9 +41,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: Graph/StronglyConnectedComponent.cpp
       title: Graph/StronglyConnectedComponent.cpp
-    - icon: ':x:'
-      path: Graph/TopologicalSort.cpp
-      title: Topological Sort
     - icon: ':heavy_check_mark:'
       path: Graph/WarshallFloyd.cpp
       title: Warshall-Floyd
@@ -75,7 +72,10 @@ data:
     - icon: ':warning:'
       path: Other/LambdaRecursion.cpp
       title: Other/LambdaRecursion.cpp
-    - icon: ':question:'
+    - icon: ':warning:'
+      path: Other/Mo.cpp
+      title: Other/Mo.cpp
+    - icon: ':heavy_check_mark:'
       path: Other/Template.cpp
       title: Other/Template.cpp
   - name: String
@@ -113,9 +113,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/StronglyConnectedComponent.test.cpp
       title: Test/AOJ/StronglyConnectedComponent.test.cpp
-    - icon: ':x:'
-      path: Test/AOJ/TopologicalSort.test.cpp
-      title: Test/AOJ/TopologicalSort.test.cpp
     - icon: ':heavy_check_mark:'
       path: Test/AOJ/WarshallFloyd.test.cpp
       title: Test/AOJ/WarshallFloyd.test.cpp
