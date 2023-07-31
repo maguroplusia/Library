@@ -1,8 +1,8 @@
 long long mul(long long  a,long long b,long long m) {
-    __int128 a = a;
-    __int128 b = b;
-    __int128 m = m;
-    __int128 ret = a * b % m;
+    __int128 a_ = a;
+    __int128 b_ = b;
+    __int128 m_ = m;
+    __int128 ret = a_ * b_ % m_;
     long long res = ret;
     return res;
 }
