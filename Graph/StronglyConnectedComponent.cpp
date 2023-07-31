@@ -1,4 +1,3 @@
-#include<bits/stdc++.h>
 class SCC {
     int n;
     std::vector<std::vector<int>> graph;

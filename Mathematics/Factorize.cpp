@@ -1,20 +1,20 @@
-long long mul(long long  A,long long B,long long M) {
-    __int128 a = A;
-    __int128 b = B;
-    __int128 m = M;
+long long mul(long long  a,long long b,long long m) {
+    __int128 a = a;
+    __int128 b = b;
+    __int128 m = m;
     __int128 ret = a * b % m;
     long long res = ret;
     return res;
 }
 
-bool is_prime(const long long& N) {
-    if(N == 1) return false;
+bool is_prime(const long long& n) {
+    if(n == 1) return false;
     for(long long p : {2,3,5,7,11,13,17,19,23,29,31,37}) {
-        if(N == p) return true;
-        if(N % p == 0) return false;
+        if(n == p) return true;
+        if(n % p == 0) return false;
     }
 
-    long long d = N - 1;
+    long long d = n - 1;
     int k = 0;
     while(!(d & 1)) {
         k++;
@@ -31,19 +31,19 @@ bool is_prime(const long long& N) {
         return ret;
     };
 
-    random_device rnd;
-    default_random_engine engine(rnd());
-    uniform_int_distribution<long long> rand(2,N - 1);
+    std::random_device rnd;
+    std::default_random_engine engine(rnd());
+    std::uniform_int_distribution<long long> rand(2,n - 1);
 
     for(int tmp = 0;tmp < 50;tmp++) {
         long long a = rand(engine);
-        long long y = modpow(a,d,N);
-        if(y == 1 || y == N - 1) continue;
+        long long y = modpow(a,d,n);
+        if(y == 1 || y == n - 1) continue;
 
         int i = 0;
         for(i = 1;i < k;i++) {
-            y = mul(y,y,N);
-            if(y == N - 1) break;
+            y = mul(y,y,n);
+            if(y == n - 1) break;
         }
         if(i == k) return false;
     }
@@ -51,47 +51,47 @@ bool is_prime(const long long& N) {
     return true;
 }
 
-long long rho(const long long &N) {
-    if(is_prime(N)) return N;
+long long rho(const long long &n) {
+    if(is_prime(n)) return n;
 
-    random_device rnd;
-    default_random_engine engine(rnd());
-    uniform_int_distribution<long long> rand(2,N - 1);
+    std::random_device rnd;
+    std::default_random_engine engine(rnd());
+    std::uniform_int_distribution<long long> rand(2,n - 1);
 
     for(int c = 1;;++c) {
         long long x = rand(engine);
         long long y = x;
         long long d = 1;
         auto f = [&](long long a) -> long long {
-            return (mul(a,a,N) + c) % N;
+            return (mul(a,a,n) + c) % n;
         };
         while(d == 1) {
             x = f(x);
             y = f(f(y));
-            d = gcd(abs(x - y),N);
-            if(1 < d && d < N) {
+            d = gcd(abs(x - y),n);
+            if(1 < d && d < n) {
                 return rho(d);
             }
         }
     }
 }
 
-vector<long long> factorize(long long N) {
-    vector<long long> ret;
+std::vector<long long> factorize(long long n) {
+    std::vector<long long> ret;
 
-    while(!(N & 1)) {
-        N >>= 1;
+    while(!(n & 1)) {
+        n >>= 1;
         ret.push_back(2);
     }
 
-    while(N > 1) {
-        long long d = rho(N);
-        while(N % d == 0) {
-            N /= d;
+    while(n > 1) {
+        long long d = rho(n);
+        while(n % d == 0) {
+            n /= d;
             ret.push_back(d);
         }
     }
 
-    sort(ret.begin(),ret.end());
+    std::sort(ret.begin(),ret.end());
     return ret;
 }

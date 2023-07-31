@@ -1,5 +1,3 @@
-long long com[2000010];
-
 long long modpow(long long a, long long n, long long mod) {
     long long res = 1;
     while (n > 0) {
@@ -10,14 +8,11 @@ long long modpow(long long a, long long n, long long mod) {
     return res;
 }
 
-long long modinv(long long a, long long mod) {
-    return modpow(a, mod - 2, mod);
-}
-
-void COM(int n) {
-    com[0] = 1;
-    for(int i = 1;i < min(n + 1,2000010long long);i++) {
-        com[i] = com[i - 1] * (n - (i - 1)) % MOD * modinv(i,MOD) % MOD;
+long long comb(int n,int m,long long MOD) {
+    std::vector<long long> res(m + 1);
+    res[0] = 1;
+    for(int i = 1;i <= m;i++) {
+        res[i] = res[i - 1] * (n - (i - 1)) % MOD * modpow(i,MOD - 2,MOD) % MOD;
     }
     return;
 }
