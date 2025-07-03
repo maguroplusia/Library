@@ -1,15 +1,16 @@
 class UnionFind {
     vector<int> par;
-    vector<int> siz;
-
+    vector<int> cluster_siz;
+    int siz;
 public:
 
     UnionFind(int n) {
         par.resize(n);
-        siz.resize(n);
+        cluster_siz.resize(n);
+        siz = n;
         for(int i = 0;i < n;i++) {
             par[i] = i;
-            siz[i] = 1;
+            cluster_siz[i] = 1;
         }
     }
 
@@ -28,18 +29,21 @@ public:
         if(x == y) {
             return;
         }
-        if(siz[x] < siz[y]) {
+        siz--;
+        if(cluster_siz[x] < cluster_siz[y]) {
             swap(x,y);
         }
         par[y] = x;
-        siz[x] += siz[y];
+        cluster_siz[x] += cluster_siz[y];
     }
 
     bool same(int x,int y) {
         return find(x) == find(y);
     }
 
-    int size(int x) {
-        return siz[find(x)];
+    int cluster_size(int x) {
+        return cluster_siz[find(x)];
     }
+
+    int size() { return siz;}
 };
