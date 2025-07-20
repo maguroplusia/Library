@@ -34,14 +34,14 @@ public:
     T fold(int l,int r) {
         l += seg_size;
         r += seg_size;
-        T ret = def;
+        T ret_l = def, ret_r = def;
         while(l < r) {
-            if(l & 1) ret = operation(ret,dat[l++]);
-            if(r & 1) ret = operation(dat[--r],ret);
+            if(l & 1) ret_l = operation(ret_l,dat[l++]);
+            if(r & 1) ret_r = operation(dat[--r],ret_r);
             l >>= 1;
             r >>= 1;
         }
-        return ret;
+        return operation(ret_l, ret_r);
     }
 
     int max_right(int l, std::function<bool(T)> f) {
